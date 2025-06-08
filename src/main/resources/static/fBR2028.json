@@ -1,0 +1,619 @@
+
+[
+  {
+    "holidayName": "Confraternização Universal",
+    "countryCode": "BR",
+    "countryName": "Brasil",
+    "currency": "BRL",
+    "travelDestinations": [
+      {
+        "city": "Rio de Janeiro",
+        "state": "Rio de Janeiro",
+        "description": "Cidade famosa por suas praias, Cristo Redentor e Carnaval.",
+        "touristAttractions": [
+          {
+            "name": "Cristo Redentor",
+            "latitude": -22.9519,
+            "longitude": -43.2105
+          },
+          {
+            "name": "Pão de Açúcar",
+            "latitude": -22.9573,
+            "longitude": -43.1657
+          }
+        ],
+        "average": 1200
+      },
+      {
+        "city": "Gramado",
+        "state": "Rio Grande do Sul",
+        "description": "Cidade turística conhecida por sua arquitetura europeia e festivais.",
+        "touristAttractions": [
+          {
+            "name": "Lago Negro",
+            "latitude": -29.3717,
+            "longitude": -50.8739
+          },
+          {
+            "name": "Rua Coberta",
+            "latitude": -29.3736,
+            "longitude": -50.8722
+          }
+        ],
+        "average": 1500
+      }
+    ]
+  },
+  {
+    "holidayName": "Carnaval",
+    "countryCode": "BR",
+    "countryName": "Brasil",
+    "currency": "BRL",
+    "travelDestinations": [
+      {
+        "city": "Salvador",
+        "state": "Bahia",
+        "description": "Famosa por seu carnaval vibrante e rica cultura afro-brasileira.",
+        "touristAttractions": [
+          {
+            "name": "Pelourinho",
+            "latitude": -12.9706,
+            "longitude": -38.5094
+          },
+          {
+            "name": "Farol da Barra",
+            "latitude": -13.0139,
+            "longitude": -38.5306
+          }
+        ],
+        "average": 1800
+      },
+      {
+        "city": "Olinda",
+        "state": "Pernambuco",
+        "description": "Cidade histórica com um carnaval de rua tradicional e animado.",
+        "touristAttractions": [
+          {
+            "name": "Alto da Sé",
+            "latitude": -8.0097,
+            "longitude": -34.8519
+          },
+          {
+            "name": "Mosteiro de São Bento",
+            "latitude": -8.0083,
+            "longitude": -34.8522
+          }
+        ],
+        "average": 1600
+      }
+    ]
+  },
+  {
+    "holidayName": "Sexta-feira Santa",
+    "countryCode": "BR",
+    "countryName": "Brasil",
+    "currency": "BRL",
+    "travelDestinations": [
+      {
+        "city": "Ouro Preto",
+        "state": "Minas Gerais",
+        "description": "Cidade histórica com arquitetura barroca preservada.",
+        "touristAttractions": [
+          {
+            "name": "Igreja de São Francisco de Assis",
+            "latitude": -20.3764,
+            "longitude": -43.5031
+          },
+          {
+            "name": "Praça Tiradentes",
+            "latitude": -20.3761,
+            "longitude": -43.5028
+          }
+        ],
+        "average": 1000
+      },
+      {
+        "city": "Aparecida",
+        "state": "São Paulo",
+        "description": "Principal centro de peregrinação católica no Brasil.",
+        "touristAttractions": [
+          {
+            "name": "Santuário Nacional de Aparecida",
+            "latitude": -22.8422,
+            "longitude": -45.2328
+          },
+          {
+            "name": "Morro do Cruzeiro",
+            "latitude": -22.8403,
+            "longitude": -45.2389
+          }
+        ],
+        "average": 900
+      }
+    ]
+  },
+  {
+    "holidayName": "Domingo de Páscoa",
+        "countryCode": "BR",
+        "countryName": "Brasil",
+        "currency": "BRL",
+        "travelDestinations": [
+          {
+            "city": "Campos do Jordão",
+            "state": "São Paulo",
+            "description": "Conhecida como a 'Suíça Brasileira', famosa pelo clima frio e arquitetura europeia.",
+            "touristAttractions": [
+              {
+                "name": "Morro do Elefante",
+                "latitude": -22.7408,
+                "longitude": -45.0008
+              },
+              {
+                "name": "Parque Amantikir",
+                "latitude": -22.7464,
+                "longitude": -45.0258
+              }
+            ],
+            "average": 1300
+          },
+          {
+            "city": "Petrópolis",
+            "state": "Rio de Janeiro",
+            "description": "Cidade Imperial com belos palácios e museus históricos.",
+            "touristAttractions": [
+              {
+                "name": "Museu Imperial",
+                "latitude": -22.5091,
+                "longitude": -43.1789
+              },
+              {
+                "name": "Catedral de São Pedro de Alcântara",
+                "latitude": -22.5067,
+                "longitude": -43.1764
+              }
+            ],
+            "average": 1100
+          }
+        ]
+      },
+      {
+        "holidayName": "Dia de Tiradentes",
+        "countryCode": "BR",
+        "countryName": "Brasil",
+        "currency": "BRL",
+        "travelDestinations": [
+          {
+            "city": "Tiradentes",
+            "state": "Minas Gerais",
+            "description": "Cidade histórica com arquitetura colonial preservada.",
+            "touristAttractions": [
+              {
+                "name": "Igreja Matriz de Santo Antônio",
+                "latitude": -21.1134,
+                "longitude": -44.1842
+              },
+              {
+                "name": "Chafariz de São José",
+                "latitude": -21.1139,
+                "longitude": -44.1833
+              }
+            ],
+            "average": 950
+          },
+          {
+            "city": "São João del Rei",
+            "state": "Minas Gerais",
+            "description": "Cidade histórica com igrejas barrocas e museus.",
+            "touristAttractions": [
+              {
+                "name": "Igreja de São Francisco de Assis",
+                "latitude": -21.1353,
+                "longitude": -44.2578
+              },
+              {
+                "name": "Ponte da Cadeia",
+                "latitude": -21.1361,
+                "longitude": -44.2572
+              }
+            ],
+            "average": 1050
+          }
+        ]
+      },
+      {
+        "holidayName": "Dia do Trabalhador",
+        "countryCode": "BR",
+        "countryName": "Brasil",
+        "currency": "BRL",
+        "travelDestinations": [
+          {
+            "city": "Foz do Iguaçu",
+            "state": "Paraná",
+            "description": "Famosa pelas Cataratas do Iguaçu, uma das maiores maravilhas naturais do mundo.",
+            "touristAttractions": [
+              {
+                "name": "Cataratas do Iguaçu",
+                "latitude": -25.6911,
+                "longitude": -54.4369
+              },
+              {
+                "name": "Parque das Aves",
+                "latitude": -25.6836,
+                "longitude": -54.4622
+              }
+            ],
+            "average": 1400
+          },
+          {
+            "city": "Curitiba",
+            "state": "Paraná",
+            "description": "Conhecida por seus parques e planejamento urbano.",
+            "touristAttractions": [
+              {
+                "name": "Jardim Botânico de Curitiba",
+                "latitude": -25.4525,
+                "longitude": -49.2453
+              },
+              {
+                "name": "Parque Tanguá",
+                "latitude": -25.4078,
+                "longitude": -49.2875
+              }
+            ],
+            "average": 1150
+          }
+        ]
+      },
+      {
+        "holidayName": "Corpus Christi",
+        "countryCode": "BR",
+        "countryName": "Brasil",
+        "currency": "BRL",
+        "travelDestinations": [
+          {
+            "city": "Paraty",
+            "state": "Rio de Janeiro",
+            "description": "Cidade histórica com arquitetura colonial e belas praias.",
+            "touristAttractions": [
+              {
+                "name": "Centro Histórico de Paraty",
+                "latitude": -23.2181,
+                "longitude": -44.7122
+              },
+              {
+                "name": "Praia do Sono",
+                "latitude": -23.3578,
+                "longitude": -44.6503
+              }
+            ],
+            "average": 1250
+          },
+          {
+            "city": "Búzios",
+            "state": "Rio de Janeiro",
+            "description": "Famosa por suas praias e vida noturna agitada.",
+            "touristAttractions": [
+              {
+                "name": "Rua das Pedras",
+                "latitude": -22.7475,
+                "longitude": -41.9042
+              },
+              {
+                "name": "Praia da Ferradura",
+                "latitude": -22.7611,
+                "longitude": -41.8747
+              }
+            ],
+            "average": 1350
+          }
+        ]
+      },
+      {
+        "holidayName": "Revolução Constitucionalista de 1932",
+        "countryCode": "BR",
+        "countryName": "Brasil",
+        "currency": "BRL",
+        "travelDestinations": [
+          {
+            "city": "São Paulo",
+            "state": "São Paulo",
+            "description": "Maior cidade do Brasil, centro financeiro e cultural.",
+            "touristAttractions": [
+              {
+                "name": "Avenida Paulista",
+                "latitude": -23.5640,
+                "longitude": -46.6550
+              },
+              {
+                "name": "Parque Ibirapuera",
+                "latitude": -23.5875,
+                "longitude": -46.6572
+              }
+            ],
+            "average": 1100
+          },
+          {
+            "city": "Campos do Jordão",
+            "state": "São Paulo",
+            "description": "Conhecida como a 'Suíça Brasileira', famosa pelo clima frio e arquitetura europeia.",
+            "touristAttractions": [
+              {
+                "name": "Morro do Elefante",
+                "latitude": -22.7408,
+                "longitude": -45.0008
+              },
+              {
+                "name": "Parque Amantikir",
+                "latitude": -22.7464,
+                "longitude": -45.0258
+              }
+            ],
+            "average": 1300
+          }
+        ]
+      },
+      {
+        "holidayName": "Dia da Independência",
+        "countryCode": "BR",
+        "countryName": "Brasil",
+        "currency": "BRL",
+        "travelDestinations": [
+          {
+            "city": "Brasília",
+            "state": "Distrito Federal",
+            "description": "Capital do Brasil, com arquitetura modernista.",
+            "touristAttractions": [
+              {
+                "name": "Catedral de Brasília",
+                "latitude": -15.7997,
+                "longitude": -47.8608
+              },
+              {
+                "name": "Congresso Nacional",
+                "latitude": -15.7983,
+                "longitude": -47.8703
+              }
+            ],
+            "average": 1200
+          },
+          {
+            "city": "Ouro Preto",
+            "state": "Minas Gerais",
+            "description": "Cidade histórica com arquitetura barroca preservada.",
+            "touristAttractions": [
+              {
+                "name": "Igreja de São Francisco de Assis",
+                "latitude": -20.3764,
+                "longitude": -43.5031
+              },
+              {
+                "name": "Praça Tiradentes",
+                "latitude": -20.3761,
+                "longitude": -43.5028
+              }
+            ],
+            "average": 1000
+          }
+        ]
+      },
+      {
+        "holidayName": "Nossa Senhora Aparecida",
+        "countryCode": "BR",
+        "countryName": "Brasil",
+        "currency": "BRL",
+        "travelDestinations": [
+          {
+            "city": "Aparecida",
+            "state": "São Paulo",
+            "description": "Principal centro de peregrinação católica no Brasil.",
+            "touristAttractions": [
+              {
+                "name": "Santuário Nacional de Aparecida",
+                "latitude": -22.8422,
+                "longitude": -45.2328
+              },
+              {
+                "name": "Morro do Cruzeiro",
+                "latitude": -22.8403,
+                "longitude": -45.2389
+              }
+            ],
+            "average": 900
+          },
+          {
+            "city": "Guaratinguetá",
+            "state": "São Paulo",
+            "description": "Cidade natal de Frei Galvão, primeiro santo brasileiro.",
+            "touristAttractions": [
+              {
+                "name": "Casa de Frei Galvão",
+                "latitude": -22.8122,
+                "longitude": -45.1964
+              },
+              {
+                "name": "Santuário de Frei Galvão",
+                "latitude": -22.8136,
+                "longitude": -45.1942
+              }
+            ],
+            "average": 850
+          }
+        ]
+      },
+      {
+        "holidayName": "Dia de Finados",
+        "countryCode": "BR",
+        "countryName": "Brasil",
+        "currency": "BRL",
+        "travelDestinations": [
+          {
+            "city": "Belo Horizonte",
+            "state": "Minas Gerais",
+            "description": "Capital de Minas Gerais, com arquitetura moderna e rica gastronomia.",
+            "touristAttractions": [
+              {
+                "name": "Pampulha",
+                "latitude": -19.8569,
+                "longitude": -43.9542
+              },
+              {
+                "name": "Mercado Central",
+                "latitude": -19.9225,
+                "longitude": -43.9392
+              }
+            ],
+            "average": 1050
+          },
+          {
+            "city": "Curitiba",
+            "state": "Paraná",
+            "description": "Conhecida por seus parques e planejamento urbano.",
+            "touristAttractions": [
+              {
+                "name": "Jardim Botânico de Curitiba",
+                "latitude": -25.4525,
+                "longitude": -49.2453
+              },
+              {
+                "name": "Parque Tanguá",
+                "latitude": -25.4078,
+                "longitude": -49.2875
+              }
+            ],
+            "average": 1150
+          }
+        ]
+      },
+      {
+        "holidayName": "Proclamação da República",
+        "countryCode": "BR",
+        "countryName": "Brasil",
+        "currency": "BRL",
+        "travelDestinations": [
+          {
+            "city": "Rio de Janeiro",
+            "state": "Rio de Janeiro",
+            "description": "Cidade famosa por suas praias, Cristo Redentor e Carnaval.",
+            "touristAttractions": [
+              {
+                "name": "Cristo Redentor",
+                "latitude": -22.9519,
+                "longitude": -43.2105
+              },
+              {
+                "name": "Pão de Açúcar",
+                "latitude": -22.9573,
+                "longitude": -43.1657
+              }
+            ],
+            "average": 1200
+          },
+          {
+            "city": "Salvador",
+            "state": "Bahia",
+            "description": "Famosa por seu carnaval vibrante e rica cultura afro-brasileira.",
+            "touristAttractions": [
+              {
+                "name": "Pelourinho",
+                "latitude": -12.9706,
+                "longitude": -38.5094
+              },
+              {
+                "name": "Farol da Barra",
+                "latitude": -13.0139,
+                "longitude": -38.5306
+              }
+            ],
+            "average": 1800
+          }
+        ]
+      },
+      {
+        "holidayName": "Dia da Consciência Negra",
+        "countryCode": "BR",
+        "countryName": "Brasil",
+        "currency": "BRL",
+        "travelDestinations": [
+          {
+            "city": "Salvador",
+            "state": "Bahia",
+            "description": "Famosa por seu carnaval vibrante e rica cultura afro-brasileira.",
+            "touristAttractions": [
+              {
+                "name": "Pelourinho",
+                "latitude": -12.9706,
+                "longitude": -38.5094
+              },
+              {
+                "name": "Farol da Barra",
+                "latitude": -13.0139,
+                "longitude": -38.5306
+              }
+            ],
+            "average": 1800
+          },
+          {
+            "city": "Rio de Janeiro",
+            "state": "Rio de Janeiro",
+            "description": "Cidade famosa por suas praias, Cristo Redentor e Carnaval.",
+            "touristAttractions": [
+              {
+                "name": "Cristo Redentor",
+                "latitude": -22.9519,
+                "longitude": -43.2105
+              },
+              {
+                "name": "Pão de Açúcar",
+                "latitude": -22.9573,
+                "longitude": -43.1657
+              }
+            ],
+            "average": 1200
+          }
+        ]
+      },
+      {
+        "holidayName": "Natal",
+        "countryCode": "BR",
+        "countryName": "Brasil",
+        "currency": "BRL",
+        "travelDestinations": [
+          {
+            "city": "Gramado",
+            "state": "Rio Grande do Sul",
+            "description": "Cidade turística conhecida por sua arquitetura europeia e festivais.",
+            "touristAttractions": [
+              {
+                "name": "Lago Negro",
+                "latitude": -29.3717,
+                "longitude": -50.8739
+              },
+              {
+                "name": "Rua Coberta",
+                "latitude": -29.3736,
+                "longitude": -50.8722
+              }
+            ],
+            "average": 1500
+          },
+          {
+            "city": "Campos do Jordão",
+            "state": "São Paulo",
+            "description": "Conhecida como a 'Suíça Brasileira', famosa pelo clima frio e arquitetura europeia.",
+            "touristAttractions": [
+              {
+                "name": "Morro do Elefante",
+                "latitude": -22.7408,
+                "longitude": -45.0008
+              },
+              {
+                "name": "Parque Amantikir",
+                "latitude": -22.7464,
+                "longitude": -45.0258
+              }
+            ],
+            "average": 1300
+          }
+        ]
+      }
+    ]

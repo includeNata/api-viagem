@@ -84,7 +84,7 @@ public class APIService {
     public String getData(HolidayRequestDTO request){
         String result = "";
         String aux = partPrompt.replace("#x1",request.origin());
-        if(Files.notExists(Path.of(path + "\\f"+request.year()+".json"))){
+        if(Files.notExists(Path.of(path + "\\f"+ request.acronym()+request.year()+".json"))){
             Client client = new Client();
             GenerateContentResponse response =
                     client.models.generateContent("gemini-2.0-flash",
