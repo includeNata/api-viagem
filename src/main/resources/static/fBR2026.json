@@ -1,0 +1,391 @@
+
+[
+  {
+    "holidayName": "Confraternização Universal",
+    "countryCode": "BR",
+    "countryName": "Brasil",
+    "holidayDate": "2026-01-01",
+    "currency": "BRL",
+    "travelDestinations": [
+      {
+        "city": "Rio de Janeiro",
+        "state": "Rio de Janeiro",
+        "description": "Conhecida por suas praias, paisagens icônicas e festas de Réveillon.",
+        "touristAttractions": [
+          {
+            "name": "Cristo Redentor",
+            "description": "Estátua icônica no topo do Corcovado, com vista panorâmica da cidade.",
+            "latitude": -22.9519,
+            "longitude": -43.2105
+          },
+          {
+            "name": "Pão de Açúcar",
+            "description": "Morro com bondinho que oferece vistas espetaculares da Baía de Guanabara.",
+            "latitude": -22.9573,
+            "longitude": -43.1662
+          },
+          {
+            "name": "Praia de Copacabana",
+            "description": "Famosa praia com calçadão movimentado, quiosques e atividades esportivas.",
+            "latitude": -22.9688,
+            "longitude": -43.1796
+          },
+          {
+            "name": "Jardim Botânico",
+            "description": "Espaço verde com diversas espécies de plantas, orquidário e museu.",
+            "latitude": -22.9734,
+            "longitude": -43.2286
+          },
+          {
+            "name": "Parque Nacional da Tijuca",
+            "description": "Área de Mata Atlântica com trilhas, cachoeiras e mirantes.",
+            "latitude": -22.9567,
+            "longitude": -43.2833
+          },
+          {
+            "name": "Museu do Amanhã",
+            "description": "Museu de ciências com foco na sustentabilidade e no futuro do planeta.",
+            "latitude": -22.8959,
+            "longitude": -43.1819
+          }
+        ],
+        "average": 1200
+      },
+      {
+        "city": "Salvador",
+        "state": "Bahia",
+        "description": "Cidade com forte influência africana, rica em cultura, história e culinária.",
+        "touristAttractions": [
+          {
+            "name": "Pelourinho",
+            "description": "Centro histórico com arquitetura colonial, igrejas e museus.",
+            "latitude": -12.9705,
+            "longitude": -38.5095
+          },
+          {
+            "name": "Farol da Barra",
+            "description": "Farol histórico que marca a entrada da Baía de Todos os Santos.",
+            "latitude": -13.0077,
+            "longitude": -38.5328
+          },
+          {
+            "name": "Mercado Modelo",
+            "description": "Mercado de artesanato com produtos típicos da Bahia.",
+            "latitude": -12.9713,
+            "longitude": -38.5137
+          },
+          {
+            "name": "Elevador Lacerda",
+            "description": "Elevador que liga a Cidade Alta ao Comércio.",
+            "latitude": -12.9723,
+            "longitude": -38.5077
+          },
+          {
+            "name": "Igreja e Convento de São Francisco",
+            "description": "Igreja barroca com interior ricamente decorado.",
+            "latitude": -12.9703,
+            "longitude": -38.5086
+          },
+          {
+            "name": "Praia do Porto da Barra",
+            "description": "Praia urbana com águas calmas e visual do pôr do sol.",
+            "latitude": -13.0035,
+            "longitude": -38.5284
+          }
+        ],
+        "average": 1000
+      }
+    ]
+  },
+  {
+    "holidayName": "Carnaval",
+    "countryCode": "BR",
+    "countryName": "Brasil",
+    "holidayDate": "2026-02-16",
+    "currency": "BRL",
+    "travelDestinations": [
+      {
+        "city": "Rio de Janeiro",
+        "state": "Rio de Janeiro",
+        "description": "Famosa pelo seu Carnaval com desfiles de escolas de samba e festas de rua.",
+        "touristAttractions": [
+          {
+            "name": "Sambódromo da Marquês de Sapucaí",
+            "description": "Local dos desfiles das escolas de samba durante o Carnaval.",
+            "latitude": -22.9111,
+            "longitude": -43.2036
+          },
+          {
+            "name": "Cidade do Samba",
+            "description": "Complexo onde as escolas de samba preparam seus carros alegóricos e fantasias.",
+            "latitude": -22.8711,
+            "longitude": -43.1956
+          },
+          {
+            "name": "Praia de Copacabana",
+            "description": "Famosa praia que recebe diversos blocos de rua durante o Carnaval.",
+            "latitude": -22.9688,
+            "longitude": -43.1796
+          },
+          {
+            "name": "Arcos da Lapa",
+            "description": "Ponto de encontro de blocos de rua e festas durante o Carnaval.",
+            "latitude": -22.9140,
+            "longitude": -43.1792
+          },
+          {
+            "name": "Baile do Cordão do Bola Preta",
+            "description": "Um dos mais tradicionais e populares blocos de rua do Rio.",
+            "latitude": -22.9017,
+            "longitude": -43.1735
+          },
+          {
+            "name": "Museu do Carnaval",
+            "description": "Museu dedicado à história e cultura do Carnaval carioca.",
+            "latitude": -22.9014,
+            "longitude": -43.1828
+          }
+        ],
+        "average": 1500
+      },
+      {
+        "city": "Salvador",
+        "state": "Bahia",
+        "description": "Carnaval com forte influência da cultura afro-brasileira, com trios elétricos e blocos afros.",
+        "touristAttractions": [
+          {
+            "name": "Circuito Barra-Ondina",
+            "description": "Principal circuito do Carnaval de Salvador, com trios elétricos e camarotes.",
+            "latitude": -13.0068,
+            "longitude": -38.5259
+          },
+          {
+            "name": "Circuito Campo Grande (Dodô)",
+            "description": "Circuito histórico do Carnaval, com desfiles de afoxés e blocos tradicionais.",
+            "latitude": -12.9777,
+            "longitude": -38.5127
+          },
+          {
+            "name": "Pelourinho",
+            "description": "Local de desfiles de blocos afros e apresentações culturais durante o Carnaval.",
+            "latitude": -12.9705,
+            "longitude": -38.5095
+          },
+          {
+            "name": "Camarote Salvador",
+            "description": "Um dos camarotes mais famosos do Carnaval de Salvador.",
+            "latitude": -13.0047,
+            "longitude": -38.5236
+          },
+          {
+            "name": "Bloco Ilê Aiyê",
+            "description": "O mais antigo bloco afro do Brasil.",
+            "latitude": -12.9111,
+            "longitude": -38.4649
+          },
+          {
+            "name": "Museu do Carnaval de Salvador",
+            "description": "Museu dedicado à história e cultura do Carnaval baiano.",
+            "latitude": -12.9732,
+            "longitude": -38.5124
+          }
+        ],
+        "average": 1300
+      }
+    ]
+  },
+  {
+    "holidayName": "Sexta-feira Santa",
+    "countryCode": "BR",
+    "countryName": "Brasil",
+    "holidayDate": "2026-04-03",
+    "currency": "BRL",
+    "travelDestinations": [
+      {
+        "city": "Ouro Preto",
+        "state": "Minas Gerais",
+        "description": "Cidade histórica com arquitetura barroca e celebrações religiosas tradicionais.",
+        "touristAttractions": [
+          {
+            "name": "Igreja de São Francisco de Assis",
+            "description": "Obra-prima do barroco mineiro, com esculturas de Aleijadinho.",
+            "latitude": -20.3765,
+            "longitude": -43.5056
+          },
+          {
+            "name": "Igreja Matriz de Nossa Senhora do Pilar",
+            "description": "Uma das igrejas mais ricas em ouro do Brasil.",
+            "latitude": -20.3758,
+            "longitude": -43.5028
+          },
+          {
+            "name": "Museu da Inconfidência",
+            "description": "Museu que conta a história da Inconfidência Mineira.",
+            "latitude": -20.3768,
+            "longitude": -43.5036
+          },
+          {
+            "name": "Mina do Chico Rei",
+            "description": "Mina de ouro histórica com passeios guiados.",
+            "latitude": -20.3785,
+            "longitude": -43.4988
+          },
+          {
+            "name": "Casa dos Contos",
+            "description": "Museu que conta a história da mineração e da economia da região.",
+            "latitude": -20.3763,
+            "longitude": -43.5047
+          },
+          {
+            "name": "Feira de Artesanato de Ouro Preto",
+            "description": "Feira com produtos de artesanato local.",
+            "latitude": -20.3752,
+            "longitude": -43.5044
+          }
+        ],
+        "average": 800
+      },
+      {
+        "city": "Aparecida",
+        "state": "São Paulo",
+        "description": "Principal centro de peregrinação católica do Brasil.",
+        "touristAttractions": [
+          {
+            "name": "Santuário Nacional de Aparecida",
+            "description": "Maior santuário mariano do mundo.",
+            "latitude": -22.8353,
+            "longitude": -45.2327
+          },
+          {
+            "name": "Morro do Cruzeiro",
+            "description": "Local com vista panorâmica da cidade e do Santuário.",
+            "latitude": -22.8305,
+            "longitude": -45.2425
+          },
+          {
+            "name": "Teleférico de Aparecida",
+            "description": "Teleférico que liga o Santuário ao Morro do Cruzeiro.",
+            "latitude": -22.8348,
+            "longitude": -45.2319
+          },
+          {
+            "name": "Porto Itaguaçu",
+            "description": "Local onde a imagem de Nossa Senhora Aparecida foi encontrada.",
+            "latitude": -22.8144,
+            "longitude": -45.2225
+          },
+          {
+            "name": "Museu de Cera de Aparecida",
+            "description": "Museu com réplicas de cera de personalidades religiosas e históricas.",
+            "latitude": -22.8326,
+            "longitude": -45.2338
+          },
+          {
+            "name": "Feira de Aparecida",
+            "description": "Feira com produtos religiosos, artesanato e lembrancinhas.",
+            "latitude": -22.8356,
+            "longitude": -45.2336
+          }
+        ],
+        "average": 700
+      }
+    ]
+  },
+  {
+    "holidayName": "Natal",
+    "countryCode": "BR",
+    "countryName": "Brasil",
+    "holidayDate": "2026-12-25",
+    "currency": "BRL",
+    "travelDestinations": [
+      {
+        "city": "Gramado",
+        "state": "Rio Grande do Sul",
+        "description": "Cidade conhecida por sua decoração natalina e eventos temáticos.",
+        "touristAttractions": [
+          {
+            "name": "Natal Luz",
+            "description": "Principal evento natalino da cidade, com espetáculos, desfiles e decoração especial.",
+            "latitude": -29.3700,
+            "longitude": -50.8700
+          },
+          {
+            "name": "Rua Coberta",
+            "description": "Rua charmosa com lojas, restaurantes e decoração natalina.",
+            "latitude": -29.3733,
+            "longitude": -50.8722
+          },
+          {
+            "name": "Aldeia do Papai Noel",
+            "description": "Parque temático com a casa do Papai Noel, neve artificial e atrações natalinas.",
+            "latitude": -29.3768,
+            "longitude": -50.8682
+          },
+          {
+            "name": "Lago Negro",
+            "description": "Lago com pedalinhos e paisagens exuberantes.",
+            "latitude": -29.3656,
+            "longitude": -50.8794
+          },
+          {
+            "name": "Mini Mundo",
+            "description": "Parque com réplicas de construções famosas em miniatura.",
+            "latitude": -29.3706,
+            "longitude": -50.8611
+          },
+          {
+            "name": "Snowland",
+            "description": "Parque de neve indoor com pistas de esqui e snowboard.",
+            "latitude": -29.3725,
+            "longitude": -50.8486
+          }
+        ],
+        "average": 1800
+      },
+      {
+        "city": "Campos do Jordão",
+        "state": "São Paulo",
+        "description": "Cidade com clima de montanha e decoração natalina charmosa.",
+        "touristAttractions": [
+          {
+            "name": "Vila Capivari",
+            "description": "Centro turístico da cidade com lojas, restaurantes e decoração natalina.",
+            "latitude": -22.7447,
+            "longitude": -45.5961
+          },
+          {
+            "name": "Parque Capivari",
+            "description": "Parque com teleférico, trenó de montanha e roda gigante.",
+            "latitude": -22.7445,
+            "longitude": -45.5972
+          },
+          {
+            "name": "Morro do Elefante",
+            "description": "Mirante com vista panorâmica da cidade.",
+            "latitude": -22.7442,
+            "longitude": -45.5983
+          },
+          {
+            "name": "Horto Florestal",
+            "description": "Parque com trilhas, cachoeiras e paisagens naturais.",
+            "latitude": -22.7850,
+            "longitude": -45.5450
+          },
+          {
+            "name": "Palácio Boa Vista",
+            "description": "Residência de inverno do Governador de São Paulo, com exposições de arte e mobiliário.",
+            "latitude": -22.7361,
+            "longitude": -45.6058
+          },
+          {
+            "name": "Cervejaria Baden Baden",
+            "description": "Cervejaria artesanal com degustação de cervejas e restaurante.",
+            "latitude": -22.7444,
+            "longitude": -45.5997
+          }
+        ],
+        "average": 1600
+      }
+    ]
+  }
+]

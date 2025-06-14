@@ -30,7 +30,20 @@ public class HolidayService {
     private APIService apiService;
 
     private final Path path = Paths.get(System.getProperty("user.dir"),"src","main","resources","static");
-    private static  final String PROMPT = "So gere o json, sem texto rapido.A cada feriado cite 2 lugares para viagens, a caracteristica do pais/cidade nome da moeda e pontos turisticos, longitude e latitude dos pontos turisticos me de esses dados em json , os feriados são: ";
+    private static  final String PROMPT = """
+            Para cada feriado listado, gere um objeto JSON com as seguintes informações:\s
+            1. Nome do feriado.
+            2. País e cidade recomendados para viagem nesse feriado.
+            3. Característica principal do país/cidade (ex: cultural, histórica, natural, etc.).
+            4. Nome da moeda oficial do país.
+            5. Uma lista com 6 lugares turísticos da cidade, onde cada lugar contenha:
+               - Nome do ponto turístico.
+               - Descrição breve do local.
+               - Latitude.
+               - Longitude.
+            
+            O resultado deve ser retornado diretamente em JSON, sem texto explicativo ou qualquer outro conteúdo fora do JSON.
+            """;
     private String address = "https://date.nager.at/api/v3/PublicHolidays/#year/#acronym";
     private static final String JSON = """
                   {

@@ -79,7 +79,6 @@ public class CityService {
                     countP = 0;
                 }
             }
-            System.out.println("test");
            return  translateText(gson.toJson(newCity));
 
 
