@@ -1,9 +1,10 @@
 package com.api.apiviagem.controller;
 
-import br.com.brasilapi.api.Feriados;
+import com.api.apiviagem.DTO.CityResponseDTO;
 import com.api.apiviagem.DTO.HolidayRequestDTO;
-import com.api.apiviagem.service.APIService;
-import com.google.gson.JsonElement;
+import com.api.apiviagem.model.City;
+import com.api.apiviagem.service.CityService;
+import com.api.apiviagem.service.HolidayService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +18,9 @@ public class HolidayController {
 
 
     private static final Logger log = LoggerFactory.getLogger(HolidayController.class);
+
     @Autowired
-    private APIService apiService;
+    private HolidayService apiService;
 
 
     @PostMapping
