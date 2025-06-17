@@ -2,10 +2,7 @@ package com.api.apiviagem.service;
 
 
 import com.api.apiviagem.DTO.HolidayRequestDTO;
-import com.google.genai.Client;
 import com.google.genai.types.GenerateContentResponse;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,68 +28,78 @@ public class HolidayService {
 
     private final Path path = Paths.get(System.getProperty("user.dir"),"src","main","resources","static");
     private static  final String PROMPT = """
-            "Para cada feriado listado, gere um objeto JSON com os seguintes dados:
-            1. Nome do feriado.
-            2. País e cidade recomendados para viagem nesse feriado.
-            3. Característica principal do país/cidade (ex: cultural, histórica, natural, gastronômica, etc.).
-            4. Nome da moeda oficial do país.
-            5. Uma lista com exatamente 6 pontos turísticos da cidade, onde cada item deve conter:
-               - Nome do ponto turístico.
-               - Descrição breve do local.
-               - Latitude.
-               - Longitude.
+                Para cada objeto do JSON fornecido, complete os campos vazios com os seguintes dados:
             
-            O JSON deve conter um array com um objeto para **cada feriado enviado**. O conteúdo deve ser retornado exclusivamente em JSON, sem nenhum texto adicional fora da estrutura JSON."
+                1. "holidayName": nome do feriado.
+                2. "countryCode": código do país (ISO-3166).
+                3. "countryName": nome do país sugerido para viagem no feriado.
+                4. "holidayDate": data do feriado.
+                5. "currency": nome da moeda oficial do país.
+                6. "travelDestinations": lista de cidades recomendadas **dentro do país indicado**. Cada cidade deve conter:
+                   - "city": nome de uma cidade turística famosa no país.
+                   - "state": estado ou província da cidade (se aplicável).
+                   - "description": descrição breve da cidade e seu apelo turístico (ex: cultural, natural, histórica, etc.).
+                   - "touristAttractions": exatamente 5 pontos turísticos da cidade. Cada ponto deve conter:
+                     - "name": nome do ponto turístico.
+                     - "latitude": coordenada de latitude.
+                     - "longitude": coordenada de longitude.
+                   - "average": média de custo diário estimado para turistas em dólares (USD).
+            
+                Regras:
+                - Todas as cidades devem pertencer ao país indicado no campo "countryName".
+                - Escolha apenas cidades reconhecidas internacionalmente como destinos turísticos.
+                - Todos os pontos turísticos devem ser reais, com nome e coordenadas verdadeiras.
+                - Retorne exclusivamente o JSON preenchido, sem nenhum texto adicional fora da estrutura.
             
             """;
     private String address = "https://date.nager.at/api/v3/PublicHolidays/#year/#acronym";
     private static final String JSON = """
                   {
-                    "holidayName":
-                    "countryCode":
-                    "countryName":
-                    "holidayDate:
-                    "currency":
+                    "holidayName": "",
+                    "countryCode": "",
+                    "countryName": "",
+                    "holidayDate": "",
+                    "currency": "",
                     "travelDestinations": [
                       {
-                        "city":
-                        "state":
-                        "description":
+                        "city": "",
+                        "state": "",
+                        "description": "",
                         "touristAttractions": [
                           {
-                            "name":
-                            "latitude":
-                            "longitude":
+                            "name": "",
+                            "latitude": "",
+                            "longitude": ""
                           },
                           {
-                            "name":
-                            "latitude":
-                            "longitude":
+                            "name": "",
+                            "latitude": "",
+                            "longitude": ""
                           }
                         ],
-                        "average":
+                        "average": ""
                       },
                       {
-                        "city":
-                        "state":
-                        "description":
+                        "city": "",
+                        "state": "",
+                        "description": "",
                         "touristAttractions": [
                           {
-                            "name":
-                            "latitude":
-                            "longitude":
+                            "name": "",
+                            "latitude": "",
+                            "longitude": ""
                           },
                           {
-                            "name":
-                            "latitude":
-                            "longitude":
+                            "name": "",
+                            "latitude": "",
+                            "longitude": ""
                           }
                         ],
-                        "average":
+                        "average": ""
                       }
                     ]
-                  },
-            
+                  }
+         
             """;
     private String partPrompt = "Crie um campo no json chamado  preco de viagens , dentro dele voce coloca a media de preços de #x1 ate o ponto turisco que voce indicou";
 
@@ -101,7 +108,7 @@ public class HolidayService {
         String result = "";
         String aux = partPrompt.replace("#x1",request.origin());
         if(Files.notExists(Path.of(path + "\\f"+ request.acronym()+request.year()+".json"))){
-            GenerateContentResponse response = apiService.geminiAPI(PROMPT+getHolidays(request)+aux +" esse e o exemplo de json"+JSON + "não mude  os nomes dos campos.");
+            GenerateContentResponse response = apiService.geminiAPI(PROMPT+getHolidays(request)+aux +" esse e o exemplo de json"+JSON + "não mude  os nomes dos campos. Continue até finalizar o json.");
            result = apiService.extractResponse(response).replace("```","").replace("json","");
         }
 

@@ -1,9 +1,13 @@
 package com.api.apiviagem.service;
 
+import com.api.apiviagem.DTO.CityRequestDTO;
 import com.api.apiviagem.DTO.CityResponseDTO;
 import com.api.apiviagem.model.City;
+import com.api.apiviagem.model.Image;
 import com.google.genai.types.GenerateContentResponse;
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -36,18 +40,23 @@ public class CityService {
             Map.entry("Museums", "Museums"),
             Map.entry("Festivals", "Festivals"),
             Map.entry("Tourism and recreation", "Tourism_and_recreation"),
-            Map.entry("Arts and theater", "Arts_and_theater")
+            Map.entry("Arts and theater", "Arts_and_theater"),
+            Map.entry("Theater","Theater"),
+            Map.entry("Events","Events"),
+            Map.entry("Transport","Transport"),
+            Map.entry("Sport","Sport"),
+            Map.entry("Feasts and festivals","Feasts_and_festivals")
     );
 
 
 
-    public CityResponseDTO getInformation(String city){
+    public CityResponseDTO getInformation(CityRequestDTO dto){
 
         try {
 
 
             String address = "https://en.wikipedia.org/wiki/#1";
-            address = address.replace("#1",city);
+            address = address.replace("#1",dto.city());
 
             Document document = Jsoup.connect(address).get();
             int countP = 0;
@@ -59,7 +68,6 @@ public class CityService {
             City newCity = new City();
 
             for(int i=0; i<elements.size(); i++){
-
                 if(map.containsKey(elements.get(i).text()) && elements.get(i).id().equals(map.get(elements.get(i).text())) ){
                     for(int j=i+1;flag && j< elements.size(); j++){
 
@@ -72,13 +80,13 @@ public class CityService {
                             flag = false;
                         }
                     }
-
                     updateObject(newCity,p.toString(),elements.get(i).text());
                     p.delete(0,p.length());
                     flag = true;
                     countP = 0;
                 }
             }
+            newCity.setImages(getImage(dto));
            return  translateText(gson.toJson(newCity));
 
 
@@ -95,12 +103,14 @@ public class CityService {
                   "economy": "o texto aqui",
                   "transportation":"o texto aqui",
                   "sports": "o texto aqui",
-                  "parksAndRecreation": "o texto aqui"
+                  "parksAndRecreation": "o texto aqui",
+                  "images":[]
                  }
                  """;
-         String propmt = "Traduza o texto para português é otimize, deixe o texto bem curto mas com todas onformações, sua redação (melhore clareza, fluidez e concisão). Em seguida, retorne o resultado no formato JSON, seguindo esta estrutura:"+format+" texto = "+json +" cheque se o json criado e valido.";
+         String propmt = "Traduza o texto para português é otimize, deixe o texto bem curto mas com todas onformações, sua redação (melhore clareza, fluidez e concisão). Em seguida, retorne o resultado no formato JSON, seguindo esta estrutura:"+format+" texto = "+json +" cheque se o json criado e valido. Não meche no Images";
          GenerateContentResponse result = apiService.geminiAPI(propmt);
          String resultS = apiService.extractResponse(result).replace("```","").replace("json","");
+
          return  gson.fromJson(resultS, CityResponseDTO.class);
 
     }
@@ -115,16 +125,21 @@ public class CityService {
                     Map.entry("Museums", "Parks and recreation"),
                     Map.entry("Festivals", "Parks and recreation"),
                     Map.entry("Arts and theater", "Parks and recreation"),
-                    Map.entry("Tourism and recreation", "Parks and recreation")
+                    Map.entry("Tourism and recreation", "Parks and recreation"),
+                    Map.entry("Theater","Parks and recreation"),
+                    Map.entry("Events","Parks and recreation"),
+                    Map.entry("Transport","Transportation"),
+                    Map.entry("Sport","Sports"),
+                    Map.entry("Feasts and festivals","Parks and recreation")
             );
 
             String id;
             Method method;
-
             if(htmlIds.containsKey(element)){
                 id = htmlIds.get(element);
 
                 if(id.equals("Parks and recreation")){
+
                     method = cityClass.getMethod("setParksAndRecreation", String.class);
                 }
                 else{
@@ -135,12 +150,47 @@ public class CityService {
 
 
             if(!htmlIds.containsKey(element) && map.containsKey(element)){
-                method = cityClass.getMethod("set" + map.get(element), String.class);
+
+                if(element.equals("Parks and recreation")){
+                    method = cityClass.getMethod("setParksAndRecreation", String.class);
+                }
+                else
+                    method = cityClass.getMethod("set" + map.get(element), String.class);
+
                 method.invoke(city,text);
             }
 
 
         } catch (ClassNotFoundException | NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {throw new RuntimeException(e);}
+
+    }
+
+    public List<Image> getImage(CityRequestDTO dto){
+        String address = "https://commons.m.wikimedia.org/wiki/#1";
+        address = address.replace("#1",dto.city());
+        List<Image> images = new ArrayList<>();
+        try {
+            Document document = Jsoup.connect(address).get();
+
+
+            List<Element> lis = document.getElementsByClass("gallerybox");
+
+            for (Element e : lis) {
+
+                Element aux =  e.getElementsByClass("gallerytext").getFirst();
+                for (String touristic : dto.touristSpots()){
+                    if(aux.text().contains(touristic)){
+                        images.add(new Image(touristic,e.getElementsByTag("img").attr("src")));
+                    }
+                }
+
+            }
+
+
+            return images;
+
+        } catch (IOException e) {throw new RuntimeException(e);}
+
 
     }
 
