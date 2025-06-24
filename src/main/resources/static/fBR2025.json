@@ -2,632 +2,152 @@
 [
   {
     "holidayName": "Confraternização Universal",
-    "countryCode": "BR",
     "countryName": "Brasil",
     "holidayDate": "2025-01-01",
-    "currency": "Real Brasileiro (BRL)",
-    "travelDestinations": [
-      {
-        "city": "Rio de Janeiro",
-        "state": "Rio de Janeiro",
-        "description": "Famosa por suas praias, paisagens icônicas e atmosfera vibrante, o Rio oferece uma mistura de beleza natural e cultura rica.",
-        "touristAttractions": [
-          {
-            "name": "Cristo Redentor",
-            "latitude": "-22.9519",
-            "longitude": "-43.2105"
-          },
-          {
-            "name": "Pão de Açúcar",
-            "latitude": "-22.9575",
-            "longitude": "-43.1667"
-          },
-          {
-            "name": "Praia de Copacabana",
-            "latitude": "-22.9686",
-            "longitude": "-43.1743"
-          },
-          {
-            "name": "Maracanã",
-            "latitude": "-22.9097",
-            "longitude": "-43.2344"
-          },
-          {
-            "name": "Arcos da Lapa",
-            "latitude": "-22.9133",
-            "longitude": "-43.1794"
-          }
-        ],
-        "average": "120"
-      }
-    ]
+    "description": "Rio de Janeiro é vibrante no Ano Novo, com festas na praia de Copacabana, shows de fogos e celebrações por toda a cidade.",
+    "city": "Rio de Janeiro",
+    "currency": "Real Brasileiro",
+    "latitude": "-22.9068",
+    "longitude": "-43.1729"
   },
   {
     "holidayName": "Carnaval",
-    "countryCode": "BR",
     "countryName": "Brasil",
     "holidayDate": "2025-03-03",
-    "currency": "Real Brasileiro (BRL)",
-    "travelDestinations": [
-      {
-        "city": "Salvador",
-        "state": "Bahia",
-        "description": "Conhecida por seu Carnaval animado, arquitetura colonial e forte influência da cultura africana, Salvador oferece uma experiência cultural rica e vibrante.",
-        "touristAttractions": [
-          {
-            "name": "Pelourinho",
-            "latitude": "-12.9763",
-            "longitude": "-38.5094"
-          },
-          {
-            "name": "Farol da Barra",
-            "latitude": "-13.0078",
-            "longitude": "-38.5242"
-          },
-          {
-            "name": "Elevador Lacerda",
-            "latitude": "-12.9744",
-            "longitude": "-38.5072"
-          },
-          {
-            "name": "Mercado Modelo",
-            "latitude": "-12.9742",
-            "longitude": "-38.5053"
-          },
-          {
-            "name": "Igreja e Convento de São Francisco",
-            "latitude": "-12.9758",
-            "longitude": "-38.5097"
-          }
-        ],
-        "average": "100"
-      }
-    ]
+    "description": "Salvador ferve no Carnaval com trios elétricos, blocos de rua e muita música baiana, proporcionando uma experiência cultural autêntica e inesquecível.",
+    "city": "Salvador",
+    "currency": "Real Brasileiro",
+    "latitude": "-12.9722",
+    "longitude": "-38.5011"
   },
   {
     "holidayName": "Carnaval",
-    "countryCode": "BR",
     "countryName": "Brasil",
     "holidayDate": "2025-03-04",
-    "currency": "Real Brasileiro (BRL)",
-    "travelDestinations": [
-      {
-        "city": "Olinda",
-        "state": "Pernambuco",
-        "description": "Famosa por seu carnaval de rua, ladeiras charmosas e rica história colonial, Olinda oferece uma experiência cultural autêntica e vibrante.",
-        "touristAttractions": [
-          {
-            "name": "Alto da Sé",
-            "latitude": "-8.0097",
-            "longitude": "-34.8492"
-          },
-          {
-            "name": "Mosteiro de São Bento",
-            "latitude": "-8.0072",
-            "longitude": "-34.8508"
-          },
-          {
-            "name": "Mercado da Ribeira",
-            "latitude": "-8.0083",
-            "longitude": "-34.8469"
-          },
-          {
-            "name": "Igreja do Carmo",
-            "latitude": "-8.0094",
-            "longitude": "-34.8522"
-          },
-          {
-            "name": "Oficina Francisco Brennand",
-            "latitude": "-8.0242",
-            "longitude": "-34.9261"
-          }
-        ],
-        "average": "90"
-      }
-    ]
+    "description": "Rio de Janeiro é o palco principal do Carnaval, com desfiles de escolas de samba no Sambódromo, blocos de rua animados e festas por toda a cidade.",
+    "city": "Rio de Janeiro",
+    "currency": "Real Brasileiro",
+    "latitude": "-22.9068",
+    "longitude": "-43.1729"
   },
   {
     "holidayName": "Sexta-feira Santa",
-    "countryCode": "BR",
     "countryName": "Brasil",
     "holidayDate": "2025-04-18",
-    "currency": "Real Brasileiro (BRL)",
-    "travelDestinations": [
-      {
-        "city": "Ouro Preto",
-        "state": "Minas Gerais",
-        "description": "Cidade histórica com arquitetura barroca preservada, Ouro Preto oferece uma imersão na história do Brasil colonial.",
-        "touristAttractions": [
-          {
-            "name": "Igreja de São Francisco de Assis",
-            "latitude": "-20.3772",
-            "longitude": "-43.5036"
-          },
-          {
-            "name": "Igreja Matriz de Nossa Senhora do Pilar",
-            "latitude": "-20.3753",
-            "longitude": "-43.5031"
-          },
-          {
-            "name": "Mina do Chico Rei",
-            "latitude": "-20.3733",
-            "longitude": "-43.4997"
-          },
-          {
-            "name": "Museu da Inconfidência",
-            "latitude": "-20.3767",
-            "longitude": "-43.5017"
-          },
-          {
-            "name": "Casa dos Contos",
-            "latitude": "-20.3778",
-            "longitude": "-43.5008"
-          }
-        ],
-        "average": "80"
-      }
-    ]
+    "description": "Ouro Preto oferece uma experiência cultural na Sexta-Feira Santa, com procissões históricas e celebrações religiosas em suas igrejas barrocas.",
+    "city": "Ouro Preto",
+    "currency": "Real Brasileiro",
+    "latitude": "-20.3761",
+    "longitude": "-43.5042"
   },
   {
     "holidayName": "Domingo de Páscoa",
-    "countryCode": "BR",
     "countryName": "Brasil",
     "holidayDate": "2025-04-20",
-    "currency": "Real Brasileiro (BRL)",
-    "travelDestinations": [
-      {
-        "city": "Gramado",
-        "state": "Rio Grande do Sul",
-        "description": "Conhecida por sua arquitetura europeia, festivais temáticos e paisagens serranas, Gramado oferece uma experiência charmosa e romântica.",
-        "touristAttractions": [
-          {
-            "name": "Rua Coberta",
-            "latitude": "-29.3661",
-            "longitude": "-50.8775"
-          },
-          {
-            "name": "Lago Negro",
-            "latitude": "-29.3619",
-            "longitude": "-50.8861"
-          },
-          {
-            "name": "Mini Mundo",
-            "latitude": "-29.3731",
-            "longitude": "-50.8781"
-          },
-          {
-            "name": "Igreja Matriz São Pedro",
-            "latitude": "-29.3667",
-            "longitude": "-50.8792"
-          },
-          {
-            "name": "Palácio dos Festivais",
-            "latitude": "-29.3658",
-            "longitude": "-50.8789"
-          }
-        ],
-        "average": "110"
-      }
-    ]
+    "description": "Gramado celebra a Páscoa com decoração temática, desfiles e atividades para famílias, tornando a cidade um destino encantador.",
+    "city": "Gramado",
+    "currency": "Real Brasileiro",
+    "latitude": "-29.3639",
+    "longitude": "-50.8703"
   },
   {
     "holidayName": "Dia de Tiradentes",
-    "countryCode": "BR",
     "countryName": "Brasil",
     "holidayDate": "2025-04-21",
-    "currency": "Real Brasileiro (BRL)",
-    "travelDestinations": [
-      {
-        "city": "Belo Horizonte",
-        "state": "Minas Gerais",
-        "description": "Capital de Minas Gerais, conhecida por sua rica gastronomia, vida noturna vibrante e museus de arte contemporânea.",
-        "touristAttractions": [
-          {
-            "name": "Museu de Arte da Pampulha (MAP)",
-            "latitude": "-19.8615",
-            "longitude": "-43.9533"
-          },
-          {
-            "name": "Conjunto Arquitetônico da Pampulha",
-            "latitude": "-19.8608",
-            "longitude": "-43.9522"
-          },
-          {
-            "name": "Mercado Central",
-            "latitude": "-19.9211",
-            "longitude": "-43.9392"
-          },
-          {
-            "name": "Parque Municipal",
-            "latitude": "-19.9256",
-            "longitude": "-43.9444"
-          },
-          {
-            "name": "Praça da Liberdade",
-            "latitude": "-19.9325",
-            "longitude": "-43.9394"
-          }
-        ],
-        "average": "95"
-      }
-    ]
+    "description": "Tiradentes, cidade histórica, celebra o Dia de Tiradentes com eventos culturais e homenagens ao herói da Inconfidência Mineira.",
+    "city": "Tiradentes",
+    "currency": "Real Brasileiro",
+    "latitude": "-20.7547",
+    "longitude": "-44.1881"
   },
   {
     "holidayName": "Dia do Trabalhador",
-    "countryCode": "BR",
     "countryName": "Brasil",
     "holidayDate": "2025-05-01",
-    "currency": "Real Brasileiro (BRL)",
-    "travelDestinations": [
-      {
-        "city": "Curitiba",
-        "state": "Paraná",
-        "description": "Conhecida por seu planejamento urbano inovador, parques e jardins bem cuidados, Curitiba oferece uma alta qualidade de vida e atrações culturais.",
-        "touristAttractions": [
-          {
-            "name": "Jardim Botânico de Curitiba",
-            "latitude": "-25.4539",
-            "longitude": "-49.2372"
-          },
-          {
-            "name": "Ópera de Arame",
-            "latitude": "-25.4081",
-            "longitude": "-49.2833"
-          },
-          {
-            "name": "Museu Oscar Niemeyer (MON)",
-            "latitude": "-25.4194",
-            "longitude": "-49.2717"
-          },
-          {
-            "name": "Parque Tanguá",
-            "latitude": "-25.3778",
-            "longitude": "-49.2908"
-          },
-          {
-            "name": "Rua XV de Novembro (Rua das Flores)",
-            "latitude": "-25.4353",
-            "longitude": "-49.2714"
-          }
-        ],
-        "average": "85"
-      }
-    ]
+    "description": "São Paulo oferece diversas opções de lazer e cultura no Dia do Trabalhador, com parques, museus e eventos para todos os gostos.",
+    "city": "São Paulo",
+    "currency": "Real Brasileiro",
+    "latitude": "-23.5505",
+    "longitude": "-46.6333"
   },
   {
     "holidayName": "Corpus Christi",
-    "countryCode": "BR",
     "countryName": "Brasil",
     "holidayDate": "2025-06-19",
-    "currency": "Real Brasileiro (BRL)",
-    "travelDestinations": [
-      {
-        "city": "Foz do Iguaçu",
-        "state": "Paraná",
-        "description": "Famosa pelas Cataratas do Iguaçu, uma das maiores e mais impressionantes quedas d'água do mundo, Foz oferece uma experiência natural inesquecível.",
-        "touristAttractions": [
-          {
-            "name": "Cataratas do Iguaçu",
-            "latitude": "-25.6911",
-            "longitude": "-54.4367"
-          },
-          {
-            "name": "Parque Nacional do Iguaçu",
-            "latitude": "-25.6333",
-            "longitude": "-54.4667"
-          },
-          {
-            "name": "Usina Hidrelétrica de Itaipu",
-            "latitude": "-25.4056",
-            "longitude": "-54.5917"
-          },
-          {
-            "name": "Marco das Três Fronteiras",
-            "latitude": "-25.6089",
-            "longitude": "-54.5756"
-          },
-          {
-            "name": "Parque das Aves",
-            "latitude": "-25.6864",
-            "longitude": "-54.4619"
-          }
-        ],
-        "average": "105"
-      }
-    ]
+    "description": "Diamantina se destaca no Corpus Christi com a tradição de decorar as ruas com tapetes coloridos feitos de serragem e outros materiais.",
+    "city": "Diamantina",
+    "currency": "Real Brasileiro",
+    "latitude": "-18.2483",
+    "longitude": "-43.6036"
   },
   {
     "holidayName": "Revolução Constitucionalista de 1932",
-    "countryCode": "BR",
     "countryName": "Brasil",
     "holidayDate": "2025-07-09",
-    "currency": "Real Brasileiro (BRL)",
-    "travelDestinations": [
-      {
-        "city": "São Paulo",
-        "state": "São Paulo",
-        "description": "A maior cidade do Brasil, centro financeiro e cultural, oferece uma vasta gama de atrações, desde museus de arte a parques urbanos e culinária diversificada.",
-        "touristAttractions": [
-          {
-            "name": "Avenida Paulista",
-            "latitude": "-23.5626",
-            "longitude": "-46.6560"
-          },
-          {
-            "name": "Museu de Arte de São Paulo Assis Chateaubriand (MASP)",
-            "latitude": "-23.5615",
-            "longitude": "-46.6559"
-          },
-          {
-            "name": "Parque Ibirapuera",
-            "latitude": "-23.5876",
-            "longitude": "-46.6575"
-          },
-          {
-            "name": "Mercado Municipal de São Paulo",
-            "latitude": "-23.5431",
-            "longitude": "-46.6275"
-          },
-          {
-            "name": "Theatro Municipal",
-            "latitude": "-23.5467",
-            "longitude": "-46.6361"
-          }
-        ],
-        "average": "115"
-      }
-    ]
+    "description": "São Paulo, epicentro da Revolução, oferece museus e monumentos históricos que relembram o movimento, além de eventos cívicos.",
+    "city": "São Paulo",
+    "currency": "Real Brasileiro",
+    "latitude": "-23.5505",
+    "longitude": "-46.6333"
   },
   {
     "holidayName": "Dia da Independência",
-    "countryCode": "BR",
     "countryName": "Brasil",
     "holidayDate": "2025-09-07",
-    "currency": "Real Brasileiro (BRL)",
-    "travelDestinations": [
-      {
-        "city": "Brasília",
-        "state": "Distrito Federal",
-        "description": "Capital do Brasil, conhecida por sua arquitetura modernista e planejamento urbano único, Brasília é um Patrimônio Mundial da UNESCO.",
-        "touristAttractions": [
-          {
-            "name": "Catedral de Brasília",
-            "latitude": "-15.7997",
-            "longitude": "-47.8603"
-          },
-          {
-            "name": "Congresso Nacional",
-            "latitude": "-15.7994",
-            "longitude": "-47.8653"
-          },
-          {
-            "name": "Praça dos Três Poderes",
-            "latitude": "-15.7983",
-            "longitude": "-47.8664"
-          },
-          {
-            "name": "Memorial JK",
-            "latitude": "-15.7808",
-            "longitude": "-47.9256"
-          },
-          {
-            "name": "Palácio da Alvorada",
-            "latitude": "-15.7758",
-            "longitude": "-47.8378"
-          }
-        ],
-        "average": "90"
-      }
-    ]
+    "description": "Brasília, capital do país, sedia o desfile cívico-militar em comemoração ao Dia da Independência, com demonstrações e celebrações.",
+    "city": "Brasília",
+    "currency": "Real Brasileiro",
+    "latitude": "-15.7797",
+    "longitude": "-47.9297"
   },
   {
     "holidayName": "Nossa Senhora Aparecida",
-    "countryCode": "BR",
     "countryName": "Brasil",
     "holidayDate": "2025-10-12",
-    "currency": "Real Brasileiro (BRL)",
-    "travelDestinations": [
-      {
-        "city": "Aparecida",
-        "state": "São Paulo",
-        "description": "Principal centro de peregrinação religiosa do Brasil, abriga o Santuário Nacional de Nossa Senhora Aparecida, um importante local de fé e devoção.",
-        "touristAttractions": [
-          {
-            "name": "Santuário Nacional de Nossa Senhora Aparecida",
-            "latitude": "-22.8361",
-            "longitude": "-45.2325"
-          },
-          {
-            "name": "Morro do Cruzeiro",
-            "latitude": "-22.8347",
-            "longitude": "-45.2275"
-          },
-          {
-            "name": "Porto Itaguaçu",
-            "latitude": "-22.8264",
-            "longitude": "-45.2378"
-          },
-          {
-            "name": "Feira Livre de Aparecida",
-            "latitude": "-22.8331",
-            "longitude": "-45.2333"
-          },
-          {
-            "name": "Museu Nossa Senhora Aparecida",
-            "latitude": "-22.8364",
-            "longitude": "-45.2306"
-          }
-        ],
-        "average": "75"
-      }
-    ]
+    "description": "Aparecida se torna um centro de peregrinação no Dia de Nossa Senhora Aparecida, com missas, procissões e celebrações religiosas.",
+    "city": "Aparecida",
+    "currency": "Real Brasileiro",
+    "latitude": "-22.8444",
+    "longitude": "-45.2344"
   },
   {
     "holidayName": "Dia de Finados",
-    "countryCode": "BR",
     "countryName": "Brasil",
     "holidayDate": "2025-11-02",
-    "currency": "Real Brasileiro (BRL)",
-    "travelDestinations": [
-      {
-        "city": "Manaus",
-        "state": "Amazonas",
-        "description": "Porta de entrada para a Amazônia, Manaus oferece acesso à rica biodiversidade da floresta tropical e a experiências culturais únicas.",
-        "touristAttractions": [
-          {
-            "name": "Teatro Amazonas",
-            "latitude": "-3.1356",
-            "longitude": "-60.0214"
-          },
-          {
-            "name": "Encontro das Águas",
-            "latitude": "-3.1017",
-            "longitude": "-59.9436"
-          },
-          {
-            "name": "Mercado Adolpho Lisboa",
-            "latitude": "-3.1344",
-            "longitude": "-60.0253"
-          },
-          {
-            "name": "Palácio Rio Negro",
-            "latitude": "-3.1364",
-            "longitude": "-60.0244"
-          },
-          {
-            "name": "Museu do Índio",
-            "latitude": "-3.1178",
-            "longitude": "-60.0036"
-          }
-        ],
-        "average": "100"
-      }
-    ]
+    "description": "Em todo o Brasil, as pessoas visitam cemitérios para homenagear seus entes queridos no Dia de Finados, levando flores e prestando suas homenagens.",
+    "city": "São Paulo",
+    "currency": "Real Brasileiro",
+    "latitude": "-23.5505",
+    "longitude": "-46.6333"
   },
   {
     "holidayName": "Proclamação da República",
-    "countryCode": "BR",
     "countryName": "Brasil",
     "holidayDate": "2025-11-15",
-    "currency": "Real Brasileiro (BRL)",
-    "travelDestinations": [
-      {
-        "city": "Porto Alegre",
-        "state": "Rio Grande do Sul",
-        "description": "Capital do Rio Grande do Sul, conhecida por sua cultura gaúcha, parques e vida noturna animada.",
-        "touristAttractions": [
-          {
-            "name": "Mercado Público",
-            "latitude": "-30.0292",
-            "longitude": "-51.2278"
-          },
-          {
-            "name": "Parque Farroupilha (Redenção)",
-            "latitude": "-30.0494",
-            "longitude": "-51.2111"
-          },
-          {
-            "name": "Usina do Gasômetro",
-            "latitude": "-30.0331",
-            "longitude": "-51.2347"
-          },
-          {
-            "name": "Catedral Metropolitana",
-            "latitude": "-30.0314",
-            "longitude": "-51.2258"
-          },
-          {
-            "name": "Theatro São Pedro",
-            "latitude": "-30.0333",
-            "longitude": "-51.2283"
-          }
-        ],
-        "average": "80"
-      }
-    ]
+    "description": "Ouro Preto oferece uma atmosfera histórica na Proclamação da República, com seus casarões coloniais e museus que relembram o período.",
+    "city": "Ouro Preto",
+    "currency": "Real Brasileiro",
+    "latitude": "-20.3761",
+    "longitude": "-43.5042"
   },
   {
     "holidayName": "Dia da Consciência Negra",
-    "countryCode": "BR",
     "countryName": "Brasil",
     "holidayDate": "2025-11-20",
-    "currency": "Real Brasileiro (BRL)",
-    "travelDestinations": [
-      {
-        "city": "São Luís",
-        "state": "Maranhão",
-        "description": "Conhecida por seu patrimônio arquitetônico colonial português e pela forte influência da cultura africana, São Luís é um Patrimônio Mundial da UNESCO.",
-        "touristAttractions": [
-          {
-            "name": "Centro Histórico de São Luís",
-            "latitude": "-2.5292",
-            "longitude": "-44.3042"
-          },
-          {
-            "name": "Palácio dos Leões",
-            "latitude": "-2.5278",
-            "longitude": "-44.3028"
-          },
-          {
-            "name": "Teatro Arthur Azevedo",
-            "latitude": "-2.5286",
-            "longitude": "-44.3022"
-          },
-          {
-            "name": "Rua Portugal",
-            "latitude": "-2.5294",
-            "longitude": "-44.3047"
-          },
-          {
-            "name": "Lagoa da Jansen",
-            "latitude": "-2.5078",
-            "longitude": "-44.2775"
-          }
-        ],
-        "average": "70"
-      }
-    ]
+    "description": "Salvador celebra o Dia da Consciência Negra com eventos culturais, apresentações musicais e debates sobre a história e a cultura afro-brasileira.",
+    "city": "Salvador",
+    "currency": "Real Brasileiro",
+    "latitude": "-12.9722",
+    "longitude": "-38.5011"
   },
   {
     "holidayName": "Natal",
-    "countryCode": "BR",
     "countryName": "Brasil",
     "holidayDate": "2025-12-25",
-    "currency": "Real Brasileiro (BRL)",
-    "travelDestinations": [
-      {
-        "city": "Natal",
-        "state": "Rio Grande do Norte",
-        "description": "Conhecida por suas belas praias, dunas e sol o ano todo, Natal é um destino popular para quem busca relaxamento e aventura.",
-        "touristAttractions": [
-          {
-            "name": "Praia de Ponta Negra",
-            "latitude": "-5.8783",
-            "longitude": "-35.1869"
-          },
-          {
-            "name": "Morro do Careca",
-            "latitude": "-5.8756",
-            "longitude": "-35.1867"
-          },
-          {
-            "name": "Forte dos Reis Magos",
-            "latitude": "-5.7575",
-            "longitude": "-35.1819"
-          },
-          {
-            "name": "Genipabu",
-            "latitude": "-5.7031",
-            "longitude": "-35.2061"
-          },
-          {
-            "name": "Via Costeira",
-            "latitude": "-5.8578",
-            "longitude": "-35.1744"
-          }
-        ],
-        "average": "90"
-      }
-    ]
+    "description": "Gramado se transforma em um conto de fadas no Natal Luz, com decoração natalina, shows e eventos temáticos que encantam visitantes de todas as idades.",
+    "city": "Gramado",
+    "currency": "Real Brasileiro",
+    "latitude": "-29.3639",
+    "longitude": "-50.8703"
   }
 ]

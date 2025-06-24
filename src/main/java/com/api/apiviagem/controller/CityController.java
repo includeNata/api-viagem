@@ -22,8 +22,6 @@ public class CityController {
     private CityService cityService;
 
 
-
-
     @PostMapping
     public ResponseEntity<CityResponseDTO> findCity(@RequestBody CityRequestDTO cityRequestDTO){
         return ResponseEntity.ok(cityService.getInformation(cityRequestDTO));

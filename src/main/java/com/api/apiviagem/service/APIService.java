@@ -1,10 +1,12 @@
 package com.api.apiviagem.service;
 
+
 import com.google.genai.Client;
 import com.google.genai.types.GenerateContentResponse;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import org.springframework.stereotype.Service;
+
 
 @Service
 public class APIService {
@@ -17,7 +19,6 @@ public class APIService {
         GenerateContentResponse response =
                 client.models.generateContent("gemini-2.0-flash",
                        prompt,null);
-
         return response;
     }
 
