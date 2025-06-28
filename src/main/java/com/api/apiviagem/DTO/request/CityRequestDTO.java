@@ -1,4 +1,4 @@
-package com.api.apiviagem.DTO;
+package com.api.apiviagem.DTO.request;
 
 
 import java.util.List;

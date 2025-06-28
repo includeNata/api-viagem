@@ -1,4 +1,4 @@
-package com.api.apiviagem.DTO;
+package com.api.apiviagem.DTO.response;
 
 import com.api.apiviagem.model.Image;
 

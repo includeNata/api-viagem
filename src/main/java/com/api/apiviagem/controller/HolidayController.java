@@ -1,9 +1,6 @@
 package com.api.apiviagem.controller;
 
-import com.api.apiviagem.DTO.CityResponseDTO;
-import com.api.apiviagem.DTO.HolidayRequestDTO;
-import com.api.apiviagem.model.City;
-import com.api.apiviagem.service.CityService;
+import com.api.apiviagem.DTO.request.HolidayRequestDTO;
 import com.api.apiviagem.service.HolidayService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

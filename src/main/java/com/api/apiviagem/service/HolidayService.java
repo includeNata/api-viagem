@@ -1,21 +1,14 @@
 package com.api.apiviagem.service;
 
 
-import com.api.apiviagem.DTO.HolidayRequestDTO;
-import com.api.apiviagem.model.Holiday;
+import com.api.apiviagem.DTO.request.HolidayRequestDTO;
 import com.google.genai.types.GenerateContentResponse;
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-import com.google.gson.reflect.TypeToken;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.*;
-import java.lang.reflect.Type;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -23,9 +16,6 @@ import java.net.http.HttpResponse;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 
 @Service
@@ -38,37 +28,64 @@ public class HolidayService {
 
     private final Path path = Paths.get(System.getProperty("user.dir"),"src","main","resources","static");
     private static  final String PROMPT = """
-                Para cada objeto do JSON fornecido, complete os campos vazios com os seguintes dados:
+             Para cada objeto do JSON fornecido, complete os campos vazios com os seguintes dados:
             
-                1. "holidayName": nome do feriado.
-                2. "countryName": nome do país sugerido para viagem no feriado.
-                3. "holidayDate": data do feriado.
-                4. "currency": nome da moeda oficial do país.
-                5. city
-                6. "latitude": "",
-                    "longitude": "",
-                7. "description": descrição da cidade e porque ela é boa no feriado indicado    
+             1. "holidayName": nome do feriado.
+             2. "country": nome do país sugerido para viagem no feriado.
+             3. "holidayDate": data do feriado.
+             4. "currency": moeda oficial do país.
+             5. "travelDestinations": uma lista de exatamente 2 cidades turísticas desse país com os seguintes campos:
+                - "city": nome da cidade.
+                - "state": estado ou província (se aplicável).
+                - "description": breve descrição turística da cidade.
+                - "latitude": latitude geográfica da cidade.
+                - "longitude": longitude geográfica da cidade.
             
-                Regras:
-                - Todas as cidades devem pertencer ao país indicado no campo "countryName".
-                - Escolha apenas cidades reconhecidas internacionalmente como destinos turísticos.
-                - Retorne exclusivamente o JSON preenchido, sem nenhum texto adicional fora da estrutura.
-                - Cidades boas para turismo.
+             ### Regras obrigatórias:
+            
+             - Todas as cidades devem pertencer ao país informado no campo `"country"`.
+             - As cidades devem ser reconhecidas internacionalmente como **destinos turísticos** populares.
+             - Cada país deve conter **exatamente 2** cidades no campo `"travelDestinations"`.
+             - A resposta deve ser **exclusivamente o JSON preenchido**, sem nenhuma explicação ou texto adicional fora do JSON.
+             - O JSON de saída deve ser **sempre bem formatado e válido**, com:
+               - Todos os campos preenchidos corretamente,
+               - Sem vírgulas extras no final de objetos ou arrays,
+               - Nenhum caractere fora do JSON (sem comentários, sem anotações).
+             - Processar **todos os feriados** fornecidos no JSON de entrada.
+             - Se o conteúdo da resposta for muito grande, **quebrar a resposta em partes**, garantindo que cada parte seja um **JSON válido**, bem formatado e completo por si só.
+             - Em nenhuma hipótese retornar um JSON mal formatado ou com campos incompletos.
+             - As descrições deve sempre ser em portugues
+            
+             ### Exemplo de estrutura correta:
+            
+             [
+               {
+                 "holidayName": 
+                 "country": 
+                 "holidayDate": 
+                 "currency": 
+                 "travelDestinations": [
+                   {
+                     "city": 
+                     "state": 
+                     "description": 
+                     "latitude": 
+                     "longitude": 
+                   },
+                   {
+                     "city": 
+                     "state": 
+                     "description": 
+                     "latitude": 
+                     "longitude": 
+                   }
+                 ]
+               }
+             ]
+            
+            ## Aqui e o são os feriados fornecido.
             """;
     private String address = "https://date.nager.at/api/v3/PublicHolidays/#year/#acronym";
-    private static final String JSON = """
-            {
-              "holidayName": "",
-              "countryName": "",
-              "holidayDate": "",
-              "description:"",
-              "city":,
-              "currency": "",
-               "latitude": "",
-              "longitude": ""
-            }
-         
-            """;
 
 
 
@@ -76,9 +93,9 @@ public class HolidayService {
         String result = "";
 
 
-        if(Files.notExists(Path.of(path + "\\f"+ request.acronym()+request.year()+".json"))){
-            GenerateContentResponse response = apiService.geminiAPI(PROMPT+getHolidays(request)+" esse e o exemplo de json"+JSON + "não mude  os nomes dos campos. Continue até finalizar o json.");
-           result = apiService.extractResponse(response).replace("```","").replace("json","");
+        if(Files.notExists(Path.of(path +"\\"+ request.acronym()+request.year()+".json"))){
+            GenerateContentResponse response = apiService.geminiAPI(PROMPT+getHolidays(request));
+            result = apiService.extractResponse(response).replace("```","").replace("json","");
         }
 
         return createFile(request,result);
@@ -87,7 +104,7 @@ public class HolidayService {
 
     public String  createFile(HolidayRequestDTO request , String response){
 
-        File file = new File(path+"\\f"+ request.acronym()+request.year()+".json");
+        File file = new File(path +"\\"+ request.acronym()+request.year()+".json");
         StringBuilder json = new StringBuilder();
         try {
             if(!file.exists()){
@@ -110,10 +127,7 @@ public class HolidayService {
             }
         } catch (IOException e) { throw new RuntimeException(e);}
 
-
     }
-
-
 
     public String getHolidays(HolidayRequestDTO dto){
         String newAddress = address.replace("#year",dto.year()+"");
@@ -123,13 +137,8 @@ public class HolidayService {
         HttpRequest request  = HttpRequest.newBuilder()
                 .uri(URI.create(newAddress))
                 .build();
-        try {
-            String response = client.send(request, HttpResponse.BodyHandlers.ofString()).body();
-            return  response;
-
-        } catch (IOException | InterruptedException e) {throw new RuntimeException(e);}
-
-
+        try {return client.send(request, HttpResponse.BodyHandlers.ofString()).body();}
+        catch (IOException | InterruptedException e) {throw new RuntimeException(e);}
     }
 
 }

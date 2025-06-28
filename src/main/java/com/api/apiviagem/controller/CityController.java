@@ -1,17 +1,11 @@
 package com.api.apiviagem.controller;
 
-import com.api.apiviagem.DTO.CityRequestDTO;
-import com.api.apiviagem.DTO.CityResponseDTO;
+import com.api.apiviagem.DTO.request.CityRequestDTO;
+import com.api.apiviagem.DTO.response.CityResponseDTO;
 import com.api.apiviagem.service.CityService;
-import jakarta.validation.Valid;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-
-import java.io.IOException;
 
 @RestController
 @RequestMapping("/api/v1/city")

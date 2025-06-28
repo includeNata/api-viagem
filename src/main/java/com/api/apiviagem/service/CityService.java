@@ -1,13 +1,11 @@
 package com.api.apiviagem.service;
 
-import com.api.apiviagem.DTO.CityRequestDTO;
-import com.api.apiviagem.DTO.CityResponseDTO;
+import com.api.apiviagem.DTO.request.CityRequestDTO;
+import com.api.apiviagem.DTO.response.CityResponseDTO;
 import com.api.apiviagem.model.City;
 import com.api.apiviagem.model.Image;
 import com.google.genai.types.GenerateContentResponse;
 import com.google.gson.Gson;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -53,8 +51,6 @@ public class CityService {
     public CityResponseDTO getInformation(CityRequestDTO dto){
 
         try {
-
-
             String address = "https://en.wikipedia.org/wiki/#1";
             address = address.replace("#1",dto.city());
 
@@ -185,12 +181,8 @@ public class CityService {
                 }
 
             }
-
-
             return images;
-
         } catch (IOException e) {throw new RuntimeException(e);}
-
 
     }
 
