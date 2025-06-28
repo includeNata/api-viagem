@@ -2,5 +2,8 @@ spring:
   application:
     name: api-viagem
 
+  profiles:
+    active: dev
+
   main:
     banner-mode: off
