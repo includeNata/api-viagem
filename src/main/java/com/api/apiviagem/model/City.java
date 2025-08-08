@@ -10,6 +10,8 @@ public class City {
     private String transportation;
     private String sports;
     private String parksAndRecreation;
+    private String state;
+    private String population;
     private List<Image> images;
     public City() {
     }
@@ -70,6 +72,22 @@ public class City {
 
     public void setImages(List<Image> images) {
         this.images = images;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getPopulation() {
+        return population;
+    }
+
+    public void setPopulation(String population) {
+        this.population = population;
     }
 
     @Override

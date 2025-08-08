@@ -83,7 +83,7 @@ public class CityService {
                 }
             }
             newCity.setImages(getImage(dto));
-           return  translateText(gson.toJson(newCity));
+           return  translateText(gson.toJson(newCity),dto.city());
 
 
         } catch (IOException e) {
@@ -92,7 +92,7 @@ public class CityService {
 
     }
 
-    public  CityResponseDTO  translateText(String json){
+    public  CityResponseDTO  translateText(String json,String city){
          String format = """
                  {
                   "culture": "o texto aqui",
@@ -100,10 +100,13 @@ public class CityService {
                   "transportation":"o texto aqui",
                   "sports": "o texto aqui",
                   "parksAndRecreation": "o texto aqui",
+                  "state:":"coloque o nome do estado da cidade aqui",
+                  "population": "coloque o valor da população da cidade aqui, apenas a quantidade ",
+                  "year_foundation":
                   "images":[]
                  }
                  """;
-         String propmt = "Traduza o texto para português é otimize, deixe o texto bem curto mas com todas onformações, sua redação (melhore clareza, fluidez e concisão). Em seguida, retorne o resultado no formato JSON, seguindo esta estrutura:"+format+" texto = "+json +" cheque se o json criado e valido. Não meche no Images";
+         String propmt = "Traduza o texto para português é otimize, deixe o texto bem curto mas com todas onformações, sua redação (melhore clareza, fluidez e concisão). Em seguida, retorne o resultado no formato JSON, seguindo esta estrutura:"+format+" texto = "+json +" cheque se o json criado e valido. Não meche no Images."+city;
          GenerateContentResponse result = apiService.geminiAPI(propmt);
          String resultS = apiService.extractResponse(result).replace("```","").replace("json","");
 
@@ -185,5 +188,7 @@ public class CityService {
         } catch (IOException e) {throw new RuntimeException(e);}
 
     }
+
+
 
 }

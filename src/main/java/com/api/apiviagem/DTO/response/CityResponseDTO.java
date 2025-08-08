@@ -10,6 +10,8 @@ public record CityResponseDTO(
          String transportation,
          String sports,
          String parksAndRecreation,
+         String state,
+         String population,
          List<Image> images
 
 ) {
