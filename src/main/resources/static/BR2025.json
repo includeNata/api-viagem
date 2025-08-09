@@ -1,0 +1,621 @@
+
+[
+  {
+    "holidayName": "Confraternização Universal",
+    "country": "Brasil",
+    "holidayDate": "2025-01-01",
+    "currency": "BRL",
+    "travelDestinations": [
+      {
+        "city": "Rio de Janeiro",
+        "state": "RJ",
+        "description": "Famosa pelas praias de Copacabana e Ipanema, o Rio oferece o Cristo Redentor e o Pão de Açúcar como cartões postais imperdíveis.",
+        "latitude": -22.9068,
+        "longitude": -43.1729,
+        "timeTravel": "1h (voo)",
+        "targetAudience": "Jovens, famílias, casais, aventureiros",
+        "highlights": ["Praias", "Cristo Redentor", "Pão de Açúcar", "Vida Noturna"],
+        "timeTemperature": "Quente"
+      },
+      {
+        "city": "Salvador",
+        "state": "BA",
+        "description": "Berço da cultura afro-brasileira, Salvador encanta com seu Pelourinho, igrejas barrocas e culinária rica em sabores.",
+        "latitude": -12.9777,
+        "longitude": -38.5016,
+        "timeTravel": "2h (voo)",
+        "targetAudience": "Amantes de história, cultura, famílias",
+        "highlights": ["Pelourinho", "Igrejas Barrocas", "Culinária Afro-Brasileira", "Praias"],
+        "timeTemperature": "Quente"
+      },
+      {
+        "city": "Foz do Iguaçu",
+        "state": "PR",
+        "description": "Lar das Cataratas do Iguaçu, uma das maiores maravilhas naturais do mundo, Foz oferece passeios de barco e trilhas inesquecíveis.",
+        "latitude": -25.6953,
+        "longitude": -54.4367,
+        "timeTravel": "1h40 (voo)",
+        "targetAudience": "Aventureiros, famílias, amantes da natureza",
+        "highlights": ["Cataratas do Iguaçu", "Parque Nacional do Iguaçu", "Usina de Itaipu", "Aventura"],
+        "timeTemperature": "Moderado"
+      },
+      {
+        "city": "Gramado",
+        "state": "RS",
+        "description": "Com arquitetura europeia e clima romântico, Gramado é famosa pelo Natal Luz e festivais de cinema, além de parques temáticos e vinícolas.",
+        "latitude": -29.3736,
+        "longitude": -50.8711,
+        "timeTravel": "1h30 (voo)",
+        "targetAudience": "Famílias, casais, amantes de gastronomia",
+        "highlights": ["Natal Luz", "Festivais", "Parques Temáticos", "Gastronomia"],
+        "timeTemperature": "Frio"
+      }
+    ]
+  },
+  {
+    "holidayName": "Carnaval",
+    "country": "Brasil",
+    "holidayDate": "2025-03-03",
+    "currency": "BRL",
+    "travelDestinations": [
+      {
+        "city": "Rio de Janeiro",
+        "state": "RJ",
+        "description": "O Carnaval do Rio é famoso pelos desfiles das escolas de samba no Sambódromo e blocos de rua animados por toda a cidade.",
+        "latitude": -22.9068,
+        "longitude": -43.1729,
+        "timeTravel": "1h (voo)",
+        "targetAudience": "Jovens, foliões, amantes da música",
+        "highlights": ["Sambódromo", "Blocos de Rua", "Praias", "Festas"],
+        "timeTemperature": "Quente"
+      },
+      {
+        "city": "Salvador",
+        "state": "BA",
+        "description": "O Carnaval de Salvador é marcado pelos trios elétricos que arrastam multidões pelas ruas, com muita música e dança.",
+        "latitude": -12.9777,
+        "longitude": -38.5016,
+        "timeTravel": "2h (voo)",
+        "targetAudience": "Foliões, amantes da música, grupos de amigos",
+        "highlights": ["Trios Elétricos", "Axé", "Blocos Afros", "Festas"],
+        "timeTemperature": "Quente"
+      },
+      {
+        "city": "Olinda",
+        "state": "PE",
+        "description": "Com seus bonecos gigantes e ladeiras históricas, o Carnaval de Olinda oferece uma experiência única e cultural.",
+        "latitude": -8.0139,
+        "longitude": -34.8533,
+        "timeTravel": "2h30 (voo)",
+        "targetAudience": "Famílias, amantes da cultura, foliões",
+        "highlights": ["Bonecos Gigantes", "Ladeiras Históricas", "Maracatu", "Frevo"],
+        "timeTemperature": "Quente"
+      },
+      {
+        "city": "Recife",
+        "state": "PE",
+        "description": "Conhecido como o maior bloco de Carnaval do mundo, o Galo da Madrugada agita Recife com muita música e alegria.",
+        "latitude": -8.0539,
+        "longitude": -34.8816,
+        "timeTravel": "2h30 (voo)",
+        "targetAudience": "Foliões, amantes da música, grupos de amigos",
+        "highlights": ["Galo da Madrugada", "Maracatu", "Frevo", "Shows"],
+        "timeTemperature": "Quente"
+      }
+    ]
+  },
+  {
+    "holidayName": "Carnaval",
+    "country": "Brasil",
+    "holidayDate": "2025-03-04",
+    "currency": "BRL",
+    "travelDestinations": [
+      {
+        "city": "Rio de Janeiro",
+        "state": "RJ",
+        "description": "O Carnaval do Rio é famoso pelos desfiles das escolas de samba no Sambódromo e blocos de rua animados por toda a cidade.",
+        "latitude": -22.9068,
+        "longitude": -43.1729,
+        "timeTravel": "1h (voo)",
+        "targetAudience": "Jovens, foliões, amantes da música",
+        "highlights": ["Sambódromo", "Blocos de Rua", "Praias", "Festas"],
+        "timeTemperature": "Quente"
+      },
+      {
+        "city": "Salvador",
+        "state": "BA",
+        "description": "O Carnaval de Salvador é marcado pelos trios elétricos que arrastam multidões pelas ruas, com muita música e dança.",
+        "latitude": -12.9777,
+        "longitude": -38.5016,
+        "timeTravel": "2h (voo)",
+        "targetAudience": "Foliões, amantes da música, grupos de amigos",
+        "highlights": ["Trios Elétricos", "Axé", "Blocos Afros", "Festas"],
+        "timeTemperature": "Quente"
+      },
+      {
+        "city": "Olinda",
+        "state": "PE",
+        "description": "Com seus bonecos gigantes e ladeiras históricas, o Carnaval de Olinda oferece uma experiência única e cultural.",
+        "latitude": -8.0139,
+        "longitude": -34.8533,
+        "timeTravel": "2h30 (voo)",
+        "targetAudience": "Famílias, amantes da cultura, foliões",
+        "highlights": ["Bonecos Gigantes", "Ladeiras Históricas", "Maracatu", "Frevo"],
+        "timeTemperature": "Quente"
+      },
+      {
+        "city": "Recife",
+        "state": "PE",
+        "description": "Conhecido como o maior bloco de Carnaval do mundo, o Galo da Madrugada agita Recife com muita música e alegria.",
+        "latitude": -8.0539,
+        "longitude": -34.8816,
+        "timeTravel": "2h30 (voo)",
+        "targetAudience": "Foliões, amantes da música, grupos de amigos",
+        "highlights": ["Galo da Madrugada", "Maracatu", "Frevo", "Shows"],
+        "timeTemperature": "Quente"
+      }
+    ]
+  },
+  {
+    "holidayName": "Sexta-feira Santa",
+    "country": "Brasil",
+    "holidayDate": "2025-04-18",
+    "currency": "BRL",
+    "travelDestinations": [
+      {
+        "city": "Ouro Preto",
+        "state": "MG",
+        "description": "Cidade histórica com rica arquitetura barroca, ideal para quem busca imersão na história do Brasil e celebrações religiosas tradicionais.",
+        "latitude": -20.3764,
+        "longitude": -43.5022,
+        "timeTravel": "1h (voo + traslado)",
+        "targetAudience": "Famílias, amantes de história, religiosos",
+        "highlights": ["Igrejas Barrocas", "Museus", "Arquitetura Colonial", "Festas Religiosas"],
+        "timeTemperature": "Moderado"
+      },
+      {
+        "city": "Aparecida",
+        "state": "SP",
+        "description": "Principal centro de peregrinação católica do Brasil, abriga o Santuário Nacional de Aparecida, um dos maiores do mundo.",
+        "latitude": -22.8447,
+        "longitude": -45.2358,
+        "timeTravel": "1h (voo + traslado)",
+        "targetAudience": "Religiosos, famílias",
+        "highlights": ["Santuário Nacional", "Romarias", "Eventos Religiosos", "Compras"],
+        "timeTemperature": "Moderado"
+      },
+      {
+        "city": "Paraty",
+        "state": "RJ",
+        "description": "Charmosa cidade colonial com ruas de pedra, casarões históricos e belas praias, ideal para relaxar e apreciar a natureza.",
+        "latitude": -23.2172,
+        "longitude": -44.7139,
+        "timeTravel": "4h (traslado)",
+        "targetAudience": "Casais, famílias, amantes da natureza",
+        "highlights": ["Centro Histórico", "Praias", "Passeios de Barco", "Culinária"],
+        "timeTemperature": "Quente"
+      },
+      {
+        "city": "Belo Horizonte",
+        "state": "MG",
+        "description": "Capital mineira com vida cultural intensa, famosa pela gastronomia e pelos bares da Savassi, além de museus e parques.",
+        "latitude": -19.9167,
+        "longitude": -43.9345,
+        "timeTravel": "1h (voo)",
+        "targetAudience": "Jovens, famílias, amantes da gastronomia",
+        "highlights": ["Gastronomia", "Museus", "Parques", "Vida Noturna"],
+        "timeTemperature": "Moderado"
+      }
+    ]
+  },
+  {
+    "holidayName": "Domingo de Páscoa",
+    "country": "Brasil",
+    "holidayDate": "2025-04-20",
+    "currency": "BRL",
+    "travelDestinations": [
+      {
+        "city": "Gramado",
+        "state": "RS",
+        "description": "Cidade charmosa na serra gaúcha, com eventos temáticos de Páscoa, como a Chocofest, e paisagens exuberantes.",
+        "latitude": -29.3736,
+        "longitude": -50.8711,
+        "timeTravel": "1h30 (voo)",
+        "targetAudience": "Famílias, casais, crianças",
+        "highlights": ["Chocofest", "Lago Negro", "Mini Mundo", "Rua Torta"],
+        "timeTemperature": "Frio"
+      },
+      {
+        "city": "Campos do Jordão",
+        "state": "SP",
+        "description": "Conhecida como a Suíça Brasileira, oferece clima frio, arquitetura europeia e eventos de Páscoa, além de trilhas e cachoeiras.",
+        "latitude": -22.7425,
+        "longitude": -45.5964,
+        "timeTravel": "3h (traslado)",
+        "targetAudience": "Casais, famílias, aventureiros",
+        "highlights": ["Morro do Elefante", "Horto Florestal", "Cervejarias", "Chocolate"],
+        "timeTemperature": "Frio"
+      },
+      {
+        "city": "Petrópolis",
+        "state": "RJ",
+        "description": "Cidade imperial com museus, palácios e paisagens montanhosas, ideal para um passeio histórico e cultural.",
+        "latitude": -22.5058,
+        "longitude": -43.1792,
+        "timeTravel": "1h (traslado)",
+        "targetAudience": "Famílias, amantes da história, casais",
+        "highlights": ["Museu Imperial", "Palácio de Cristal", "Catedral São Pedro de Alcântara", "Cervejaria Bohemia"],
+        "timeTemperature": "Moderado"
+      },
+      {
+        "city": "Curitiba",
+        "state": "PR",
+        "description": "Capital ecológica com parques, jardins e museus, além de uma programação especial para a Páscoa.",
+        "latitude": -25.4296,
+        "longitude": -49.2719,
+        "timeTravel": "1h15 (voo)",
+        "targetAudience": "Famílias, amantes da natureza, culturais",
+        "highlights": ["Jardim Botânico", "Parque Tanguá", "Museu Oscar Niemeyer", "Ópera de Arame"],
+        "timeTemperature": "Moderado"
+      }
+    ]
+  },
+  {
+    "holidayName": "Dia de Tiradentes",
+    "country": "Brasil",
+    "holidayDate": "2025-04-21",
+    "currency": "BRL",
+    "travelDestinations": [
+      {
+        "city": "Ouro Preto",
+        "state": "MG",
+        "description": "Cidade histórica com arquitetura barroca preservada, ideal para reviver a história da Inconfidência Mineira e homenagear Tiradentes.",
+        "latitude": -20.3764,
+        "longitude": -43.5022,
+        "timeTravel": "1h (voo + traslado)",
+        "targetAudience": "Amantes da história, estudantes, famílias",
+        "highlights": ["Igrejas Barrocas", "Museu da Inconfidência", "Casa dos Contos", "Minas de Ouro"],
+        "timeTemperature": "Moderado"
+      },
+      {
+        "city": "Tiradentes",
+        "state": "MG",
+        "description": "Charmosa cidade histórica com ruas de pedra e casarões coloniais, palco de importantes eventos culturais e gastronômicos.",
+        "latitude": -21.1228,
+        "longitude": -44.1878,
+        "timeTravel": "4h (traslado)",
+        "targetAudience": "Casais, famílias, amantes da gastronomia",
+        "highlights": ["Centro Histórico", "Maria Fumaça", "Igreja Matriz de Santo Antônio", "Festivais"],
+        "timeTemperature": "Moderado"
+      },
+      {
+        "city": "São João del Rei",
+        "state": "MG",
+        "description": "Cidade histórica com igrejas barrocas e museus, conhecida pela arquitetura preservada e pela tranquilidade.",
+        "latitude": -21.1364,
+        "longitude": -44.2575,
+        "timeTravel": "4h30 (traslado)",
+        "targetAudience": "Famílias, amantes da história, viajantes tranquilos",
+        "highlights": ["Igrejas", "Museus", "Ponte da Cadeia", "Centro Histórico"],
+        "timeTemperature": "Moderado"
+      },
+      {
+        "city": "Diamantina",
+        "state": "MG",
+        "description": "Cidade histórica com casarões coloniais e paisagens montanhosas, famosa pela extração de diamantes e pela arquitetura peculiar.",
+        "latitude": -18.2475,
+        "longitude": -43.6031,
+        "timeTravel": "2h (voo + traslado)",
+        "targetAudience": "Aventureiros, amantes da história, famílias",
+        "highlights": ["Casa de Juscelino Kubitschek", "Mercado Velho", "Cachoeiras", "Paisagens"],
+        "timeTemperature": "Moderado"
+      }
+    ]
+  },
+  {
+    "holidayName": "Dia do Trabalhador",
+    "country": "Brasil",
+    "holidayDate": "2025-05-01",
+    "currency": "BRL",
+    "travelDestinations": [
+      {
+        "city": "São Paulo",
+        "state": "SP",
+        "description": "Maior centro financeiro e cultural do país, oferece museus, parques, restaurantes e uma vida noturna agitada.",
+        "latitude": -23.5505,
+        "longitude": -46.6333,
+        "timeTravel": "N/A",
+        "targetAudience": "Jovens, famílias, amantes da cultura, negócios",
+        "highlights": ["Museus", "Parques", "Gastronomia", "Vida Noturna"],
+        "timeTemperature": "Moderado"
+      },
+      {
+        "city": "Rio de Janeiro",
+        "state": "RJ",
+        "description": "Cidade famosa pelas praias de Copacabana e Ipanema, com o Cristo Redentor e o Pão de Açúcar como cartões postais.",
+        "latitude": -22.9068,
+        "longitude": -43.1729,
+        "timeTravel": "1h (voo)",
+        "targetAudience": "Jovens, famílias, casais, aventureiros",
+        "highlights": ["Praias", "Cristo Redentor", "Pão de Açúcar", "Vida Noturna"],
+        "timeTemperature": "Quente"
+      },
+      {
+        "city": "Curitiba",
+        "state": "PR",
+        "description": "Capital ecológica com parques, jardins e museus, ideal para um passeio tranquilo em meio à natureza.",
+        "latitude": -25.4296,
+        "longitude": -49.2719,
+        "timeTravel": "1h15 (voo)",
+        "targetAudience": "Famílias, amantes da natureza, culturais",
+        "highlights": ["Jardim Botânico", "Parque Tanguá", "Museu Oscar Niemeyer", "Ópera de Arame"],
+        "timeTemperature": "Moderado"
+      },
+      {
+        "city": "Porto Alegre",
+        "state": "RS",
+        "description": "Capital gaúcha com parques, museus e o Mercado Público, ideal para conhecer a cultura local e saborear a gastronomia.",
+        "latitude": -30.0346,
+        "longitude": -51.2177,
+        "timeTravel": "1h40 (voo)",
+        "targetAudience": "Famílias, amantes da cultura, viajantes tranquilos",
+        "highlights": ["Mercado Público", "Parque da Redenção", "Museu de Arte do Rio Grande do Sul", "Cultura Gaúcha"],
+        "timeTemperature": "Moderado"
+      }
+    ]
+  },
+  {
+    "holidayName": "Corpus Christi",
+    "country": "Brasil",
+    "holidayDate": "2025-06-19",
+    "currency": "BRL",
+    "travelDestinations": [
+      {
+        "city": "Ouro Preto",
+        "state": "MG",
+        "description": "Cidade histórica com rica tradição religiosa, onde as ruas são enfeitadas com tapetes coloridos para a procissão de Corpus Christi.",
+        "latitude": -20.3764,
+        "longitude": -43.5022,
+        "timeTravel": "1h (voo + traslado)",
+        "targetAudience": "Religiosos, amantes da história, famílias",
+        "highlights": ["Tapetes de Corpus Christi", "Igrejas Barrocas", "Museus", "Arquitetura Colonial"],
+        "timeTemperature": "Moderado"
+      },
+      {
+        "city": "Diamantina",
+        "state": "MG",
+        "description": "Cidade histórica com arquitetura colonial preservada, onde a festa de Corpus Christi é celebrada com missas e procissões.",
+        "latitude": -18.2475,
+        "longitude": -43.6031,
+        "timeTravel": "2h (voo + traslado)",
+        "targetAudience": "Religiosos, amantes da história, famílias",
+        "highlights": ["Procissões", "Igrejas Históricas", "Casa de Juscelino Kubitschek", "Paisagens"],
+        "timeTemperature": "Moderado"
+      },
+      {
+        "city": "Olinda",
+        "state": "PE",
+        "description": "Cidade histórica com igrejas seculares e ladeiras coloridas, onde a celebração de Corpus Christi é marcada por missas e procissões.",
+        "latitude": -8.0139,
+        "longitude": -34.8533,
+        "timeTravel": "2h30 (voo)",
+        "targetAudience": "Religiosos, amantes da história, famílias",
+        "highlights": ["Igrejas Históricas", "Ladeiras", "Procissões", "Artesanato"],
+        "timeTemperature": "Quente"
+      },
+      {
+        "city": "Salvador",
+        "state": "BA",
+        "description": "Cidade com forte influência religiosa, onde a festa de Corpus Christi é celebrada com missas e procissões em diversas igrejas.",
+        "latitude": -12.9777,
+        "longitude": -38.5016,
+        "timeTravel": "2h (voo)",
+        "targetAudience": "Religiosos, amantes da cultura, famílias",
+        "highlights": ["Igrejas Históricas", "Procissões", "Pelourinho", "Culinária Afro-Brasileira"],
+        "timeTemperature": "Quente"
+      }
+    ]
+  },
+  {
+    "holidayName": "Revolução Constitucionalista de 1932",
+    "country": "Brasil",
+    "holidayDate": "2025-07-09",
+    "currency": "BRL",
+    "travelDestinations": [
+      {
+        "city": "São Paulo",
+        "state": "SP",
+        "description": "Visite o Obelisco do Ibirapuera, um monumento que homenageia os heróis da Revolução de 1932, e explore museus com exposições sobre o evento.",
+        "latitude": -23.5505,
+        "longitude": -46.6333,
+        "timeTravel": "N/A",
+        "targetAudience": "Amantes da história, famílias, estudantes",
+        "highlights": ["Obelisco do Ibirapuera", "Museus", "Parques", "Gastronomia"],
+        "timeTemperature": "Moderado"
+      },
+      {
+        "city": "Guaratinguetá",
+        "state": "SP",
+        "description": "Cidade natal de Frei Galvão, com igrejas históricas e museus que contam a história da região e sua participação na Revolução de 1932.",
+        "latitude": -22.8144,
+        "longitude": -45.1944,
+        "timeTravel": "2h (traslado)",
+        "targetAudience": "Religiosos, amantes da história, famílias",
+        "highlights": ["Igrejas Históricas", "Museu Frei Galvão", "Santuário de Frei Galvão", "Cultura Local"],
+        "timeTemperature": "Moderado"
+      },
+      {
+        "city": "Campinas",
+        "state": "SP",
+        "description": "Cidade com museus e centros culturais que abordam a história da Revolução de 1932, além de parques e áreas verdes para relaxar.",
+        "latitude": -22.9056,
+        "longitude": -47.0608,
+        "timeTravel": "1h30 (traslado)",
+        "targetAudience": "Famílias, amantes da história, estudantes",
+        "highlights": ["Museus", "Parques", "Cultura", "Gastronomia"],
+        "timeTemperature": "Moderado"
+      },
+      {
+        "city": "Santos",
+        "state": "SP",
+        "description": "Cidade litorânea com o Museu do Café, que conta a história da produção cafeeira e sua importância para a economia paulista.",
+        "latitude": -23.9608,
+        "longitude": -46.3322,
+        "timeTravel": "1h (traslado)",
+        "targetAudience": "Famílias, amantes da história, turistas",
+        "highlights": ["Museu do Café", "Praias", "Orla", "Aquário"],
+        "timeTemperature": "Quente"
+      }
+    ]
+  },
+  {
+    "holidayName": "Dia da Independência",
+    "country": "Brasil",
+    "holidayDate": "2025-09-07",
+    "currency": "BRL",
+    "travelDestinations": [
+      {
+        "city": "Brasília",
+        "state": "DF",
+        "description": "Visite o local do desfile cívico-militar na Esplanada dos Ministérios e explore os monumentos históricos da capital federal.",
+        "latitude": -15.7797,
+        "longitude": -47.9297,
+        "timeTravel": "N/A",
+        "targetAudience": "Famílias, estudantes, amantes da história",
+        "highlights": ["Esplanada dos Ministérios", "Praça dos Três Poderes", "Catedral de Brasília", "Museu Nacional"],
+        "timeTemperature": "Moderado"
+      },
+      {
+        "city": "São Paulo",
+        "state": "SP",
+        "description": "Acompanhe as celebrações cívicas no Parque do Ibirapuera e visite museus com exposições sobre a história do Brasil.",
+        "latitude": -23.5505,
+        "longitude": -46.6333,
+        "timeTravel": "N/A",
+        "targetAudience": "Famílias, estudantes, amantes da história",
+        "highlights": ["Parque do Ibirapuera", "Museus", "Gastronomia", "Vida Noturna"],
+        "timeTemperature": "Moderado"
+      },
+      {
+        "city": "Rio de Janeiro",
+        "state": "RJ",
+        "description": "Assista ao desfile militar na Avenida Presidente Vargas e explore os museus e monumentos históricos da cidade.",
+        "latitude": -22.9068,
+        "longitude": -43.1729,
+        "timeTravel": "1h (voo)",
+        "targetAudience": "Famílias, amantes da história, turistas",
+        "highlights": ["Avenida Presidente Vargas", "Museus", "Praias", "Cristo Redentor"],
+        "timeTemperature": "Quente"
+      },
+      {
+        "city": "Salvador",
+        "state": "BA",
+        "description": "Participe das celebrações cívicas no centro histórico e explore os museus e igrejas que contam a história da Bahia e do Brasil.",
+        "latitude": -12.9777,
+        "longitude": -38.5016,
+        "timeTravel": "2h (voo)",
+        "targetAudience": "Amantes da história, famílias, turistas",
+        "highlights": ["Pelourinho", "Igrejas Históricas", "Museus", "Cultura Afro-Brasileira"],
+        "timeTemperature": "Quente"
+      }
+    ]
+  },
+  {
+    "holidayName": "Nossa Senhora Aparecida",
+    "country": "Brasil",
+    "holidayDate": "2025-10-12",
+    "currency": "BRL",
+    "travelDestinations": [
+      {
+        "city": "Aparecida",
+        "state": "SP",
+        "description": "Principal centro de peregrinação religiosa do Brasil, com o Santuário Nacional de Aparecida, um dos maiores do mundo.",
+        "latitude": -22.8447,
+        "longitude": -45.2358,
+        "timeTravel": "N/A",
+        "targetAudience": "Religiosos, famílias",
+        "highlights": ["Santuário Nacional", "Romarias", "Eventos Religiosos", "Compras"],
+        "timeTemperature": "Moderado"
+      },
+      {
+        "city": "Guaratinguetá",
+        "state": "SP",
+        "description": "Cidade natal de Frei Galvão, com o Santuário dedicado ao primeiro santo brasileiro e igrejas históricas.",
+        "latitude": -22.8144,
+        "longitude": -45.1944,
+        "timeTravel": "30min (traslado)",
+        "targetAudience": "Religiosos, famílias",
+        "highlights": ["Santuário de Frei Galvão", "Igrejas Históricas", "Museu Frei Galvão", "Cultura Local"],
+        "timeTemperature": "Moderado"
+      },
+      {
+        "city": "Canindé",
+        "state": "CE",
+        "description": "Importante centro de peregrinação religiosa no Nordeste, com a Basílica de São Francisco das Chagas.",
+        "latitude": -4.3558,
+        "longitude": -39.3011,
+        "timeTravel": "3h (voo + traslado)",
+        "targetAudience": "Religiosos, famílias",
+        "highlights": ["Basílica de São Francisco", "Romarias", "Eventos Religiosos", "Artesanato"],
+        "timeTemperature": "Quente"
+      },
+      {
+        "city": "Juazeiro do Norte",
+        "state": "CE",
+        "description": "Cidade com forte apelo religioso, com a estátua de Padre Cícero e o Santuário dedicado ao líder religioso.",
+        "latitude": -7.2144,
+        "longitude": -39.3192,
+        "timeTravel": "3h (voo + traslado)",
+        "targetAudience": "Religiosos, famílias",
+        "highlights": ["Estátua de Padre Cícero", "Santuário de Padre Cícero", "Romarias", "Artesanato"],
+        "timeTemperature": "Quente"
+      }
+    ]
+  },
+  {
+    "holidayName": "Dia de Finados",
+    "country": "Brasil",
+    "holidayDate": "2025-11-02",
+    "currency": "BRL",
+    "travelDestinations": [
+      {
+        "city": "São Paulo",
+        "state": "SP",
+        "description": "Visite o Cemitério da Consolação, um museu a céu aberto com esculturas e obras de arte de importantes artistas.",
+        "latitude": -23.5505,
+        "longitude": -46.6333,
+        "timeTravel": "N/A",
+        "targetAudience": "Amantes da arte, famílias, turistas",
+        "highlights": ["Cemitério da Consolação", "Museus", "Parques", "Gastronomia"],
+        "timeTemperature": "Moderado"
+      },
+      {
+        "city": "Rio de Janeiro",
+        "state": "RJ",
+        "description": "Visite o Cemitério de São João Batista, com túmulos de personalidades históricas e esculturas importantes.",
+        "latitude": -22.9068,
+        "longitude": -43.1729,
+        "timeTravel": "1h (voo)",
+        "targetAudience": "Amantes da arte, famílias, turistas",
+        "highlights": ["Cemitério de São João Batista", "Praias", "Cristo Redentor", "Pão de Açúcar"],
+        "timeTemperature": "Quente"
+      },
+      {
+        "city": "Belo Horizonte",
+        "state": "MG",
+        "description": "Visite o Cemitério do Bonfim, com túmulos de personalidades mineiras e esculturas.",
+        "latitude": -19.9167,
+        "longitude": -43.9345,
+        "timeTravel": "1h (voo)",
+        "targetAudience": "Amantes da arte, famílias, turistas",
+        "highlights": ["Cemitério do Bonfim", "Museus", "Gastronomia", "Parques"],
+        "timeTemperature": "Moderado"
+      },
+      {
+        "city": "Porto Alegre",
+        "state": "RS",
+        "description": "Visite o Cemitério da Santa Casa, com túmulos de personalidades gaúchas e esculturas.",
+        "latitude": -30.0346,
+        "longitude": -51.2177,
+        "timeTravel": "1h40 (voo)",
+        
