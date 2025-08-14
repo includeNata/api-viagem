@@ -1,0 +1,41 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: back-end_destinify
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: ${DB_URL}
+      SPRING_DATASOURCE_USERNAME: ${DB_USER}
+      SPRING_DATASOURCE_PASSWORD: ${ROOT_PASSWORD}
+    depends_on:
+      - db
+    networks:
+      - network1
+
+
+  db:
+    image: mysql:8.0
+    container_name: db_container
+    environment:
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${ROOT_PASSWORD}
+    ports:
+      - '3306:3306'
+    volumes:
+      - mysql_data:/var/lib/mysql
+    restart: always
+    networks:
+      - network1
+
+
+networks:
+  network1:
+    driver: bridge
+
+
+volumes:
+  mysql_data:
