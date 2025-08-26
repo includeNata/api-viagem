@@ -1,6 +1,5 @@
 package com.api.apiviagem.service;
 
-import com.api.apiviagem.DTO.request.CityRequestDTO;
 import com.api.apiviagem.DTO.response.CityResponseDTO;
 import com.api.apiviagem.model.City;
 import com.api.apiviagem.model.Image;
@@ -48,11 +47,11 @@ public class CityService {
 
 
 
-    public CityResponseDTO getInformation(CityRequestDTO dto){
+    public CityResponseDTO getInformation(String city){
 
         try {
             String address = "https://en.wikipedia.org/wiki/#1";
-            address = address.replace("#1",dto.city());
+            address = address.replace("#1",city);
 
             Document document = Jsoup.connect(address).get();
             int countP = 0;
@@ -82,8 +81,8 @@ public class CityService {
                     countP = 0;
                 }
             }
-            newCity.setImages(getImage(dto));
-           return  translateText(gson.toJson(newCity),dto.city());
+
+           return  translateText(gson.toJson(newCity),city);
 
 
         } catch (IOException e) {
@@ -103,7 +102,8 @@ public class CityService {
                   "state:":"coloque o nome do estado da cidade aqui",
                   "population": "coloque o valor da população da cidade aqui, apenas a quantidade ",
                   "year_foundation":
-                  "images":[]
+                  "latitude":
+                  "longitude":
                  }
                  """;
          String propmt = "Traduza o texto para português é otimize, deixe o texto bem curto mas com todas onformações, sua redação (melhore clareza, fluidez e concisão). Em seguida, retorne o resultado no formato JSON, seguindo esta estrutura:"+format+" texto = "+json +" cheque se o json criado e valido. Não meche no Images."+city;
@@ -161,31 +161,6 @@ public class CityService {
 
 
         } catch (ClassNotFoundException | NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {throw new RuntimeException(e);}
-
-    }
-
-    public List<Image> getImage(CityRequestDTO dto){
-        String address = "https://commons.m.wikimedia.org/wiki/#1";
-        address = address.replace("#1",dto.city());
-        List<Image> images = new ArrayList<>();
-        try {
-            Document document = Jsoup.connect(address).get();
-
-
-            List<Element> lis = document.getElementsByClass("gallerybox");
-
-            for (Element e : lis) {
-
-                Element aux =  e.getElementsByClass("gallerytext").getFirst();
-                for (String touristic : dto.touristSpots()){
-                    if(aux.text().contains(touristic)){
-                        images.add(new Image(touristic,e.getElementsByTag("img").attr("src")));
-                    }
-                }
-
-            }
-            return images;
-        } catch (IOException e) {throw new RuntimeException(e);}
 
     }
 

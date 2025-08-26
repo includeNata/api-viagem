@@ -12,7 +12,8 @@ public record CityResponseDTO(
          String parksAndRecreation,
          String state,
          String population,
-         List<Image> images
+         String longitude,
+         String latitude
 
 ) {
 }
