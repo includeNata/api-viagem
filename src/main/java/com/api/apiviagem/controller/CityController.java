@@ -1,6 +1,5 @@
 package com.api.apiviagem.controller;
 
-import com.api.apiviagem.DTO.request.CityRequestDTO;
 import com.api.apiviagem.DTO.response.CityResponseDTO;
 import com.api.apiviagem.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +15,8 @@ public class CityController {
     private CityService cityService;
 
 
-    @PostMapping
-    public ResponseEntity<CityResponseDTO> findCity(@RequestBody CityRequestDTO cityRequestDTO){
-        return ResponseEntity.ok(cityService.getInformation(cityRequestDTO));
+    @GetMapping("/{city}")
+    public ResponseEntity<CityResponseDTO> findCity(@PathVariable String city){
+        return ResponseEntity.ok(cityService.getInformation(city));
     }
 }
