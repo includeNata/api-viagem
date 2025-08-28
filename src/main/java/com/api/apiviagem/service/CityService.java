@@ -102,8 +102,10 @@ public class CityService {
                   "state:":"coloque o nome do estado da cidade aqui",
                   "population": "coloque o valor da população da cidade aqui, apenas a quantidade ",
                   "year_foundation":
-                  "latitude":
-                  "longitude":
+                  "latitude": informe a latitude da cidade
+                  "longitude": informe a longitude da cidade
+                  "description: faça uma  descrição da cidade
+                  standout:[] Liste os principais destaques de em um array de strings. Cada destaque deve ter exatamente 2 palavras. Inclua tanto atrativos naturais e climáticos (praia paradisíaca, montanha verde, clima frio, neve abundante) quanto aspectos urbanos e culturais (transporte público, vida noturna, gastronomia local, educação referência, segurança urbana). Não repita termos e varie entre natureza, clima, lazer, cultura, infraestrutura e qualidade de vida. Utilize letras maisculas para inicio de frases.
                  }
                  """;
          String propmt = "Traduza o texto para português é otimize, deixe o texto bem curto mas com todas onformações, sua redação (melhore clareza, fluidez e concisão). Em seguida, retorne o resultado no formato JSON, seguindo esta estrutura:"+format+" texto = "+json +" cheque se o json criado e valido. Não meche no Images."+city;
