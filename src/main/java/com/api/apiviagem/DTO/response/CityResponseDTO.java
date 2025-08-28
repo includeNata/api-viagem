@@ -13,7 +13,9 @@ public record CityResponseDTO(
          String state,
          String population,
          String longitude,
-         String latitude
+         String latitude,
+         String description,
+         List<String> standout
 
 ) {
 }
