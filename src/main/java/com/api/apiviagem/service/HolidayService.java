@@ -3,6 +3,11 @@ package com.api.apiviagem.service;
 
 import com.api.apiviagem.DTO.request.HolidayRequestDTO;
 import com.google.genai.types.GenerateContentResponse;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +49,7 @@ public class HolidayService {
                             - "targetAudience": público alvo da cidade.
                             - "highlights": Lista de array dos destaques da cidade;
                             - "timeTemperature": Temperatura padrão da cidade. Exemplos: Moderado - Quente - Frio
+                            - "averageCost": Custo de viagem para viajar da {city} nesse feriado.
                        \s
                        \s
                          ### Regras obrigatórias:
@@ -80,6 +86,7 @@ public class HolidayService {
                                  "targetAudience":
                                  "highlights":\s
                                  "timeTemperature":\s
+                                 "averageCost":\s
                        \s
                                },
                                {
@@ -92,6 +99,7 @@ public class HolidayService {
                                  "targetAudience":
                                  "highlights":\s
                                  "timeTemperature":\s
+                                 "averageCost":\s
                                }
                              ]
                            }
@@ -108,8 +116,8 @@ public class HolidayService {
 
 
         if(Files.notExists(Path.of(path +"\\"+ request.acronym()+request.year()+".json"))){
-            GenerateContentResponse response = apiService.geminiAPI(PROMPT+getHolidays(request));
-            result = apiService.extractResponse(response).replace("```","").replace("json","");
+            // Monta em chunks para evitar respostas longas quebradas e valida JSON
+            result = buildJsonWithChunking(getHolidays(request));
         }
 
         return createFile(request,result);
@@ -123,9 +131,11 @@ public class HolidayService {
         try {
             if(!file.exists()){
                     if(file.createNewFile()){
-                        FileWriter writer = new FileWriter(file);
-                        writer.write(response);
-                        writer.close();
+                        String safe = sanitizeToJson(response);
+                        String pretty = prettyPrintJson(safe);
+                        try (Writer writer = new OutputStreamWriter(new FileOutputStream(file), java.nio.charset.StandardCharsets.UTF_8)) {
+                            writer.write(pretty);
+                        }
                         log.info("Json criado com sucesso!");
                     }
                 return response;
@@ -155,4 +165,62 @@ public class HolidayService {
         catch (IOException | InterruptedException e) {throw new RuntimeException(e);}
     }
 
+    private String buildJsonWithChunking(String holidaysSource) {
+        JsonArray inputArray = JsonParser.parseString(holidaysSource).getAsJsonArray();
+        int chunkSize = 10;
+        JsonArray merged = new JsonArray();
+
+        for (int start = 0; start < inputArray.size(); start += chunkSize) {
+            int end = Math.min(start + chunkSize, inputArray.size());
+            JsonArray subArray = new JsonArray();
+            for (int i = start; i < end; i++) {
+                subArray.add(inputArray.get(i));
+            }
+
+            String prompt = PROMPT + "\n\n### Feriados a processar (JSON):\n" + subArray.toString();
+            GenerateContentResponse response = apiService.geminiAPI(prompt);
+            String text = apiService.extractResponse(response);
+            String sanitized = sanitizeToJson(text);
+
+            JsonElement element = JsonParser.parseString(sanitized);
+            if (element.isJsonArray()) {
+                JsonArray arr = element.getAsJsonArray();
+                for (JsonElement item : arr) {
+                    merged.add(item);
+                }
+            } else {
+                merged.add(element);
+            }
+        }
+
+        return prettyPrintJson(merged.toString());
+    }
+
+    private String sanitizeToJson(String raw) {
+        if (raw == null) return "[]";
+        String cleaned = raw.replace("```", "").replace("json", "");
+        int firstBracket = cleaned.indexOf('[');
+        int lastBracket = cleaned.lastIndexOf(']');
+        if (firstBracket >= 0 && lastBracket >= firstBracket) {
+            cleaned = cleaned.substring(firstBracket, lastBracket + 1);
+        }
+        try { JsonParser.parseString(cleaned); return cleaned; } catch (Exception ignored) {}
+        int firstBrace = cleaned.indexOf('{');
+        int lastBrace = cleaned.lastIndexOf('}');
+        if (firstBrace >= 0 && lastBrace >= firstBrace) {
+            String objectStr = cleaned.substring(firstBrace, lastBrace + 1);
+            try { JsonParser.parseString(objectStr); return objectStr; } catch (Exception ignored) {}
+        }
+        return cleaned;
+    }
+
+    private String prettyPrintJson(String json) {
+        try {
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            JsonElement element = JsonParser.parseString(json);
+            return gson.toJson(element);
+        } catch (Exception e) {
+            return json;
+        }
+    }
 }

@@ -1,4 +1,3 @@
-
 [
   {
     "holidayName": "Confraternização Universal",
@@ -8,47 +7,71 @@
     "travelDestinations": [
       {
         "city": "Rio de Janeiro",
-        "state": "RJ",
-        "description": "Famosa pelas praias de Copacabana e Ipanema, o Rio oferece o Cristo Redentor e o Pão de Açúcar como cartões postais imperdíveis.",
+        "state": "Rio de Janeiro",
+        "description": "Famosa pelas praias de Copacabana e Ipanema, o Rio oferece o Cristo Redentor, o Pão de Açúcar e uma vibrante vida noturna.",
         "latitude": -22.9068,
         "longitude": -43.1729,
-        "timeTravel": "1h (voo)",
-        "targetAudience": "Jovens, famílias, casais, aventureiros",
-        "highlights": ["Praias", "Cristo Redentor", "Pão de Açúcar", "Vida Noturna"],
-        "timeTemperature": "Quente"
+        "timeTravel": "4h30 (voo + traslados)",
+        "targetAudience": "Casais, Famílias, Aventureiros, Amantes da praia",
+        "highlights": [
+          "Cristo Redentor",
+          "Pão de Açúcar",
+          "Praias",
+          "Vida Noturna"
+        ],
+        "timeTemperature": "Quente",
+        "averageCost": "R$ 3500"
       },
       {
         "city": "Salvador",
-        "state": "BA",
-        "description": "Berço da cultura afro-brasileira, Salvador encanta com seu Pelourinho, igrejas barrocas e culinária rica em sabores.",
+        "state": "Bahia",
+        "description": "Conhecida pelo Pelourinho, sua arquitetura colonial e a forte influência da cultura africana, Salvador oferece praias e festas o ano todo.",
         "latitude": -12.9777,
         "longitude": -38.5016,
-        "timeTravel": "2h (voo)",
-        "targetAudience": "Amantes de história, cultura, famílias",
-        "highlights": ["Pelourinho", "Igrejas Barrocas", "Culinária Afro-Brasileira", "Praias"],
-        "timeTemperature": "Quente"
+        "timeTravel": "2h30 (voo + traslados)",
+        "targetAudience": "Amantes de história, Famílias, Aventureiros, Apreciadores da cultura",
+        "highlights": [
+          "Pelourinho",
+          "Farol da Barra",
+          "Praias",
+          "Cultura Afro-Brasileira"
+        ],
+        "timeTemperature": "Quente",
+        "averageCost": "R$ 2800"
+      },
+      {
+        "city": "Florianópolis",
+        "state": "Santa Catarina",
+        "description": "A capital catarinense é famosa por suas belas praias, lagoas e trilhas. Ideal para quem busca contato com a natureza e esportes ao ar livre.",
+        "latitude": -27.5955,
+        "longitude": -48.5478,
+        "timeTravel": "1h30 (voo + traslados)",
+        "targetAudience": "Surfistas, Famílias, Aventureiros, Amantes da natureza",
+        "highlights": [
+          "Praias",
+          "Lagoa da Conceição",
+          "Trilhas",
+          "Gastronomia"
+        ],
+        "timeTemperature": "Moderado",
+        "averageCost": "R$ 3000"
       },
       {
         "city": "Foz do Iguaçu",
-        "state": "PR",
-        "description": "Lar das Cataratas do Iguaçu, uma das maiores maravilhas naturais do mundo, Foz oferece passeios de barco e trilhas inesquecíveis.",
+        "state": "Paraná",
+        "description": "Lar das majestosas Cataratas do Iguaçu, uma das maiores maravilhas naturais do mundo, e da Usina de Itaipu.",
         "latitude": -25.6953,
         "longitude": -54.4367,
-        "timeTravel": "1h40 (voo)",
-        "targetAudience": "Aventureiros, famílias, amantes da natureza",
-        "highlights": ["Cataratas do Iguaçu", "Parque Nacional do Iguaçu", "Usina de Itaipu", "Aventura"],
-        "timeTemperature": "Moderado"
-      },
-      {
-        "city": "Gramado",
-        "state": "RS",
-        "description": "Com arquitetura europeia e clima romântico, Gramado é famosa pelo Natal Luz e festivais de cinema, além de parques temáticos e vinícolas.",
-        "latitude": -29.3736,
-        "longitude": -50.8711,
-        "timeTravel": "1h30 (voo)",
-        "targetAudience": "Famílias, casais, amantes de gastronomia",
-        "highlights": ["Natal Luz", "Festivais", "Parques Temáticos", "Gastronomia"],
-        "timeTemperature": "Frio"
+        "timeTravel": "2h (voo + traslados)",
+        "targetAudience": "Famílias, Aventureiros, Amantes da natureza",
+        "highlights": [
+          "Cataratas do Iguaçu",
+          "Parque das Aves",
+          "Usina de Itaipu",
+          "Compras no Paraguai"
+        ],
+        "timeTemperature": "Quente",
+        "averageCost": "R$ 2500"
       }
     ]
   },
@@ -60,47 +83,71 @@
     "travelDestinations": [
       {
         "city": "Rio de Janeiro",
-        "state": "RJ",
-        "description": "O Carnaval do Rio é famoso pelos desfiles das escolas de samba no Sambódromo e blocos de rua animados por toda a cidade.",
+        "state": "Rio de Janeiro",
+        "description": "O Carnaval do Rio é famoso mundialmente pelos desfiles das escolas de samba no Sambódromo e pelos blocos de rua que agitam a cidade.",
         "latitude": -22.9068,
         "longitude": -43.1729,
-        "timeTravel": "1h (voo)",
-        "targetAudience": "Jovens, foliões, amantes da música",
-        "highlights": ["Sambódromo", "Blocos de Rua", "Praias", "Festas"],
-        "timeTemperature": "Quente"
+        "timeTravel": "4h30 (voo + traslados)",
+        "targetAudience": "Jovens, Festivos, Amantes da música e dança",
+        "highlights": [
+          "Desfiles das Escolas de Samba",
+          "Blocos de Rua",
+          "Praias",
+          "Festas"
+        ],
+        "timeTemperature": "Quente",
+        "averageCost": "R$ 4500"
       },
       {
         "city": "Salvador",
-        "state": "BA",
-        "description": "O Carnaval de Salvador é marcado pelos trios elétricos que arrastam multidões pelas ruas, com muita música e dança.",
+        "state": "Bahia",
+        "description": "O Carnaval de Salvador é conhecido por seus trios elétricos e a energia contagiante das ruas do Pelourinho.",
         "latitude": -12.9777,
         "longitude": -38.5016,
-        "timeTravel": "2h (voo)",
-        "targetAudience": "Foliões, amantes da música, grupos de amigos",
-        "highlights": ["Trios Elétricos", "Axé", "Blocos Afros", "Festas"],
-        "timeTemperature": "Quente"
+        "timeTravel": "2h30 (voo + traslados)",
+        "targetAudience": "Jovens, Festivos, Amantes da música e dança",
+        "highlights": [
+          "Trios Elétricos",
+          "Pelourinho",
+          "Shows",
+          "Festas"
+        ],
+        "timeTemperature": "Quente",
+        "averageCost": "R$ 4000"
       },
       {
         "city": "Olinda",
-        "state": "PE",
-        "description": "Com seus bonecos gigantes e ladeiras históricas, o Carnaval de Olinda oferece uma experiência única e cultural.",
-        "latitude": -8.0139,
-        "longitude": -34.8533,
-        "timeTravel": "2h30 (voo)",
-        "targetAudience": "Famílias, amantes da cultura, foliões",
-        "highlights": ["Bonecos Gigantes", "Ladeiras Históricas", "Maracatu", "Frevo"],
-        "timeTemperature": "Quente"
+        "state": "Pernambuco",
+        "description": "O Carnaval de Olinda é famoso pelos bonecos gigantes e as ladeiras históricas tomadas por foliões.",
+        "latitude": -8.0092,
+        "longitude": -34.8553,
+        "timeTravel": "3h (voo + traslados)",
+        "targetAudience": "Famílias, Festivos, Amantes da cultura",
+        "highlights": [
+          "Bonecos Gigantes",
+          "Ladeiras Históricas",
+          "Maracatu",
+          "Frevo"
+        ],
+        "timeTemperature": "Quente",
+        "averageCost": "R$ 3800"
       },
       {
         "city": "Recife",
-        "state": "PE",
-        "description": "Conhecido como o maior bloco de Carnaval do mundo, o Galo da Madrugada agita Recife com muita música e alegria.",
+        "state": "Pernambuco",
+        "description": "O Carnaval de Recife é marcado pelo Galo da Madrugada e a diversidade de ritmos como o frevo e o maracatu.",
         "latitude": -8.0539,
         "longitude": -34.8816,
-        "timeTravel": "2h30 (voo)",
-        "targetAudience": "Foliões, amantes da música, grupos de amigos",
-        "highlights": ["Galo da Madrugada", "Maracatu", "Frevo", "Shows"],
-        "timeTemperature": "Quente"
+        "timeTravel": "3h (voo + traslados)",
+        "targetAudience": "Jovens, Festivos, Amantes da música e dança",
+        "highlights": [
+          "Galo da Madrugada",
+          "Frevo",
+          "Maracatu",
+          "Shows"
+        ],
+        "timeTemperature": "Quente",
+        "averageCost": "R$ 3500"
       }
     ]
   },
@@ -112,47 +159,71 @@
     "travelDestinations": [
       {
         "city": "Rio de Janeiro",
-        "state": "RJ",
-        "description": "O Carnaval do Rio é famoso pelos desfiles das escolas de samba no Sambódromo e blocos de rua animados por toda a cidade.",
+        "state": "Rio de Janeiro",
+        "description": "O Carnaval do Rio é famoso mundialmente pelos desfiles das escolas de samba no Sambódromo e pelos blocos de rua que agitam a cidade.",
         "latitude": -22.9068,
         "longitude": -43.1729,
-        "timeTravel": "1h (voo)",
-        "targetAudience": "Jovens, foliões, amantes da música",
-        "highlights": ["Sambódromo", "Blocos de Rua", "Praias", "Festas"],
-        "timeTemperature": "Quente"
+        "timeTravel": "4h30 (voo + traslados)",
+        "targetAudience": "Jovens, Festivos, Amantes da música e dança",
+        "highlights": [
+          "Desfiles das Escolas de Samba",
+          "Blocos de Rua",
+          "Praias",
+          "Festas"
+        ],
+        "timeTemperature": "Quente",
+        "averageCost": "R$ 4500"
       },
       {
         "city": "Salvador",
-        "state": "BA",
-        "description": "O Carnaval de Salvador é marcado pelos trios elétricos que arrastam multidões pelas ruas, com muita música e dança.",
+        "state": "Bahia",
+        "description": "O Carnaval de Salvador é conhecido por seus trios elétricos e a energia contagiante das ruas do Pelourinho.",
         "latitude": -12.9777,
         "longitude": -38.5016,
-        "timeTravel": "2h (voo)",
-        "targetAudience": "Foliões, amantes da música, grupos de amigos",
-        "highlights": ["Trios Elétricos", "Axé", "Blocos Afros", "Festas"],
-        "timeTemperature": "Quente"
+        "timeTravel": "2h30 (voo + traslados)",
+        "targetAudience": "Jovens, Festivos, Amantes da música e dança",
+        "highlights": [
+          "Trios Elétricos",
+          "Pelourinho",
+          "Shows",
+          "Festas"
+        ],
+        "timeTemperature": "Quente",
+        "averageCost": "R$ 4000"
       },
       {
         "city": "Olinda",
-        "state": "PE",
-        "description": "Com seus bonecos gigantes e ladeiras históricas, o Carnaval de Olinda oferece uma experiência única e cultural.",
-        "latitude": -8.0139,
-        "longitude": -34.8533,
-        "timeTravel": "2h30 (voo)",
-        "targetAudience": "Famílias, amantes da cultura, foliões",
-        "highlights": ["Bonecos Gigantes", "Ladeiras Históricas", "Maracatu", "Frevo"],
-        "timeTemperature": "Quente"
+        "state": "Pernambuco",
+        "description": "O Carnaval de Olinda é famoso pelos bonecos gigantes e as ladeiras históricas tomadas por foliões.",
+        "latitude": -8.0092,
+        "longitude": -34.8553,
+        "timeTravel": "3h (voo + traslados)",
+        "targetAudience": "Famílias, Festivos, Amantes da cultura",
+        "highlights": [
+          "Bonecos Gigantes",
+          "Ladeiras Históricas",
+          "Maracatu",
+          "Frevo"
+        ],
+        "timeTemperature": "Quente",
+        "averageCost": "R$ 3800"
       },
       {
         "city": "Recife",
-        "state": "PE",
-        "description": "Conhecido como o maior bloco de Carnaval do mundo, o Galo da Madrugada agita Recife com muita música e alegria.",
+        "state": "Pernambuco",
+        "description": "O Carnaval de Recife é marcado pelo Galo da Madrugada e a diversidade de ritmos como o frevo e o maracatu.",
         "latitude": -8.0539,
         "longitude": -34.8816,
-        "timeTravel": "2h30 (voo)",
-        "targetAudience": "Foliões, amantes da música, grupos de amigos",
-        "highlights": ["Galo da Madrugada", "Maracatu", "Frevo", "Shows"],
-        "timeTemperature": "Quente"
+        "timeTravel": "3h (voo + traslados)",
+        "targetAudience": "Jovens, Festivos, Amantes da música e dança",
+        "highlights": [
+          "Galo da Madrugada",
+          "Frevo",
+          "Maracatu",
+          "Shows"
+        ],
+        "timeTemperature": "Quente",
+        "averageCost": "R$ 3500"
       }
     ]
   },
@@ -164,47 +235,71 @@
     "travelDestinations": [
       {
         "city": "Ouro Preto",
-        "state": "MG",
-        "description": "Cidade histórica com rica arquitetura barroca, ideal para quem busca imersão na história do Brasil e celebrações religiosas tradicionais.",
+        "state": "Minas Gerais",
+        "description": "Cidade histórica com arquitetura barroca preservada, igrejas ricamente decoradas e um importante centro cultural.",
         "latitude": -20.3764,
-        "longitude": -43.5022,
-        "timeTravel": "1h (voo + traslado)",
-        "targetAudience": "Famílias, amantes de história, religiosos",
-        "highlights": ["Igrejas Barrocas", "Museus", "Arquitetura Colonial", "Festas Religiosas"],
-        "timeTemperature": "Moderado"
+        "longitude": -43.5044,
+        "timeTravel": "1h30 (voo + traslados)",
+        "targetAudience": "Amantes de história, Famílias, Casais",
+        "highlights": [
+          "Igrejas Barrocas",
+          "Museus",
+          "Arquitetura Colonial",
+          "Festas Religiosas"
+        ],
+        "timeTemperature": "Moderado",
+        "averageCost": "R$ 2200"
+      },
+      {
+        "city": "Gramado",
+        "state": "Rio Grande do Sul",
+        "description": "Conhecida por sua arquitetura europeia, parques temáticos e eventos como o Natal Luz.",
+        "latitude": -29.3725,
+        "longitude": -50.8736,
+        "timeTravel": "2h (voo + traslados)",
+        "targetAudience": "Famílias, Casais, Aventureiros",
+        "highlights": [
+          "Natal Luz",
+          "Parques Temáticos",
+          "Gastronomia",
+          "Arquitetura Europeia"
+        ],
+        "timeTemperature": "Frio",
+        "averageCost": "R$ 2800"
       },
       {
         "city": "Aparecida",
-        "state": "SP",
-        "description": "Principal centro de peregrinação católica do Brasil, abriga o Santuário Nacional de Aparecida, um dos maiores do mundo.",
-        "latitude": -22.8447,
-        "longitude": -45.2358,
-        "timeTravel": "1h (voo + traslado)",
-        "targetAudience": "Religiosos, famílias",
-        "highlights": ["Santuário Nacional", "Romarias", "Eventos Religiosos", "Compras"],
-        "timeTemperature": "Moderado"
-      },
-      {
-        "city": "Paraty",
-        "state": "RJ",
-        "description": "Charmosa cidade colonial com ruas de pedra, casarões históricos e belas praias, ideal para relaxar e apreciar a natureza.",
-        "latitude": -23.2172,
-        "longitude": -44.7139,
-        "timeTravel": "4h (traslado)",
-        "targetAudience": "Casais, famílias, amantes da natureza",
-        "highlights": ["Centro Histórico", "Praias", "Passeios de Barco", "Culinária"],
-        "timeTemperature": "Quente"
+        "state": "São Paulo",
+        "description": "Principal centro de peregrinação religiosa do Brasil, com a Basílica de Nossa Senhora Aparecida.",
+        "latitude": -22.8442,
+        "longitude": -45.2336,
+        "timeTravel": "1h (voo + traslados)",
+        "targetAudience": "Religiosos, Famílias",
+        "highlights": [
+          "Basílica de Nossa Senhora Aparecida",
+          "Romarias",
+          "Eventos Religiosos",
+          "Compras"
+        ],
+        "timeTemperature": "Moderado",
+        "averageCost": "R$ 1800"
       },
       {
         "city": "Belo Horizonte",
-        "state": "MG",
-        "description": "Capital mineira com vida cultural intensa, famosa pela gastronomia e pelos bares da Savassi, além de museus e parques.",
+        "state": "Minas Gerais",
+        "description": "A capital mineira oferece uma rica cena cultural, arquitetura moderna e uma gastronomia de dar água na boca.",
         "latitude": -19.9167,
         "longitude": -43.9345,
-        "timeTravel": "1h (voo)",
-        "targetAudience": "Jovens, famílias, amantes da gastronomia",
-        "highlights": ["Gastronomia", "Museus", "Parques", "Vida Noturna"],
-        "timeTemperature": "Moderado"
+        "timeTravel": "1h (voo + traslados)",
+        "targetAudience": "Amantes da gastronomia, Casais, Famílias",
+        "highlights": [
+          "Mercado Central",
+          "Inhotim",
+          "Gastronomia Mineira",
+          "Arquitetura"
+        ],
+        "timeTemperature": "Moderado",
+        "averageCost": "R$ 2000"
       }
     ]
   },
@@ -216,47 +311,71 @@
     "travelDestinations": [
       {
         "city": "Gramado",
-        "state": "RS",
-        "description": "Cidade charmosa na serra gaúcha, com eventos temáticos de Páscoa, como a Chocofest, e paisagens exuberantes.",
-        "latitude": -29.3736,
-        "longitude": -50.8711,
-        "timeTravel": "1h30 (voo)",
-        "targetAudience": "Famílias, casais, crianças",
-        "highlights": ["Chocofest", "Lago Negro", "Mini Mundo", "Rua Torta"],
-        "timeTemperature": "Frio"
+        "state": "Rio Grande do Sul",
+        "description": "Conhecida por sua arquitetura europeia, parques temáticos e eventos temáticos de Páscoa.",
+        "latitude": -29.3725,
+        "longitude": -50.8736,
+        "timeTravel": "2h (voo + traslados)",
+        "targetAudience": "Famílias, Casais, Aventureiros",
+        "highlights": [
+          "Chocolates",
+          "Parques Temáticos",
+          "Gastronomia",
+          "Arquitetura Europeia"
+        ],
+        "timeTemperature": "Frio",
+        "averageCost": "R$ 3000"
       },
       {
         "city": "Campos do Jordão",
-        "state": "SP",
-        "description": "Conhecida como a Suíça Brasileira, oferece clima frio, arquitetura europeia e eventos de Páscoa, além de trilhas e cachoeiras.",
-        "latitude": -22.7425,
-        "longitude": -45.5964,
-        "timeTravel": "3h (traslado)",
-        "targetAudience": "Casais, famílias, aventureiros",
-        "highlights": ["Morro do Elefante", "Horto Florestal", "Cervejarias", "Chocolate"],
-        "timeTemperature": "Frio"
+        "state": "São Paulo",
+        "description": "Conhecida como a \u0027Suíça Brasileira\u0027, Campos do Jordão oferece clima frio, arquitetura charmosa e paisagens montanhosas.",
+        "latitude": -22.7428,
+        "longitude": -45.5986,
+        "timeTravel": "1h30 (voo + traslados)",
+        "targetAudience": "Casais, Famílias, Aventureiros",
+        "highlights": [
+          "Clima Frio",
+          "Arquitetura Europeia",
+          "Gastronomia",
+          "Passeios de Trem"
+        ],
+        "timeTemperature": "Frio",
+        "averageCost": "R$ 2500"
       },
       {
         "city": "Petrópolis",
-        "state": "RJ",
-        "description": "Cidade imperial com museus, palácios e paisagens montanhosas, ideal para um passeio histórico e cultural.",
+        "state": "Rio de Janeiro",
+        "description": "Cidade Imperial com museus históricos, palácios e arquitetura neoclássica.",
         "latitude": -22.5058,
         "longitude": -43.1792,
-        "timeTravel": "1h (traslado)",
-        "targetAudience": "Famílias, amantes da história, casais",
-        "highlights": ["Museu Imperial", "Palácio de Cristal", "Catedral São Pedro de Alcântara", "Cervejaria Bohemia"],
-        "timeTemperature": "Moderado"
+        "timeTravel": "1h (voo + traslados)",
+        "targetAudience": "Amantes de história, Casais, Famílias",
+        "highlights": [
+          "Museu Imperial",
+          "Palácio de Cristal",
+          "Catedral de São Pedro de Alcântara",
+          "Cervejarias"
+        ],
+        "timeTemperature": "Moderado",
+        "averageCost": "R$ 2000"
       },
       {
         "city": "Curitiba",
-        "state": "PR",
-        "description": "Capital ecológica com parques, jardins e museus, além de uma programação especial para a Páscoa.",
+        "state": "Paraná",
+        "description": "Conhecida por seus parques, jardins e planejamento urbano, Curitiba oferece uma experiência cultural rica e diversificada.",
         "latitude": -25.4296,
         "longitude": -49.2719,
-        "timeTravel": "1h15 (voo)",
-        "targetAudience": "Famílias, amantes da natureza, culturais",
-        "highlights": ["Jardim Botânico", "Parque Tanguá", "Museu Oscar Niemeyer", "Ópera de Arame"],
-        "timeTemperature": "Moderado"
+        "timeTravel": "1h (voo + traslados)",
+        "targetAudience": "Casais, Famílias, Aventureiros",
+        "highlights": [
+          "Jardim Botânico",
+          "Museu Oscar Niemeyer",
+          "Parque Tanguá",
+          "Gastronomia"
+        ],
+        "timeTemperature": "Moderado",
+        "averageCost": "R$ 2300"
       }
     ]
   },
@@ -268,47 +387,71 @@
     "travelDestinations": [
       {
         "city": "Ouro Preto",
-        "state": "MG",
-        "description": "Cidade histórica com arquitetura barroca preservada, ideal para reviver a história da Inconfidência Mineira e homenagear Tiradentes.",
+        "state": "Minas Gerais",
+        "description": "Cidade histórica com arquitetura barroca preservada, igrejas ricamente decoradas e um importante centro cultural.",
         "latitude": -20.3764,
-        "longitude": -43.5022,
-        "timeTravel": "1h (voo + traslado)",
-        "targetAudience": "Amantes da história, estudantes, famílias",
-        "highlights": ["Igrejas Barrocas", "Museu da Inconfidência", "Casa dos Contos", "Minas de Ouro"],
-        "timeTemperature": "Moderado"
+        "longitude": -43.5044,
+        "timeTravel": "1h30 (voo + traslados)",
+        "targetAudience": "Amantes de história, Famílias, Casais",
+        "highlights": [
+          "Igrejas Barrocas",
+          "Museus",
+          "Arquitetura Colonial",
+          "Festas Religiosas"
+        ],
+        "timeTemperature": "Moderado",
+        "averageCost": "R$ 2200"
       },
       {
         "city": "Tiradentes",
-        "state": "MG",
-        "description": "Charmosa cidade histórica com ruas de pedra e casarões coloniais, palco de importantes eventos culturais e gastronômicos.",
-        "latitude": -21.1228,
-        "longitude": -44.1878,
-        "timeTravel": "4h (traslado)",
-        "targetAudience": "Casais, famílias, amantes da gastronomia",
-        "highlights": ["Centro Histórico", "Maria Fumaça", "Igreja Matriz de Santo Antônio", "Festivais"],
-        "timeTemperature": "Moderado"
+        "state": "Minas Gerais",
+        "description": "Cidade histórica com arquitetura colonial preservada, igrejas barrocas e um ambiente tranquilo e charmoso.",
+        "latitude": -21.1131,
+        "longitude": -44.1875,
+        "timeTravel": "2h (voo + traslados)",
+        "targetAudience": "Amantes de história, Casais, Famílias",
+        "highlights": [
+          "Igreja Matriz de Santo Antônio",
+          "Chafariz de São José",
+          "Museus",
+          "Arquitetura Colonial"
+        ],
+        "timeTemperature": "Moderado",
+        "averageCost": "R$ 2500"
       },
       {
         "city": "São João del Rei",
-        "state": "MG",
-        "description": "Cidade histórica com igrejas barrocas e museus, conhecida pela arquitetura preservada e pela tranquilidade.",
-        "latitude": -21.1364,
-        "longitude": -44.2575,
-        "timeTravel": "4h30 (traslado)",
-        "targetAudience": "Famílias, amantes da história, viajantes tranquilos",
-        "highlights": ["Igrejas", "Museus", "Ponte da Cadeia", "Centro Histórico"],
-        "timeTemperature": "Moderado"
+        "state": "Minas Gerais",
+        "description": "Cidade histórica com arquitetura colonial preservada, igrejas barrocas e um ambiente tranquilo e charmoso.",
+        "latitude": -21.1375,
+        "longitude": -44.2583,
+        "timeTravel": "2h30 (voo + traslados)",
+        "targetAudience": "Amantes de história, Casais, Famílias",
+        "highlights": [
+          "Igrejas Barrocas",
+          "Ponte da Cadeia",
+          "Museus",
+          "Arquitetura Colonial"
+        ],
+        "timeTemperature": "Moderado",
+        "averageCost": "R$ 2300"
       },
       {
-        "city": "Diamantina",
-        "state": "MG",
-        "description": "Cidade histórica com casarões coloniais e paisagens montanhosas, famosa pela extração de diamantes e pela arquitetura peculiar.",
-        "latitude": -18.2475,
-        "longitude": -43.6031,
-        "timeTravel": "2h (voo + traslado)",
-        "targetAudience": "Aventureiros, amantes da história, famílias",
-        "highlights": ["Casa de Juscelino Kubitschek", "Mercado Velho", "Cachoeiras", "Paisagens"],
-        "timeTemperature": "Moderado"
+        "city": "Congonhas",
+        "state": "Minas Gerais",
+        "description": "Cidade histórica conhecida pelo Santuário de Bom Jesus de Matosinhos, com esculturas dos profetas de Aleijadinho.",
+        "latitude": -20.4933,
+        "longitude": -43.8572,
+        "timeTravel": "2h (voo + traslados)",
+        "targetAudience": "Amantes de história, Religiosos, Famílias",
+        "highlights": [
+          "Santuário de Bom Jesus de Matosinhos",
+          "Esculturas de Aleijadinho",
+          "Museus",
+          "Arquitetura Colonial"
+        ],
+        "timeTemperature": "Moderado",
+        "averageCost": "R$ 2000"
       }
     ]
   },
@@ -319,48 +462,72 @@
     "currency": "BRL",
     "travelDestinations": [
       {
-        "city": "São Paulo",
-        "state": "SP",
-        "description": "Maior centro financeiro e cultural do país, oferece museus, parques, restaurantes e uma vida noturna agitada.",
-        "latitude": -23.5505,
-        "longitude": -46.6333,
-        "timeTravel": "N/A",
-        "targetAudience": "Jovens, famílias, amantes da cultura, negócios",
-        "highlights": ["Museus", "Parques", "Gastronomia", "Vida Noturna"],
-        "timeTemperature": "Moderado"
-      },
-      {
         "city": "Rio de Janeiro",
-        "state": "RJ",
-        "description": "Cidade famosa pelas praias de Copacabana e Ipanema, com o Cristo Redentor e o Pão de Açúcar como cartões postais.",
+        "state": "Rio de Janeiro",
+        "description": "Famosa pelas praias de Copacabana e Ipanema, o Rio oferece o Cristo Redentor, o Pão de Açúcar e uma vibrante vida noturna.",
         "latitude": -22.9068,
         "longitude": -43.1729,
-        "timeTravel": "1h (voo)",
-        "targetAudience": "Jovens, famílias, casais, aventureiros",
-        "highlights": ["Praias", "Cristo Redentor", "Pão de Açúcar", "Vida Noturna"],
-        "timeTemperature": "Quente"
+        "timeTravel": "4h30 (voo + traslados)",
+        "targetAudience": "Casais, Famílias, Aventureiros, Amantes da praia",
+        "highlights": [
+          "Cristo Redentor",
+          "Pão de Açúcar",
+          "Praias",
+          "Vida Noturna"
+        ],
+        "timeTemperature": "Quente",
+        "averageCost": "R$ 3500"
+      },
+      {
+        "city": "São Paulo",
+        "state": "São Paulo",
+        "description": "A maior cidade do Brasil, com museus, parques, gastronomia diversificada e vida noturna agitada.",
+        "latitude": -23.5505,
+        "longitude": -46.6333,
+        "timeTravel": "1h (voo + traslados)",
+        "targetAudience": "Amantes da cultura, Jovens, Famílias",
+        "highlights": [
+          "Avenida Paulista",
+          "Museu de Arte de São Paulo",
+          "Parque Ibirapuera",
+          "Gastronomia"
+        ],
+        "timeTemperature": "Moderado",
+        "averageCost": "R$ 3000"
+      },
+      {
+        "city": "Belo Horizonte",
+        "state": "Minas Gerais",
+        "description": "A capital mineira oferece uma rica cena cultural, arquitetura moderna e uma gastronomia de dar água na boca.",
+        "latitude": -19.9167,
+        "longitude": -43.9345,
+        "timeTravel": "1h (voo + traslados)",
+        "targetAudience": "Amantes da gastronomia, Casais, Famílias",
+        "highlights": [
+          "Mercado Central",
+          "Inhotim",
+          "Gastronomia Mineira",
+          "Arquitetura"
+        ],
+        "timeTemperature": "Moderado",
+        "averageCost": "R$ 2000"
       },
       {
         "city": "Curitiba",
-        "state": "PR",
-        "description": "Capital ecológica com parques, jardins e museus, ideal para um passeio tranquilo em meio à natureza.",
+        "state": "Paraná",
+        "description": "Conhecida por seus parques, jardins e planejamento urbano, Curitiba oferece uma experiência cultural rica e diversificada.",
         "latitude": -25.4296,
         "longitude": -49.2719,
-        "timeTravel": "1h15 (voo)",
-        "targetAudience": "Famílias, amantes da natureza, culturais",
-        "highlights": ["Jardim Botânico", "Parque Tanguá", "Museu Oscar Niemeyer", "Ópera de Arame"],
-        "timeTemperature": "Moderado"
-      },
-      {
-        "city": "Porto Alegre",
-        "state": "RS",
-        "description": "Capital gaúcha com parques, museus e o Mercado Público, ideal para conhecer a cultura local e saborear a gastronomia.",
-        "latitude": -30.0346,
-        "longitude": -51.2177,
-        "timeTravel": "1h40 (voo)",
-        "targetAudience": "Famílias, amantes da cultura, viajantes tranquilos",
-        "highlights": ["Mercado Público", "Parque da Redenção", "Museu de Arte do Rio Grande do Sul", "Cultura Gaúcha"],
-        "timeTemperature": "Moderado"
+        "timeTravel": "1h (voo + traslados)",
+        "targetAudience": "Casais, Famílias, Aventureiros",
+        "highlights": [
+          "Jardim Botânico",
+          "Museu Oscar Niemeyer",
+          "Parque Tanguá",
+          "Gastronomia"
+        ],
+        "timeTemperature": "Moderado",
+        "averageCost": "R$ 2300"
       }
     ]
   },
@@ -372,47 +539,71 @@
     "travelDestinations": [
       {
         "city": "Ouro Preto",
-        "state": "MG",
-        "description": "Cidade histórica com rica tradição religiosa, onde as ruas são enfeitadas com tapetes coloridos para a procissão de Corpus Christi.",
+        "state": "Minas Gerais",
+        "description": "Cidade histórica com arquitetura barroca preservada, igrejas ricamente decoradas e tradições religiosas.",
         "latitude": -20.3764,
-        "longitude": -43.5022,
-        "timeTravel": "1h (voo + traslado)",
-        "targetAudience": "Religiosos, amantes da história, famílias",
-        "highlights": ["Tapetes de Corpus Christi", "Igrejas Barrocas", "Museus", "Arquitetura Colonial"],
-        "timeTemperature": "Moderado"
+        "longitude": -43.5044,
+        "timeTravel": "1h30 (voo + traslados)",
+        "targetAudience": "Amantes de história, Famílias, Religiosos",
+        "highlights": [
+          "Igrejas Barrocas",
+          "Museus",
+          "Arquitetura Colonial",
+          "Tapetes de Corpus Christi"
+        ],
+        "timeTemperature": "Moderado",
+        "averageCost": "R$ 2200"
       },
       {
         "city": "Diamantina",
-        "state": "MG",
-        "description": "Cidade histórica com arquitetura colonial preservada, onde a festa de Corpus Christi é celebrada com missas e procissões.",
-        "latitude": -18.2475,
-        "longitude": -43.6031,
-        "timeTravel": "2h (voo + traslado)",
-        "targetAudience": "Religiosos, amantes da história, famílias",
-        "highlights": ["Procissões", "Igrejas Históricas", "Casa de Juscelino Kubitschek", "Paisagens"],
-        "timeTemperature": "Moderado"
-      },
-      {
-        "city": "Olinda",
-        "state": "PE",
-        "description": "Cidade histórica com igrejas seculares e ladeiras coloridas, onde a celebração de Corpus Christi é marcada por missas e procissões.",
-        "latitude": -8.0139,
-        "longitude": -34.8533,
-        "timeTravel": "2h30 (voo)",
-        "targetAudience": "Religiosos, amantes da história, famílias",
-        "highlights": ["Igrejas Históricas", "Ladeiras", "Procissões", "Artesanato"],
-        "timeTemperature": "Quente"
+        "state": "Minas Gerais",
+        "description": "Cidade histórica com arquitetura colonial preservada e famosa pelo Festival de Inverno.",
+        "latitude": -18.2472,
+        "longitude": -43.6033,
+        "timeTravel": "2h (voo + traslados)",
+        "targetAudience": "Amantes de história, Famílias, Aventureiros",
+        "highlights": [
+          "Casarões Coloniais",
+          "Rua da Quitanda",
+          "Festival de Inverno",
+          "Arquitetura"
+        ],
+        "timeTemperature": "Moderado",
+        "averageCost": "R$ 2500"
       },
       {
         "city": "Salvador",
-        "state": "BA",
-        "description": "Cidade com forte influência religiosa, onde a festa de Corpus Christi é celebrada com missas e procissões em diversas igrejas.",
+        "state": "Bahia",
+        "description": "Conhecida pelo Pelourinho, sua arquitetura colonial e a forte influência da cultura africana.",
         "latitude": -12.9777,
         "longitude": -38.5016,
-        "timeTravel": "2h (voo)",
-        "targetAudience": "Religiosos, amantes da cultura, famílias",
-        "highlights": ["Igrejas Históricas", "Procissões", "Pelourinho", "Culinária Afro-Brasileira"],
-        "timeTemperature": "Quente"
+        "timeTravel": "2h30 (voo + traslados)",
+        "targetAudience": "Amantes de história, Famílias, Aventureiros",
+        "highlights": [
+          "Pelourinho",
+          "Igrejas Históricas",
+          "Cultura Afro-Brasileira",
+          "Praias"
+        ],
+        "timeTemperature": "Quente",
+        "averageCost": "R$ 2800"
+      },
+      {
+        "city": "Olinda",
+        "state": "Pernambuco",
+        "description": "Cidade histórica com arquitetura colonial preservada e igrejas barrocas.",
+        "latitude": -8.0092,
+        "longitude": -34.8553,
+        "timeTravel": "3h (voo + traslados)",
+        "targetAudience": "Amantes de história, Famílias, Religiosos",
+        "highlights": [
+          "Igrejas Históricas",
+          "Casarões Coloniais",
+          "Artesanato",
+          "Cultura"
+        ],
+        "timeTemperature": "Quente",
+        "averageCost": "R$ 2600"
       }
     ]
   },
@@ -424,47 +615,71 @@
     "travelDestinations": [
       {
         "city": "São Paulo",
-        "state": "SP",
-        "description": "Visite o Obelisco do Ibirapuera, um monumento que homenageia os heróis da Revolução de 1932, e explore museus com exposições sobre o evento.",
+        "state": "São Paulo",
+        "description": "A maior cidade do Brasil, com museus, parques, gastronomia diversificada e vida noturna agitada.",
         "latitude": -23.5505,
         "longitude": -46.6333,
-        "timeTravel": "N/A",
-        "targetAudience": "Amantes da história, famílias, estudantes",
-        "highlights": ["Obelisco do Ibirapuera", "Museus", "Parques", "Gastronomia"],
-        "timeTemperature": "Moderado"
+        "timeTravel": "1h (voo + traslados)",
+        "targetAudience": "Amantes da cultura, Jovens, Famílias",
+        "highlights": [
+          "Avenida Paulista",
+          "Museu de Arte de São Paulo",
+          "Parque Ibirapuera",
+          "Gastronomia"
+        ],
+        "timeTemperature": "Moderado",
+        "averageCost": "R$ 3000"
       },
       {
-        "city": "Guaratinguetá",
-        "state": "SP",
-        "description": "Cidade natal de Frei Galvão, com igrejas históricas e museus que contam a história da região e sua participação na Revolução de 1932.",
-        "latitude": -22.8144,
-        "longitude": -45.1944,
-        "timeTravel": "2h (traslado)",
-        "targetAudience": "Religiosos, amantes da história, famílias",
-        "highlights": ["Igrejas Históricas", "Museu Frei Galvão", "Santuário de Frei Galvão", "Cultura Local"],
-        "timeTemperature": "Moderado"
-      },
-      {
-        "city": "Campinas",
-        "state": "SP",
-        "description": "Cidade com museus e centros culturais que abordam a história da Revolução de 1932, além de parques e áreas verdes para relaxar.",
-        "latitude": -22.9056,
-        "longitude": -47.0608,
-        "timeTravel": "1h30 (traslado)",
-        "targetAudience": "Famílias, amantes da história, estudantes",
-        "highlights": ["Museus", "Parques", "Cultura", "Gastronomia"],
-        "timeTemperature": "Moderado"
+        "city": "Campos do Jordão",
+        "state": "São Paulo",
+        "description": "Conhecida como a \u0027Suíça Brasileira\u0027, Campos do Jordão oferece clima frio, arquitetura charmosa e paisagens montanhosas.",
+        "latitude": -22.7428,
+        "longitude": -45.5986,
+        "timeTravel": "1h30 (voo + traslados)",
+        "targetAudience": "Casais, Famílias, Aventureiros",
+        "highlights": [
+          "Clima Frio",
+          "Arquitetura Europeia",
+          "Gastronomia",
+          "Passeios de Trem"
+        ],
+        "timeTemperature": "Frio",
+        "averageCost": "R$ 2500"
       },
       {
         "city": "Santos",
-        "state": "SP",
-        "description": "Cidade litorânea com o Museu do Café, que conta a história da produção cafeeira e sua importância para a economia paulista.",
+        "state": "São Paulo",
+        "description": "Cidade litorânea com a maior orla de jardins do mundo, museus e um importante porto.",
         "latitude": -23.9608,
-        "longitude": -46.3322,
-        "timeTravel": "1h (traslado)",
-        "targetAudience": "Famílias, amantes da história, turistas",
-        "highlights": ["Museu do Café", "Praias", "Orla", "Aquário"],
-        "timeTemperature": "Quente"
+        "longitude": -46.3342,
+        "timeTravel": "1h (voo + traslados)",
+        "targetAudience": "Famílias, Amantes da praia, Aventureiros",
+        "highlights": [
+          "Orla da Praia",
+          "Museu do Café",
+          "Aquário Municipal",
+          "Bonde Turístico"
+        ],
+        "timeTemperature": "Quente",
+        "averageCost": "R$ 2000"
+      },
+      {
+        "city": "Aparecida",
+        "state": "São Paulo",
+        "description": "Principal centro de peregrinação religiosa do Brasil, com a Basílica de Nossa Senhora Aparecida.",
+        "latitude": -22.8442,
+        "longitude": -45.2336,
+        "timeTravel": "1h (voo + traslados)",
+        "targetAudience": "Religiosos, Famílias",
+        "highlights": [
+          "Basílica de Nossa Senhora Aparecida",
+          "Romarias",
+          "Eventos Religiosos",
+          "Compras"
+        ],
+        "timeTemperature": "Moderado",
+        "averageCost": "R$ 1800"
       }
     ]
   },
@@ -476,47 +691,71 @@
     "travelDestinations": [
       {
         "city": "Brasília",
-        "state": "DF",
-        "description": "Visite o local do desfile cívico-militar na Esplanada dos Ministérios e explore os monumentos históricos da capital federal.",
+        "state": "Distrito Federal",
+        "description": "Capital do Brasil, com arquitetura modernista de Oscar Niemeyer e importantes monumentos históricos.",
         "latitude": -15.7797,
         "longitude": -47.9297,
-        "timeTravel": "N/A",
-        "targetAudience": "Famílias, estudantes, amantes da história",
-        "highlights": ["Esplanada dos Ministérios", "Praça dos Três Poderes", "Catedral de Brasília", "Museu Nacional"],
-        "timeTemperature": "Moderado"
-      },
-      {
-        "city": "São Paulo",
-        "state": "SP",
-        "description": "Acompanhe as celebrações cívicas no Parque do Ibirapuera e visite museus com exposições sobre a história do Brasil.",
-        "latitude": -23.5505,
-        "longitude": -46.6333,
-        "timeTravel": "N/A",
-        "targetAudience": "Famílias, estudantes, amantes da história",
-        "highlights": ["Parque do Ibirapuera", "Museus", "Gastronomia", "Vida Noturna"],
-        "timeTemperature": "Moderado"
+        "timeTravel": "1h (voo + traslados)",
+        "targetAudience": "Amantes da arquitetura, Famílias, Aventureiros",
+        "highlights": [
+          "Congresso Nacional",
+          "Catedral de Brasília",
+          "Palácio da Alvorada",
+          "Arquitetura"
+        ],
+        "timeTemperature": "Moderado",
+        "averageCost": "R$ 2800"
       },
       {
         "city": "Rio de Janeiro",
-        "state": "RJ",
-        "description": "Assista ao desfile militar na Avenida Presidente Vargas e explore os museus e monumentos históricos da cidade.",
+        "state": "Rio de Janeiro",
+        "description": "Famosa pelas praias de Copacabana e Ipanema, o Rio oferece o Cristo Redentor, o Pão de Açúcar e uma vibrante vida noturna.",
         "latitude": -22.9068,
         "longitude": -43.1729,
-        "timeTravel": "1h (voo)",
-        "targetAudience": "Famílias, amantes da história, turistas",
-        "highlights": ["Avenida Presidente Vargas", "Museus", "Praias", "Cristo Redentor"],
-        "timeTemperature": "Quente"
+        "timeTravel": "4h30 (voo + traslados)",
+        "targetAudience": "Casais, Famílias, Aventureiros, Amantes da praia",
+        "highlights": [
+          "Cristo Redentor",
+          "Pão de Açúcar",
+          "Praias",
+          "Vida Noturna"
+        ],
+        "timeTemperature": "Quente",
+        "averageCost": "R$ 3500"
       },
       {
         "city": "Salvador",
-        "state": "BA",
-        "description": "Participe das celebrações cívicas no centro histórico e explore os museus e igrejas que contam a história da Bahia e do Brasil.",
+        "state": "Bahia",
+        "description": "Conhecida pelo Pelourinho, sua arquitetura colonial e a forte influência da cultura africana.",
         "latitude": -12.9777,
         "longitude": -38.5016,
-        "timeTravel": "2h (voo)",
-        "targetAudience": "Amantes da história, famílias, turistas",
-        "highlights": ["Pelourinho", "Igrejas Históricas", "Museus", "Cultura Afro-Brasileira"],
-        "timeTemperature": "Quente"
+        "timeTravel": "2h30 (voo + traslados)",
+        "targetAudience": "Amantes de história, Famílias, Aventureiros",
+        "highlights": [
+          "Pelourinho",
+          "Farol da Barra",
+          "Praias",
+          "Cultura Afro-Brasileira"
+        ],
+        "timeTemperature": "Quente",
+        "averageCost": "R$ 2800"
+      },
+      {
+        "city": "Ouro Preto",
+        "state": "Minas Gerais",
+        "description": "Cidade histórica com arquitetura barroca preservada, igrejas ricamente decoradas e um importante centro cultural.",
+        "latitude": -20.3764,
+        "longitude": -43.5044,
+        "timeTravel": "1h30 (voo + traslados)",
+        "targetAudience": "Amantes de história, Famílias, Casais",
+        "highlights": [
+          "Igrejas Barrocas",
+          "Museus",
+          "Arquitetura Colonial",
+          "Festas Religiosas"
+        ],
+        "timeTemperature": "Moderado",
+        "averageCost": "R$ 2200"
       }
     ]
   },
@@ -527,48 +766,72 @@
     "currency": "BRL",
     "travelDestinations": [
       {
-        "city": "Aparecida",
-        "state": "SP",
-        "description": "Principal centro de peregrinação religiosa do Brasil, com o Santuário Nacional de Aparecida, um dos maiores do mundo.",
-        "latitude": -22.8447,
-        "longitude": -45.2358,
-        "timeTravel": "N/A",
-        "targetAudience": "Religiosos, famílias",
-        "highlights": ["Santuário Nacional", "Romarias", "Eventos Religiosos", "Compras"],
-        "timeTemperature": "Moderado"
+        "city": "Rio de Janeiro",
+        "state": "Rio de Janeiro",
+        "description": "Famosa pelas praias de Copacabana e Ipanema, o Rio oferece o Cristo Redentor, o Pão de Açúcar e uma vibrante vida noturna.",
+        "latitude": -22.9068,
+        "longitude": -43.1729,
+        "timeTravel": "1h (voo)",
+        "targetAudience": "Famílias, jovens, casais, aventureiros",
+        "highlights": [
+          "Cristo Redentor",
+          "Pão de Açúcar",
+          "Praias",
+          "Carnaval"
+        ],
+        "timeTemperature": "Quente",
+        "averageCost": "R$ 2500"
       },
       {
-        "city": "Guaratinguetá",
-        "state": "SP",
-        "description": "Cidade natal de Frei Galvão, com o Santuário dedicado ao primeiro santo brasileiro e igrejas históricas.",
-        "latitude": -22.8144,
-        "longitude": -45.1944,
-        "timeTravel": "30min (traslado)",
-        "targetAudience": "Religiosos, famílias",
-        "highlights": ["Santuário de Frei Galvão", "Igrejas Históricas", "Museu Frei Galvão", "Cultura Local"],
-        "timeTemperature": "Moderado"
+        "city": "Salvador",
+        "state": "Bahia",
+        "description": "Berço da cultura afro-brasileira, Salvador encanta com seu Pelourinho, igrejas barrocas e culinária única.",
+        "latitude": -12.9722,
+        "longitude": -38.5016,
+        "timeTravel": "2h (voo)",
+        "targetAudience": "Interessados em cultura, história e gastronomia",
+        "highlights": [
+          "Pelourinho",
+          "Igrejas barrocas",
+          "Culinária afro-brasileira",
+          "Praias"
+        ],
+        "timeTemperature": "Quente",
+        "averageCost": "R$ 2000"
       },
       {
-        "city": "Canindé",
-        "state": "CE",
-        "description": "Importante centro de peregrinação religiosa no Nordeste, com a Basílica de São Francisco das Chagas.",
-        "latitude": -4.3558,
-        "longitude": -39.3011,
-        "timeTravel": "3h (voo + traslado)",
-        "targetAudience": "Religiosos, famílias",
-        "highlights": ["Basílica de São Francisco", "Romarias", "Eventos Religiosos", "Artesanato"],
-        "timeTemperature": "Quente"
+        "city": "Foz do Iguaçu",
+        "state": "Paraná",
+        "description": "Lar das Cataratas do Iguaçu, uma das maiores maravilhas naturais do mundo, com atividades de ecoturismo e aventura.",
+        "latitude": -25.6953,
+        "longitude": -54.4367,
+        "timeTravel": "1h40 (voo)",
+        "targetAudience": "Aventureiros, amantes da natureza, famílias",
+        "highlights": [
+          "Cataratas do Iguaçu",
+          "Parque Nacional do Iguaçu",
+          "Usina de Itaipu",
+          "Ecoturismo"
+        ],
+        "timeTemperature": "Moderado",
+        "averageCost": "R$ 1800"
       },
       {
-        "city": "Juazeiro do Norte",
-        "state": "CE",
-        "description": "Cidade com forte apelo religioso, com a estátua de Padre Cícero e o Santuário dedicado ao líder religioso.",
-        "latitude": -7.2144,
-        "longitude": -39.3192,
-        "timeTravel": "3h (voo + traslado)",
-        "targetAudience": "Religiosos, famílias",
-        "highlights": ["Estátua de Padre Cícero", "Santuário de Padre Cícero", "Romarias", "Artesanato"],
-        "timeTemperature": "Quente"
+        "city": "Gramado",
+        "state": "Rio Grande do Sul",
+        "description": "Conhecida por sua arquitetura europeia, festivais de cinema e Natal Luz, Gramado oferece charme e atrações para todas as idades.",
+        "latitude": -29.3736,
+        "longitude": -50.8706,
+        "timeTravel": "2h30 (voo + traslados)",
+        "targetAudience": "Famílias, casais, apreciadores de cultura e gastronomia",
+        "highlights": [
+          "Natal Luz",
+          "Mini Mundo",
+          "Lago Negro",
+          "Festival de Cinema"
+        ],
+        "timeTemperature": "Frio",
+        "averageCost": "R$ 2200"
       }
     ]
   },
@@ -580,42 +843,300 @@
     "travelDestinations": [
       {
         "city": "São Paulo",
-        "state": "SP",
-        "description": "Visite o Cemitério da Consolação, um museu a céu aberto com esculturas e obras de arte de importantes artistas.",
+        "state": "São Paulo",
+        "description": "A maior cidade do Brasil, centro financeiro e cultural, com museus, parques, teatros e uma gastronomia diversificada.",
         "latitude": -23.5505,
         "longitude": -46.6333,
-        "timeTravel": "N/A",
-        "targetAudience": "Amantes da arte, famílias, turistas",
-        "highlights": ["Cemitério da Consolação", "Museus", "Parques", "Gastronomia"],
-        "timeTemperature": "Moderado"
-      },
-      {
-        "city": "Rio de Janeiro",
-        "state": "RJ",
-        "description": "Visite o Cemitério de São João Batista, com túmulos de personalidades históricas e esculturas importantes.",
-        "latitude": -22.9068,
-        "longitude": -43.1729,
-        "timeTravel": "1h (voo)",
-        "targetAudience": "Amantes da arte, famílias, turistas",
-        "highlights": ["Cemitério de São João Batista", "Praias", "Cristo Redentor", "Pão de Açúcar"],
-        "timeTemperature": "Quente"
+        "timeTravel": "30 min (voo)",
+        "targetAudience": "Profissionais, amantes da cultura, famílias",
+        "highlights": [
+          "Avenida Paulista",
+          "Museu de Arte de São Paulo (MASP)",
+          "Parque Ibirapuera",
+          "Gastronomia"
+        ],
+        "timeTemperature": "Moderado",
+        "averageCost": "R$ 2000"
       },
       {
         "city": "Belo Horizonte",
-        "state": "MG",
-        "description": "Visite o Cemitério do Bonfim, com túmulos de personalidades mineiras e esculturas.",
+        "state": "Minas Gerais",
+        "description": "Conhecida como a capital dos bares, Belo Horizonte oferece uma rica cena gastronômica, arquitetura modernista e o famoso Mercado Central.",
         "latitude": -19.9167,
         "longitude": -43.9345,
         "timeTravel": "1h (voo)",
-        "targetAudience": "Amantes da arte, famílias, turistas",
-        "highlights": ["Cemitério do Bonfim", "Museus", "Gastronomia", "Parques"],
-        "timeTemperature": "Moderado"
+        "targetAudience": "Jovens, apreciadores de gastronomia e cultura",
+        "highlights": [
+          "Mercado Central",
+          "Conjunto Arquitetônico da Pampulha",
+          "Bares e restaurantes",
+          "Museus"
+        ],
+        "timeTemperature": "Moderado",
+        "averageCost": "R$ 1700"
       },
       {
+        "city": "Curitiba",
+        "state": "Paraná",
+        "description": "Modelo de urbanismo e sustentabilidade, Curitiba encanta com seus parques, jardins e arquitetura inovadora.",
+        "latitude": -25.4284,
+        "longitude": -49.2733,
+        "timeTravel": "1h15 (voo)",
+        "targetAudience": "Famílias, amantes da natureza, interessados em urbanismo",
+        "highlights": [
+          "Jardim Botânico",
+          "Parque Tanguá",
+          "Museu Oscar Niemeyer",
+          "Transporte público"
+        ],
+        "timeTemperature": "Frio",
+        "averageCost": "R$ 1900"
+      },
+      {
+        "city": "Manaus",
+        "state": "Amazonas",
+        "description": "Porta de entrada para a Amazônia, Manaus oferece passeios pela selva, encontros das águas e o famoso Teatro Amazonas.",
+        "latitude": -3.1186,
+        "longitude": -60.0212,
+        "timeTravel": "4h (voo)",
+        "targetAudience": "Aventureiros, amantes da natureza, interessados em ecoturismo",
+        "highlights": [
+          "Teatro Amazonas",
+          "Encontro das Águas",
+          "Passeios na Amazônia",
+          "Mercado Adolfo Lisboa"
+        ],
+        "timeTemperature": "Quente",
+        "averageCost": "R$ 2300"
+      }
+    ]
+  },
+  {
+    "holidayName": "Proclamação da República",
+    "country": "Brasil",
+    "holidayDate": "2025-11-15",
+    "currency": "BRL",
+    "travelDestinations": [
+      {
+        "city": "Brasília",
+        "state": "Distrito Federal",
+        "description": "Capital do Brasil, com arquitetura modernista de Oscar Niemeyer, Patrimônio Cultural da Humanidade pela UNESCO.",
+        "latitude": -15.7797,
+        "longitude": -47.9297,
+        "timeTravel": "1h (voo)",
+        "targetAudience": "Interessados em arquitetura, história e política",
+        "highlights": [
+          "Congresso Nacional",
+          "Catedral de Brasília",
+          "Palácio da Alvorada",
+          "Museu Nacional"
+        ],
+        "timeTemperature": "Moderado",
+        "averageCost": "R$ 1800"
+      },
+      {
+        "city": "Fortaleza",
+        "state": "Ceará",
+        "description": "Famosa por suas praias, como Praia do Futuro e Iracema, e pelo artesanato local, Fortaleza oferece sol, mar e cultura.",
+        "latitude": -3.7172,
+        "longitude": -38.5433,
+        "timeTravel": "3h (voo)",
+        "targetAudience": "Famílias, jovens, amantes de praia e artesanato",
+        "highlights": [
+          "Praia do Futuro",
+          "Mercado Central",
+          "Centro Dragão do Mar de Arte e Cultura",
+          "Beach Park"
+        ],
+        "timeTemperature": "Quente",
+        "averageCost": "R$ 1900"
+      },
+      {
+        "city": "Recife",
+        "state": "Pernambuco",
+        "description": "Conhecida como a Veneza Brasileira, Recife encanta com seus rios, pontes, o bairro histórico do Recife Antigo e o Instituto Ricardo Brennand.",
+        "latitude": -8.0539,
+        "longitude": -34.8811,
+        "timeTravel": "2h30 (voo)",
+        "targetAudience": "Interessados em história, cultura e arquitetura",
+        "highlights": [
+          "Recife Antigo",
+          "Instituto Ricardo Brennand",
+          "Oficina Francisco Brennand",
+          "Praia de Boa Viagem"
+        ],
+        "timeTemperature": "Quente",
+        "averageCost": "R$ 2100"
+      },
+      {
+        "city": "Ouro Preto",
+        "state": "Minas Gerais",
+        "description": "Cidade histórica tombada pela UNESCO, Ouro Preto preserva a arquitetura barroca do período colonial, com igrejas e museus.",
+        "latitude": -20.3767,
+        "longitude": -43.5033,
+        "timeTravel": "1h30 (voo + traslados)",
+        "targetAudience": "Interessados em história, arquitetura e cultura brasileira",
+        "highlights": [
+          "Igrejas barrocas",
+          "Museu da Inconfidência",
+          "Minas de ouro",
+          "Festival de Inverno"
+        ],
+        "timeTemperature": "Moderado",
+        "averageCost": "R$ 1600"
+      }
+    ]
+  },
+  {
+    "holidayName": "Dia da Consciência Negra",
+    "country": "Brasil",
+    "holidayDate": "2025-11-20",
+    "currency": "BRL",
+    "travelDestinations": [
+      {
         "city": "Porto Alegre",
-        "state": "RS",
-        "description": "Visite o Cemitério da Santa Casa, com túmulos de personalidades gaúchas e esculturas.",
+        "state": "Rio Grande do Sul",
+        "description": "Capital gaúcha com forte influência europeia, parques arborizados, vida cultural intensa e culinária tradicional.",
         "latitude": -30.0346,
         "longitude": -51.2177,
-        "timeTravel": "1h40 (voo)",
-        
+        "timeTravel": "1h45 (voo)",
+        "targetAudience": "Famílias, jovens, apreciadores de cultura e gastronomia",
+        "highlights": [
+          "Mercado Público",
+          "Parque da Redenção",
+          "Usina do Gasômetro",
+          "Culinária gaúcha"
+        ],
+        "timeTemperature": "Frio",
+        "averageCost": "R$ 1700"
+      },
+      {
+        "city": "Belém",
+        "state": "Pará",
+        "description": "Porta de entrada da Amazônia, com o famoso Mercado Ver-o-Peso, culinária exótica e rica cultura regional.",
+        "latitude": -1.4558,
+        "longitude": -48.5044,
+        "timeTravel": "4h (voo)",
+        "targetAudience": "Aventureiros, amantes da natureza, interessados em cultura amazônica",
+        "highlights": [
+          "Mercado Ver-o-Peso",
+          "Estação das Docas",
+          "Theatro da Paz",
+          "Culinária amazônica"
+        ],
+        "timeTemperature": "Quente",
+        "averageCost": "R$ 2000"
+      },
+      {
+        "city": "João Pessoa",
+        "state": "Paraíba",
+        "description": "Capital da Paraíba, conhecida como \u0027a cidade onde o sol nasce primeiro\u0027, com belas praias e centros históricos.",
+        "latitude": -7.115,
+        "longitude": -34.8642,
+        "timeTravel": "2h45 (voo)",
+        "targetAudience": "Famílias, casais, amantes de praia e história",
+        "highlights": [
+          "Praias de Tambaú e Cabo Branco",
+          "Farol do Cabo Branco",
+          "Centro Histórico",
+          "Pôr do sol na Praia do Jacaré"
+        ],
+        "timeTemperature": "Quente",
+        "averageCost": "R$ 1800"
+      },
+      {
+        "city": "Natal",
+        "state": "Rio Grande do Norte",
+        "description": "Famosa pelas dunas de Genipabu e praias paradisíacas, Natal oferece sol, aventura e paisagens deslumbrantes.",
+        "latitude": -5.7953,
+        "longitude": -35.2094,
+        "timeTravel": "2h50 (voo)",
+        "targetAudience": "Aventureiros, amantes de praia, famílias",
+        "highlights": [
+          "Dunas de Genipabu",
+          "Praia de Ponta Negra",
+          "Forte dos Reis Magos",
+          "Passeios de buggy"
+        ],
+        "timeTemperature": "Quente",
+        "averageCost": "R$ 2000"
+      }
+    ]
+  },
+  {
+    "holidayName": "Natal",
+    "country": "Brasil",
+    "holidayDate": "2025-12-25",
+    "currency": "BRL",
+    "travelDestinations": [
+      {
+        "city": "Campos do Jordão",
+        "state": "São Paulo",
+        "description": "Conhecida como a Suíça Brasileira, Campos do Jordão oferece clima frio, arquitetura europeia e festivais de inverno.",
+        "latitude": -22.7406,
+        "longitude": -45.5983,
+        "timeTravel": "2h30 (carro)",
+        "targetAudience": "Casais, famílias, apreciadores de clima frio e gastronomia",
+        "highlights": [
+          "Vila Capivari",
+          "Morro do Elefante",
+          "Festival de Inverno",
+          "Cervejarias artesanais"
+        ],
+        "timeTemperature": "Frio",
+        "averageCost": "R$ 2800"
+      },
+      {
+        "city": "Florianópolis",
+        "state": "Santa Catarina",
+        "description": "Ilha da Magia, com praias paradisíacas, lagoas, trilhas e uma vida noturna agitada.",
+        "latitude": -27.5953,
+        "longitude": -48.548,
+        "timeTravel": "1h20 (voo)",
+        "targetAudience": "Jovens, famílias, amantes de praia e esportes aquáticos",
+        "highlights": [
+          "Praia da Joaquina",
+          "Lagoa da Conceição",
+          "Mercado Público",
+          "Trilhas"
+        ],
+        "timeTemperature": "Moderado",
+        "averageCost": "R$ 2300"
+      },
+      {
+        "city": "Jericoacoara",
+        "state": "Ceará",
+        "description": "Paraíso com dunas, lagoas cristalinas e um pôr do sol inesquecível, Jericoacoara oferece aventura e relaxamento.",
+        "latitude": -2.7972,
+        "longitude": -40.5167,
+        "timeTravel": "5h (voo + traslados)",
+        "targetAudience": "Aventureiros, casais, amantes de praia e natureza",
+        "highlights": [
+          "Duna do Pôr do Sol",
+          "Lagoa Azul",
+          "Pedra Furada",
+          "Passeios de buggy"
+        ],
+        "timeTemperature": "Quente",
+        "averageCost": "R$ 3000"
+      },
+      {
+        "city": "Paraty",
+        "state": "Rio de Janeiro",
+        "description": "Cidade histórica com arquitetura colonial preservada, praias e ilhas exuberantes.",
+        "latitude": -23.2167,
+        "longitude": -44.7111,
+        "timeTravel": "4h (carro)",
+        "targetAudience": "Famílias, casais, apreciadores de história e natureza",
+        "highlights": [
+          "Centro Histórico",
+          "Passeios de barco pelas ilhas",
+          "Cachoeiras",
+          "Festas literárias"
+        ],
+        "timeTemperature": "Quente",
+        "averageCost": "R$ 2500"
+      }
+    ]
+  }
+]
