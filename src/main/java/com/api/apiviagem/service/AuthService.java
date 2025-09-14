@@ -2,6 +2,7 @@ package com.api.apiviagem.service;
 
 import com.api.apiviagem.model.AuthProvider;
 import com.api.apiviagem.model.GetInfosGoogle;
+import com.api.apiviagem.model.RoleType;
 import com.api.apiviagem.model.User;
 import com.api.apiviagem.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,9 @@ import java.util.Optional;
 public class AuthService {
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private UserRoleService userRoleService;
 
     private static final String GOOGLE_USERINFO_URL = "https://www.googleapis.com/oauth2/v3/userinfo";
 
@@ -62,8 +66,15 @@ public class AuthService {
             user.setEmail(infos.getEmail());
             user.setImageUrl(infos.getPicture());
             user.setAuthProvider(AuthProvider.GOOGLE);
+            
+            // Salva o usuário no banco
             userRepository.save(user);
-            // Salva no banco
+            
+            // Atribui role padrão USER se o usuário não tiver nenhuma role
+            if (user.getRoles() == null || user.getRoles().isEmpty()) {
+                userRoleService.assignDefaultRole(user);
+            }
+            
             return ResponseEntity.ok().body("Login Feito com Sucesso");
         } catch (Exception e){
             return ResponseEntity.badRequest().body("Não foi possivel fazer login");

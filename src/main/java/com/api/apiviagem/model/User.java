@@ -8,6 +8,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.Instant;
+import java.util.Set;
 import java.util.UUID;
 
 @DataAmount // Anotação do Lombok: gera getters, setters, toString, equals, hashCode
@@ -52,10 +53,20 @@ public class User {
     @Column(name = "auth_provider", nullable = false)
     private AuthProvider authProvider;
 
+    // --- Controle de Roles ---
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinTable(
+        name = "user_roles",
+        joinColumns = @JoinColumn(name = "user_id"),
+        inverseJoinColumns = @JoinColumn(name = "role_id")
+    )
+    private Set<Role> roles;
+
     public User() {
     }
 
-    public User(UUID id, String email, String name, Instant createdAt, Instant updatedAt, String googleId, String imageUrl, AuthProvider authProvider) {
+    public User(UUID id, String email, String name, Instant createdAt, Instant updatedAt, String googleId, String imageUrl, AuthProvider authProvider, Set<Role> roles) {
         this.id = id;
         this.email = email;
         this.name = name;
@@ -64,6 +75,7 @@ public class User {
         this.googleId = googleId;
         this.imageUrl = imageUrl;
         this.authProvider = authProvider;
+        this.roles = roles;
     }
 
     public UUID getId() {
@@ -128,5 +140,35 @@ public class User {
 
     public void setAuthProvider(AuthProvider authProvider) {
         this.authProvider = authProvider;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
+
+    // Métodos utilitários para gerenciar roles
+    public void addRole(Role role) {
+        if (this.roles == null) {
+            this.roles = new java.util.HashSet<>();
+        }
+        this.roles.add(role);
+    }
+
+    public void removeRole(Role role) {
+        if (this.roles != null) {
+            this.roles.remove(role);
+        }
+    }
+
+    public boolean hasRole(RoleType roleType) {
+        if (this.roles == null) {
+            return false;
+        }
+        return this.roles.stream()
+                .anyMatch(role -> role.getName().equals(roleType));
     }
 }
