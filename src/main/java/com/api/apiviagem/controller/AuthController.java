@@ -1,5 +1,7 @@
 package com.api.apiviagem.controller;
 
+import com.api.apiviagem.DTO.request.GoogleTokenRequest;
+import com.api.apiviagem.DTO.response.ErrorResponse;
 import com.api.apiviagem.model.User;
 import com.api.apiviagem.service.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,19 +17,18 @@ public class AuthController {
     @Autowired
     private AuthService authService;
 
-    @GetMapping
-    public ResponseEntity<List<User>> GetAllUsers() {
-        return ResponseEntity.status(HttpStatus.OK).body(authService.getUsers());
-    }
+    @PostMapping("/google/callback")
+    public ResponseEntity<?> handleGoogleCallback(@RequestBody GoogleTokenRequest request) {
+        String accessToken = request.accessToken();
 
-    @GetMapping("/google/callback")
-    public ResponseEntity<String> handleGoogleCallback(@RequestParam("access_token") String accessToken) {
+        // A validação pode ser melhorada com Bean Validation (@Valid) no DTO
         if (accessToken == null || accessToken.isBlank()) {
             return ResponseEntity
-                    .status(HttpStatus.UNAUTHORIZED) // Use HttpStatus para clareza
-                    .body("{\"error\": \"Access token ausente.\"}");
+                    .status(HttpStatus.BAD_REQUEST) // BAD_REQUEST é mais apropriado para input inválido
+                    .body(new ErrorResponse("O access token é obrigatório."));
         }
 
-        return authService.getUserInfo(accessToken);
+        // Delega a lógica para o serviço, que já retorna uma ResponseEntity
+        return authService.loginOrRegisterWithGoogle(accessToken);
     }
 }

@@ -2,12 +2,10 @@ package com.api.apiviagem.controller;
 
 import com.api.apiviagem.DTO.response.RoleResponseDTO;
 import com.api.apiviagem.exception.ResourceNotFoundException;
-import com.api.apiviagem.model.Role;
 import com.api.apiviagem.model.RoleType;
 import com.api.apiviagem.model.User;
-import com.api.apiviagem.service.UserRoleService;
+import com.api.apiviagem.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,12 +15,12 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/api/v1/users")
 @CrossOrigin(origins = "*")
-public class UserRoleController {
+public class UserController {
 
     @Autowired
-    private UserRoleService userRoleService;
+    private UserService userService;
 
     /**
      * Atribui uma role a um usuário.
@@ -32,7 +30,7 @@ public class UserRoleController {
             @PathVariable UUID userId,
             @PathVariable RoleType roleType) {
         try {
-            User user = userRoleService.assignRoleToUser(userId, roleType);
+            User user = userService.assignRoleToUser(userId, roleType);
             return ResponseEntity.ok(user);
         } catch (ResourceNotFoundException e) {
             return ResponseEntity.notFound().build();
@@ -47,7 +45,7 @@ public class UserRoleController {
             @PathVariable UUID userId,
             @PathVariable RoleType roleType) {
         try {
-            User user = userRoleService.removeRoleFromUser(userId, roleType);
+            User user = userService.removeRoleFromUser(userId, roleType);
             return ResponseEntity.ok(user);
         } catch (ResourceNotFoundException e) {
             return ResponseEntity.notFound().build();
@@ -59,8 +57,16 @@ public class UserRoleController {
      */
     @GetMapping("/by-role/{roleType}")
     public ResponseEntity<List<User>> getUsersByRole(@PathVariable RoleType roleType) {
-        List<User> users = userRoleService.getUsersByRole(roleType);
+        List<User> users = userService.getUsersByRole(roleType);
         return ResponseEntity.ok(users);
+    }
+
+    /**
+     * Busca todos os usuários.
+     */
+    @GetMapping
+    public ResponseEntity<List<User>> getAllUsers() {
+        return ResponseEntity.ok().body(userService.getAllUsers());
     }
 
     /**
@@ -68,7 +74,7 @@ public class UserRoleController {
      */
     @GetMapping("/admins")
     public ResponseEntity<List<User>> getAdminUsers() {
-        List<User> adminUsers = userRoleService.getAdminUsers();
+        List<User> adminUsers = userService.getAdminUsers();
         return ResponseEntity.ok(adminUsers);
     }
 
@@ -77,7 +83,7 @@ public class UserRoleController {
      */
     @GetMapping("/regular-users")
     public ResponseEntity<List<User>> getRegularUsers() {
-        List<User> regularUsers = userRoleService.getRegularUsers();
+        List<User> regularUsers = userService.getRegularUsers();
         return ResponseEntity.ok(regularUsers);
     }
 
@@ -88,7 +94,7 @@ public class UserRoleController {
     public ResponseEntity<Boolean> userHasRole(
             @PathVariable UUID userId,
             @PathVariable RoleType roleType) {
-        boolean hasRole = userRoleService.userHasRole(userId, roleType);
+        boolean hasRole = userService.userHasRole(userId, roleType);
         return ResponseEntity.ok(hasRole);
     }
 
@@ -100,7 +106,7 @@ public class UserRoleController {
             @PathVariable UUID userId,
             @RequestBody Set<RoleType> roleTypes) {
         try {
-            User user = userRoleService.setUserRoles(userId, roleTypes);
+            User user = userService.setUserRoles(userId, roleTypes);
             return ResponseEntity.ok(user);
         } catch (ResourceNotFoundException e) {
             return ResponseEntity.notFound().build();
@@ -113,7 +119,7 @@ public class UserRoleController {
     @GetMapping("/{userId}/roles")
     public ResponseEntity<List<RoleResponseDTO>> getUserRoles(@PathVariable UUID userId) {
         try {
-            User user = userRoleService.getUserById(userId);
+            User user = userService.getUserById(userId);
             List<RoleResponseDTO> roles = user.getRoles().stream()
                     .map(RoleResponseDTO::fromRole)
                     .collect(Collectors.toList());

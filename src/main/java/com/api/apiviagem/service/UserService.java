@@ -14,7 +14,7 @@ import java.util.Set;
 import java.util.UUID;
 
 @Service
-public class UserRoleService {
+public class UserService {
 
     @Autowired
     private UserRepository userRepository;
@@ -55,6 +55,13 @@ public class UserRoleService {
      */
     public List<User> getUsersByRole(RoleType roleType) {
         return userRepository.findByRoleType(roleType);
+    }
+
+    /**
+     * Busca todos os usuários.
+     */
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
     }
 
     /**
