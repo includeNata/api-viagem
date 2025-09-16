@@ -1,5 +1,6 @@
 package com.api.apiviagem.service;
 
+import com.api.apiviagem.DTO.response.UserResponseDTO;
 import com.api.apiviagem.model.AuthProvider;
 import com.api.apiviagem.model.GetInfosGoogle;
 import com.api.apiviagem.model.User;
@@ -34,7 +35,7 @@ public class AuthService {
 
     private static final String GOOGLE_USERINFO_URL = "https://www.googleapis.com/oauth2/v3/userinfo";
 
-    public ResponseEntity<String> loginOrRegisterWithGoogle(String googleAccessToken) {
+    public ResponseEntity<?> loginOrRegisterWithGoogle(String googleAccessToken) {
         try {
             // 1. Obter informações do usuário do Google
             GetInfosGoogle googleUserInfo = getUserInfoFromGoogle(googleAccessToken);
@@ -67,7 +68,10 @@ public class AuthService {
 
             return ResponseEntity.ok()
                     .header(HttpHeaders.SET_COOKIE, cookie.toString())
-                    .body("Login realizado com sucesso.");
+                    .body(new UserResponseDTO(user.getId(), user.getName(),
+                            user.getEmail(), user.getImageUrl(),
+                            user.getRoles(), user.getCreatedAt(),
+                            user.getUpdatedAt()));
 
         } catch (HttpClientErrorException.Unauthorized e) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Token do Google inválido ou expirado.");
