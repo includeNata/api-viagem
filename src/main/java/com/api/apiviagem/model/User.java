@@ -63,10 +63,15 @@ public class User {
     )
     private Set<Role> roles;
 
+    // --- Favoritos ---
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private Set<Favorite> favorites;
+
     public User() {
     }
 
-    public User(UUID id, String email, String name, Instant createdAt, Instant updatedAt, String googleId, String imageUrl, AuthProvider authProvider, Set<Role> roles) {
+    public User(UUID id, String email, String name, Instant createdAt, Instant updatedAt, String googleId, String imageUrl, AuthProvider authProvider, Set<Role> roles, Set<Favorite> favorites) {
         this.id = id;
         this.email = email;
         this.name = name;
@@ -76,6 +81,7 @@ public class User {
         this.imageUrl = imageUrl;
         this.authProvider = authProvider;
         this.roles = roles;
+        this.favorites = favorites;
     }
 
     public UUID getId() {
@@ -170,5 +176,29 @@ public class User {
         }
         return this.roles.stream()
                 .anyMatch(role -> role.getName().equals(roleType));
+    }
+
+    public Set<Favorite> getFavorites() {
+        return favorites;
+    }
+
+    public void setFavorites(Set<Favorite> favorites) {
+        this.favorites = favorites;
+    }
+
+    // Métodos utilitários para gerenciar favoritos
+    public void addFavorite(Favorite favorite) {
+        if (this.favorites == null) {
+            this.favorites = new java.util.HashSet<>();
+        }
+        this.favorites.add(favorite);
+        favorite.setUser(this);
+    }
+
+    public void removeFavorite(Favorite favorite) {
+        if (this.favorites != null) {
+            this.favorites.remove(favorite);
+            favorite.setUser(null);
+        }
     }
 }

@@ -6,6 +6,8 @@ import com.api.apiviagem.model.GetInfosGoogle;
 import com.api.apiviagem.model.User;
 import com.api.apiviagem.repository.UserRepository;
 import com.api.apiviagem.security.JwtTokenProvider;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -31,9 +33,29 @@ public class AuthService {
     @Autowired
     private JwtTokenProvider jwtTokenProvider;
 
-    // Removido o AuthenticationManager, ele não é usado aqui.
-
     private static final String GOOGLE_USERINFO_URL = "https://www.googleapis.com/oauth2/v3/userinfo";
+
+    public ResponseEntity<?> getCurrentUser(HttpServletRequest request) {
+        Cookie[] cookie = request.getCookies();
+
+        if (cookie != null) {
+            String token = "";
+            for (Cookie c : cookie) {
+                if (c.getName().equals("destinify-jwt-token")) {
+                    token = c.getValue();
+                }
+            }
+
+            User user = userRepository.findByEmail(token).get();
+
+            return ResponseEntity.ok(new UserResponseDTO(user.getId(), user.getName(),
+                    user.getEmail(), user.getImageUrl(),
+                    user.getRoles(), user.getCreatedAt(),
+                    user.getUpdatedAt()));
+        }
+
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Não foi encontrado nenhum cookie");
+    }
 
     public ResponseEntity<?> loginOrRegisterWithGoogle(String googleAccessToken) {
         try {
@@ -59,7 +81,7 @@ public class AuthService {
             String localJwt = jwtTokenProvider.generateToken(authentication);
 
             // 5. Criar o cookie e retorná-lo na resposta
-            ResponseCookie cookie = ResponseCookie.from("jwtToken", localJwt)
+            ResponseCookie cookie = ResponseCookie.from("destinify-jwt-token", localJwt)
                     .httpOnly(true)
                     .secure(true) // Use 'false' apenas em ambiente de desenvolvimento com HTTP
                     .path("/")

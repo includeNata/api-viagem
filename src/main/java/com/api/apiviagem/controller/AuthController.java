@@ -4,6 +4,7 @@ import com.api.apiviagem.DTO.request.GoogleTokenRequest;
 import com.api.apiviagem.DTO.response.ErrorResponse;
 import com.api.apiviagem.model.User;
 import com.api.apiviagem.service.AuthService;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +16,11 @@ import org.springframework.web.bind.annotation.*;
 public class AuthController {
     @Autowired
     private AuthService authService;
+
+    @GetMapping("/me")
+    public ResponseEntity<?> getCurrentUser(HttpServletRequest request) {
+        return authService.getCurrentUser(request);
+    }
 
     @PostMapping("/google/callback")
     public ResponseEntity<?> handleGoogleCallback(@RequestBody GoogleTokenRequest request) {

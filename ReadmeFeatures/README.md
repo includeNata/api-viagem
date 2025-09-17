@@ -8,6 +8,9 @@ Esta pasta contém a documentação detalhada das funcionalidades implementadas 
 - **[ROLE_API_DOCUMENTATION.md](./ROLE_API_DOCUMENTATION.md)** - Documentação completa da API de gerenciamento de roles
 - **[USER_ROLE_RELATIONSHIP.md](./USER_ROLE_RELATIONSHIP.md)** - Documentação do relacionamento entre usuários e roles
 
+### ⭐ Sistema de Favoritos
+- **[FAVORITES_API_DOCUMENTATION.md](./FAVORITES_API_DOCUMENTATION.md)** - Documentação completa da API de gerenciamento de favoritos
+
 ## 🚀 Features Implementadas
 
 ### 1. Sistema de Roles
@@ -21,6 +24,13 @@ Esta pasta contém a documentação detalhada das funcionalidades implementadas 
 - ✅ Atribuição automática de role padrão (USER) para novos usuários
 - ✅ Endpoints para gerenciar roles de usuários
 - ✅ Métodos utilitários para verificação de permissões
+
+### 3. Sistema de Favoritos
+- ✅ Modelo Favorite com relacionamento Many-to-One com User
+- ✅ CRUD completo para favoritos
+- ✅ Segurança: usuários só acessam seus próprios favoritos
+- ✅ Validações com Bean Validation
+- ✅ Endpoints REST para gerenciamento de favoritos
 
 ## 📋 Como Usar
 
@@ -49,14 +59,28 @@ curl -X GET http://localhost:8080/api/users/{userId}/has-role/ADMIN
 curl -X GET http://localhost:8080/api/users/admins
 ```
 
+### Gerenciando Favoritos
+```bash
+# Adicionar favorito
+curl -X POST http://localhost:8080/api/v1/favorites/user/{userId} \
+  -H "Content-Type: application/json" \
+  -d '{"name": "Google", "image": "https://google.com/favicon.ico", "href": "https://google.com"}'
+
+# Listar favoritos do usuário
+curl -X GET http://localhost:8080/api/v1/favorites/user/{userId}
+
+# Deletar favorito
+curl -X DELETE http://localhost:8080/api/v1/favorites/{favoriteId}/user/{userId}
+```
+
 ## 🔧 Arquitetura
 
 ### Camadas Implementadas
-- **Model**: Role, RoleType, relacionamento com User
-- **Repository**: RoleRepository, métodos adicionais no UserRepository
-- **Service**: RoleService, UserRoleService
-- **Controller**: RoleController, UserRoleController
-- **DTO**: RoleRequestDTO, RoleResponseDTO
+- **Model**: Role, RoleType, Favorite, relacionamentos com User
+- **Repository**: RoleRepository, FavoriteRepository, métodos adicionais no UserRepository
+- **Service**: RoleService, FavoriteService
+- **Controller**: RoleController, FavoriteController
+- **DTO**: RoleRequestDTO, RoleResponseDTO, FavoriteRequestDTO, FavoriteResponseDTO
 
 ### Padrões Utilizados
 - **Repository Pattern**: Para acesso a dados
@@ -69,10 +93,13 @@ curl -X GET http://localhost:8080/api/users/admins
 ### Tabelas Criadas
 - `roles` - Armazena as roles do sistema
 - `user_roles` - Tabela de relacionamento Many-to-Many
+- `favorites` - Armazena os favoritos dos usuários
 
 ### Relacionamentos
 - User ↔ Role (Many-to-Many)
 - Tabela intermediária: user_roles
+- User ↔ Favorite (One-to-Many)
+- Tabela favorites com chave estrangeira user_id
 
 ## 🔒 Segurança
 
@@ -95,6 +122,10 @@ curl -X GET http://localhost:8080/api/users/admins
 - [ ] Logs de auditoria para mudanças de roles
 - [ ] Interface web para gerenciamento de roles
 - [ ] Sistema de convites para roles administrativas
+- [ ] Paginação para listagem de favoritos
+- [ ] Busca/filtro para favoritos
+- [ ] Categorias/tags para favoritos
+- [ ] Cache Redis para consultas frequentes
 
 ---
 
