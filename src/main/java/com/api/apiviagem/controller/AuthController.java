@@ -5,6 +5,7 @@ import com.api.apiviagem.DTO.response.ErrorResponse;
 import com.api.apiviagem.model.User;
 import com.api.apiviagem.service.AuthService;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -35,5 +36,10 @@ public class AuthController {
 
         // Delega a lógica para o serviço, que já retorna uma ResponseEntity
         return authService.loginOrRegisterWithGoogle(accessToken);
+    }
+
+    @PostMapping("/logout")
+    public ResponseEntity<String> logout(HttpServletResponse response) {
+        return authService.logout(response);
     }
 }

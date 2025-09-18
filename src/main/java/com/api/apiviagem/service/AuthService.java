@@ -1,6 +1,7 @@
 package com.api.apiviagem.service;
 
 import com.api.apiviagem.DTO.response.UserResponseDTO;
+import com.api.apiviagem.exception.ResourceNotFoundException;
 import com.api.apiviagem.model.AuthProvider;
 import com.api.apiviagem.model.GetInfosGoogle;
 import com.api.apiviagem.model.User;
@@ -8,7 +9,9 @@ import com.api.apiviagem.repository.UserRepository;
 import com.api.apiviagem.security.JwtTokenProvider;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -33,28 +36,58 @@ public class AuthService {
     @Autowired
     private JwtTokenProvider jwtTokenProvider;
 
+    @Value("${app.cookie.secure}")
+    private boolean cookieSecure;
+
     private static final String GOOGLE_USERINFO_URL = "https://www.googleapis.com/oauth2/v3/userinfo";
 
     public ResponseEntity<?> getCurrentUser(HttpServletRequest request) {
-        Cookie[] cookie = request.getCookies();
+        Cookie[] cookies = request.getCookies();
 
-        if (cookie != null) {
+        if (cookies != null) {
             String token = "";
-            for (Cookie c : cookie) {
-                if (c.getName().equals("destinify-jwt-token")) {
-                    token = c.getValue();
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals("destinify-jwt-token")) {
+                    token = cookie.getValue();
+                    break;
                 }
             }
 
-            User user = userRepository.findByEmail(token).get();
+            if (!token.isEmpty()) {
+                try {
+                    // Valida o JWT e extrai o email
+                    String email = jwtTokenProvider.getUsernameFromToken(token);
+                    
+                    // Busca o usuário pelo email extraído do JWT
+                    User user = userRepository.findByEmail(email)
+                            .orElseThrow(() -> new ResourceNotFoundException("Usuário não encontrado"));
 
-            return ResponseEntity.ok(new UserResponseDTO(user.getId(), user.getName(),
-                    user.getEmail(), user.getImageUrl(),
-                    user.getRoles(), user.getCreatedAt(),
-                    user.getUpdatedAt()));
+                    return ResponseEntity.ok(new UserResponseDTO(user.getId(), user.getName(),
+                            user.getEmail(), user.getImageUrl(),
+                            user.getRoles(), user.getCreatedAt(),
+                            user.getUpdatedAt()));
+                } catch (Exception e) {
+                    // Token inválido ou expirado
+                    return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Token inválido ou expirado");
+                }
+            }
         }
 
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Não foi encontrado nenhum cookie");
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Não foi encontrado nenhum cookie de autenticação");
+    }
+
+    public ResponseEntity<String> logout(HttpServletResponse response) {
+        // Remove cookie usando ResponseCookie para manter consistência
+        ResponseCookie cookieBuilder = ResponseCookie.from("destinify-jwt-token", "")
+                .httpOnly(true)
+                .secure(cookieSecure)
+                .path("/")
+                .maxAge(0) // expira imediatamente
+                .build();
+
+        return ResponseEntity.ok()
+                .header(HttpHeaders.SET_COOKIE, cookieBuilder.toString())
+                .body("Logout realizado com sucesso!");
     }
 
     public ResponseEntity<?> loginOrRegisterWithGoogle(String googleAccessToken) {
@@ -81,12 +114,20 @@ public class AuthService {
             String localJwt = jwtTokenProvider.generateToken(authentication);
 
             // 5. Criar o cookie e retorná-lo na resposta
-            ResponseCookie cookie = ResponseCookie.from("destinify-jwt-token", localJwt)
+            ResponseCookie.ResponseCookieBuilder cookieBuilder = ResponseCookie.from("destinify-jwt-token", localJwt)
                     .httpOnly(true)
-                    .secure(true) // Use 'false' apenas em ambiente de desenvolvimento com HTTP
+                    .secure(cookieSecure)
                     .path("/")
-                    .maxAge(7 * 24 * 60 * 60) // 7 dias
-                    .build();
+                    .maxAge(7 * 24 * 60 * 60); // 7 dias
+
+            // Em produção (HTTPS) usa SameSite=None, em desenvolvimento usa SameSite=Lax
+            if (cookieSecure) {
+                cookieBuilder.sameSite("None"); // Para HTTPS/produção
+            } else {
+                cookieBuilder.sameSite("Lax"); // Para HTTP/desenvolvimento
+            }
+
+            ResponseCookie cookie = cookieBuilder.build();
 
             return ResponseEntity.ok()
                     .header(HttpHeaders.SET_COOKIE, cookie.toString())

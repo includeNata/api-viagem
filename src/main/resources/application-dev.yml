@@ -15,3 +15,7 @@ spring:
 admin:
   name: Administrador
   email: destinyfyone@gmail.com
+
+app:
+  cookie:
+    secure: false

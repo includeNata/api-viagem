@@ -60,6 +60,14 @@ public class JwtTokenProvider {
         return claims.getSubject();
     }
 
+    /**
+     * Alias para getUsername - extrai o username (email) do token JWT.
+     * Usado para manter consistência com o AuthService.
+     */
+    public String getUsernameFromToken(String token) {
+        return getUsername(token);
+    }
+
     public boolean validateToken(String token) {
         try {
             Jwts.parser()
