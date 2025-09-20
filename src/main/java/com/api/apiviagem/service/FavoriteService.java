@@ -52,6 +52,7 @@ public class FavoriteService {
         // Cria o novo favorito
         Favorite favorite = new Favorite();
         favorite.setName(requestDTO.name());
+        favorite.setDescription(requestDTO.description());
         favorite.setImage(requestDTO.image());
         favorite.setHref(requestDTO.href());
         favorite.setUser(user);
@@ -109,6 +110,7 @@ public class FavoriteService {
 
         // Atualiza os campos
         favorite.setName(requestDTO.name());
+        favorite.setDescription(requestDTO.description());
         favorite.setImage(requestDTO.image());
         favorite.setHref(requestDTO.href());
 

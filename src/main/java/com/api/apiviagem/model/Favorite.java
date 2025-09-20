@@ -21,6 +21,10 @@ public class Favorite {
     @Column(nullable = false)
     private String name;
 
+    @NotNull
+    @Column(nullable = false)
+    private String description;
+
     @Column(nullable = true)
     private String image;
 
@@ -45,8 +49,9 @@ public class Favorite {
     public Favorite() {
     }
 
-    public Favorite(String name, String image, String href, User user) {
+    public Favorite(String name, String description, String image, String href, User user) {
         this.name = name;
+        this.description = description;
         this.image = image;
         this.href = href;
         this.user = user;
@@ -77,6 +82,14 @@ public class Favorite {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getImage() {
@@ -124,6 +137,7 @@ public class Favorite {
         return "Favorite{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
                 ", image='" + image + '\'' +
                 ", href='" + href + '\'' +
                 ", user=" + (user != null ? user.getId() : null) +

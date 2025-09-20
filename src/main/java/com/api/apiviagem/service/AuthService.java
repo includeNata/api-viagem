@@ -1,5 +1,7 @@
 package com.api.apiviagem.service;
 
+import com.api.apiviagem.DTO.response.RefreshResponse;
+import com.api.apiviagem.DTO.response.SignInResponse;
 import com.api.apiviagem.DTO.response.UserResponseDTO;
 import com.api.apiviagem.exception.ResourceNotFoundException;
 import com.api.apiviagem.model.AuthProvider;
@@ -23,6 +25,8 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.http.ResponseCookie; // Import necessário
 
 import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class AuthService {
@@ -41,53 +45,17 @@ public class AuthService {
 
     private static final String GOOGLE_USERINFO_URL = "https://www.googleapis.com/oauth2/v3/userinfo";
 
-    public ResponseEntity<?> getCurrentUser(HttpServletRequest request) {
-        Cookie[] cookies = request.getCookies();
+    // Em AuthService.java
+    public ResponseEntity<?> getUserDataByEmail(String email) {
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new ResourceNotFoundException("Usuário não encontrado com o email: " + email));
 
-        if (cookies != null) {
-            String token = "";
-            for (Cookie cookie : cookies) {
-                if (cookie.getName().equals("destinify-jwt-token")) {
-                    token = cookie.getValue();
-                    break;
-                }
-            }
+        UserResponseDTO userResponseDTO = new UserResponseDTO(user.getId(), user.getName(),
+                user.getEmail(), user.getImageUrl(),
+                user.getRoles(), user.getCreatedAt(),
+                user.getUpdatedAt());
 
-            if (!token.isEmpty()) {
-                try {
-                    // Valida o JWT e extrai o email
-                    String email = jwtTokenProvider.getUsernameFromToken(token);
-                    
-                    // Busca o usuário pelo email extraído do JWT
-                    User user = userRepository.findByEmail(email)
-                            .orElseThrow(() -> new ResourceNotFoundException("Usuário não encontrado"));
-
-                    return ResponseEntity.ok(new UserResponseDTO(user.getId(), user.getName(),
-                            user.getEmail(), user.getImageUrl(),
-                            user.getRoles(), user.getCreatedAt(),
-                            user.getUpdatedAt()));
-                } catch (Exception e) {
-                    // Token inválido ou expirado
-                    return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Token inválido ou expirado");
-                }
-            }
-        }
-
-        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Não foi encontrado nenhum cookie de autenticação");
-    }
-
-    public ResponseEntity<String> logout(HttpServletResponse response) {
-        // Remove cookie usando ResponseCookie para manter consistência
-        ResponseCookie cookieBuilder = ResponseCookie.from("destinify-jwt-token", "")
-                .httpOnly(true)
-                .secure(cookieSecure)
-                .path("/")
-                .maxAge(0) // expira imediatamente
-                .build();
-
-        return ResponseEntity.ok()
-                .header(HttpHeaders.SET_COOKIE, cookieBuilder.toString())
-                .body("Logout realizado com sucesso!");
+        return ResponseEntity.ok(userResponseDTO);
     }
 
     public ResponseEntity<?> loginOrRegisterWithGoogle(String googleAccessToken) {
@@ -101,24 +69,15 @@ public class AuthService {
             // 3. Criar a autenticação manualmente (identidade já verificada pelo Google)
             // Aqui, usamos o email como principal e null para credenciais, pois não há senha.
             // As roles/authorities devem ser carregadas do nosso banco.
-            Authentication authentication = new UsernamePasswordAuthenticationToken(
-                    user.getEmail(),
-                    null,
-                    Collections.singletonList(new SimpleGrantedAuthority(user.getRoles().toString())) // Ou as roles reais do usuário
-            );
-
-            // Define o principal autenticado no contexto de segurança do Spring
-            SecurityContextHolder.getContext().setAuthentication(authentication);
+            Authentication authentication = createAuthentication(user);
 
             // 4. Gerar nosso JWT interno para o usuário
-            String localJwt = jwtTokenProvider.generateToken(authentication);
+            String refreshToken = jwtTokenProvider.generateRefreshToken(authentication);
+            String accessToken = jwtTokenProvider.generateAccessToken(authentication);
+
 
             // 5. Criar o cookie e retorná-lo na resposta
-            ResponseCookie.ResponseCookieBuilder cookieBuilder = ResponseCookie.from("destinify-jwt-token", localJwt)
-                    .httpOnly(true)
-                    .secure(cookieSecure)
-                    .path("/")
-                    .maxAge(7 * 24 * 60 * 60); // 7 dias
+            ResponseCookie.ResponseCookieBuilder cookieBuilder = generateCookieSession(refreshToken);
 
             // Em produção (HTTPS) usa SameSite=None, em desenvolvimento usa SameSite=Lax
             if (cookieSecure) {
@@ -128,13 +87,14 @@ public class AuthService {
             }
 
             ResponseCookie cookie = cookieBuilder.build();
+            UserResponseDTO userResponseDTO = new UserResponseDTO(user.getId(), user.getName(),
+                    user.getEmail(), user.getImageUrl(),
+                    user.getRoles(), user.getCreatedAt(),
+                    user.getUpdatedAt());
 
             return ResponseEntity.ok()
                     .header(HttpHeaders.SET_COOKIE, cookie.toString())
-                    .body(new UserResponseDTO(user.getId(), user.getName(),
-                            user.getEmail(), user.getImageUrl(),
-                            user.getRoles(), user.getCreatedAt(),
-                            user.getUpdatedAt()));
+                    .body(new SignInResponse(userResponseDTO, accessToken));
 
         } catch (HttpClientErrorException.Unauthorized e) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Token do Google inválido ou expirado.");
@@ -143,6 +103,59 @@ public class AuthService {
             // logger.error("Erro inesperado durante o login com Google: ", e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Ocorreu um erro no servidor.");
         }
+    }
+
+    public ResponseEntity<String> logout() {
+        // Remove cookie usando ResponseCookie para manter consistência
+        ResponseCookie cookieBuilder = ResponseCookie.from("destinify-refresh-token", "")
+                .httpOnly(true)
+                .secure(cookieSecure)
+                .path("/")
+                .maxAge(0) // expira imediatamente
+                .build();
+
+        return ResponseEntity.ok()
+                .header(HttpHeaders.SET_COOKIE, cookieBuilder.toString())
+                .body("Logout realizado com sucesso!");
+    }
+
+    public ResponseEntity<RefreshResponse> refreshToken(String refreshToken) {
+        try {
+            String userName = jwtTokenProvider.getUsernameFromRefreshToken(refreshToken);
+            User user = userRepository.findByEmail(userName).orElseThrow(() -> new ResourceNotFoundException(""));
+
+            Authentication authentication = createAuthentication(user);
+            String accessToken = jwtTokenProvider.generateAccessToken(authentication);
+
+            return ResponseEntity.ok().body(new RefreshResponse(accessToken));
+        } catch (RuntimeException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private ResponseCookie.ResponseCookieBuilder generateCookieSession(String token) {
+        return ResponseCookie.from("destinify-refresh-token", token)
+                .httpOnly(true)
+                .secure(cookieSecure)
+                .path("/")
+                .maxAge(7 * 24 * 60 * 60);
+    }
+
+    private Authentication createAuthentication(User user) {
+        List<SimpleGrantedAuthority> authorities = user.getRoles().stream()
+                .map(role -> new SimpleGrantedAuthority(role.getName().toString())) // Mapeia cada role
+                .collect(Collectors.toList());
+
+        Authentication authentication = new UsernamePasswordAuthenticationToken(
+                user.getEmail(),
+                null,
+                authorities // Ou as roles reais do usuário
+        );
+
+        // Define o principal autenticado no contexto de segurança do Spring
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+
+        return authentication;
     }
 
     private GetInfosGoogle getUserInfoFromGoogle(String accessToken) {

@@ -6,6 +6,8 @@ import jakarta.validation.constraints.NotNull;
 public record FavoriteRequestDTO(
         @NotBlank(message = "Nome do favorito é obrigatório")
         String name,
+
+        String description,
         
         String image,
         

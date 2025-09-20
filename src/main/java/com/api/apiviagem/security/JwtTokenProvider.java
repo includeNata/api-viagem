@@ -3,7 +3,6 @@ package com.api.apiviagem.security;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
-import io.jsonwebtoken.security.SignatureException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -22,72 +21,92 @@ public class JwtTokenProvider {
 
     private static final Logger logger = LoggerFactory.getLogger(JwtTokenProvider.class);
 
-    @Value("${jwt.secret}")
-    private String jwtSecret;
+    @Value("${jwt.access-token.secret}")
+    private String jwtAccessSecret;
+    @Value("${jwt.access-token.duration}")
+    private long jwtAccessExpirationDate;
 
-    @Value("${jwt.duration}")
-    private long jwtExpirationDate;
+    @Value("${jwt.refresh-token.secret}")
+    private String jwtRefreshSecret;
+    @Value("${jwt.refresh-token.duration}")
+    private long jwtRefreshExpirationDate;
 
-    public String generateToken(Authentication authentication) {
+    // --- GERAÇÃO DE TOKENS ---
+    public String generateAccessToken(Authentication authentication) {
         String username = authentication.getName();
-        Date currentDate = new Date();
-        Date expirationDate = new Date(currentDate.getTime() + jwtExpirationDate);
-
-        // Extraindo as roles (authorities) do usuário para incluir no token
         List<String> roles = authentication.getAuthorities().stream()
                 .map(GrantedAuthority::getAuthority)
                 .collect(Collectors.toList());
 
+        Date currentDate = new Date();
+        Date expirationDate = new Date(currentDate.getTime() + jwtAccessExpirationDate);
+
         return Jwts.builder()
                 .subject(username)
-                .claim("roles", roles) // <-- ADICIONADO: Incluindo roles como custom claim
+                .claim("roles", roles)
                 .issuedAt(currentDate)
                 .expiration(expirationDate)
-                .signWith(key())
+                .signWith(accessKey())
                 .compact();
     }
 
-    private Key key() {
-        return Keys.hmacShaKeyFor(Decoders.BASE64.decode(jwtSecret));
+    public String generateRefreshToken(Authentication authentication) {
+        String username = authentication.getName();
+        Date currentDate = new Date();
+        Date expirationDate = new Date(currentDate.getTime() + jwtRefreshExpirationDate);
+
+        return Jwts.builder()
+                .subject(username)
+                // O Refresh Token não precisa das roles. Mantê-lo simples é mais seguro.
+                .issuedAt(currentDate)
+                .expiration(expirationDate)
+                .signWith(refreshKey())
+                .compact();
     }
 
-    public String getUsername(String token) {
-        Claims claims = Jwts.parser()
-                .verifyWith((SecretKey) key())
+    // --- VALIDAÇÃO DE TOKENS ---
+    public boolean validateAccessToken(String token) {
+        return validateToken(token, accessKey());
+    }
+
+    public boolean validateRefreshToken(String token) {
+        return validateToken(token, refreshKey());
+    }
+
+    // --- EXTRAÇÃO DE DADOS DOS TOKENS ---
+    public String getUsernameFromAccessToken(String token) {
+        return getUsernameFromToken(token, accessKey());
+    }
+
+    public String getUsernameFromRefreshToken(String token) {
+        return getUsernameFromToken(token, refreshKey());
+    }
+
+    // --- MÉTODOS PRIVADOS GENÉRICOS ---
+    private boolean validateToken(String token, Key key) {
+        try {
+            Jwts.parser().verifyWith((SecretKey) key).build().parse(token);
+            return true;
+        } catch (JwtException | IllegalArgumentException e) {
+            logger.warn("Validação de JWT falhou: {}", e.getMessage());
+            return false;
+        }
+    }
+
+    private String getUsernameFromToken(String token, Key key) {
+        return Jwts.parser()
+                .verifyWith((SecretKey) key)
                 .build()
                 .parseSignedClaims(token)
-                .getPayload();
-        return claims.getSubject();
+                .getPayload()
+                .getSubject();
     }
 
-    /**
-     * Alias para getUsername - extrai o username (email) do token JWT.
-     * Usado para manter consistência com o AuthService.
-     */
-    public String getUsernameFromToken(String token) {
-        return getUsername(token);
+    private Key accessKey() {
+        return Keys.hmacShaKeyFor(Decoders.BASE64.decode(jwtAccessSecret));
     }
 
-    public boolean validateToken(String token) {
-        try {
-            Jwts.parser()
-                    .verifyWith((SecretKey) key())
-                    .build()
-                    .parse(token);
-            return true;
-            // Capturando as exceções específicas e logando a causa da falha
-        } catch (MalformedJwtException e) {
-            logger.error("Token JWT malformado: {}", e.getMessage());
-        } catch (ExpiredJwtException e) {
-            logger.warn("Token JWT expirado: {}", e.getMessage());
-        } catch (UnsupportedJwtException e) {
-            logger.error("Token JWT não suportado: {}", e.getMessage());
-        } catch (IllegalArgumentException e) {
-            logger.error("Payload do token JWT está vazio ou nulo: {}", e.getMessage());
-        } catch (SignatureException e) {
-            logger.error("Assinatura do token JWT inválida: {}", e.getMessage());
-        }
-        // Se qualquer exceção for capturada, a validação falha
-        return false;
+    private Key refreshKey() {
+        return Keys.hmacShaKeyFor(Decoders.BASE64.decode(jwtRefreshSecret));
     }
 }

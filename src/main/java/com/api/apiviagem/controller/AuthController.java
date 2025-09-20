@@ -4,11 +4,13 @@ import com.api.apiviagem.DTO.request.GoogleTokenRequest;
 import com.api.apiviagem.DTO.response.ErrorResponse;
 import com.api.apiviagem.model.User;
 import com.api.apiviagem.service.AuthService;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -19,8 +21,12 @@ public class AuthController {
     private AuthService authService;
 
     @GetMapping("/me")
-    public ResponseEntity<?> getCurrentUser(HttpServletRequest request) {
-        return authService.getCurrentUser(request);
+    public ResponseEntity<?> getCurrentUser(Authentication authentication) {
+        if (authentication == null) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Nenhum usuário autenticado.");
+        }
+        String userEmail = authentication.getName();
+        return authService.getUserDataByEmail(userEmail);
     }
 
     @PostMapping("/google/callback")
@@ -39,7 +45,30 @@ public class AuthController {
     }
 
     @PostMapping("/logout")
-    public ResponseEntity<String> logout(HttpServletResponse response) {
-        return authService.logout(response);
+    public ResponseEntity<String> logout() {
+        return authService.logout();
+    }
+
+    @PostMapping("/refresh")
+    public ResponseEntity<?> refresh(HttpServletRequest request) {
+        Cookie[] cookies = request.getCookies();
+
+        if (cookies == null || cookies.length == 0) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Faltando cookie de autenticação");
+        }
+
+        String cookieToken = "";
+        for (Cookie cookie : cookies) {
+            if (cookie.getName().equals("destinify-refresh-token")) {
+                cookieToken = cookie.getValue();
+                break;
+            }
+        }
+
+        if (cookieToken == null || cookieToken.isBlank()) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Faltando token de sessão");
+        }
+
+        return authService.refreshToken(cookieToken);
     }
 }
