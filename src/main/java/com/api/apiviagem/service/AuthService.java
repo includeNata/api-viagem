@@ -1,6 +1,7 @@
 package com.api.apiviagem.service;
 
 import com.api.apiviagem.DTO.response.RefreshResponse;
+import com.api.apiviagem.DTO.response.ResponseDTO;
 import com.api.apiviagem.DTO.response.SignInResponse;
 import com.api.apiviagem.DTO.response.UserResponseDTO;
 import com.api.apiviagem.exception.ResourceNotFoundException;
@@ -76,25 +77,34 @@ public class AuthService {
             String accessToken = jwtTokenProvider.generateAccessToken(authentication);
 
 
-            // 5. Criar o cookie e retorná-lo na resposta
-            ResponseCookie.ResponseCookieBuilder cookieBuilder = generateCookieSession(refreshToken);
+            // 5. Criar os cookies de forma mais simples e direta
+            ResponseCookie refreshTokenCookie = ResponseCookie.from("destinify-refresh-token", refreshToken)
+                    .httpOnly(true)
+                    .secure(cookieSecure)
+                    .path("/")
+                    .maxAge(7 * 24 * 60 * 60) // 7 dias
+                    .sameSite(cookieSecure ? "None" : "Lax")
+                    .build();
 
-            // Em produção (HTTPS) usa SameSite=None, em desenvolvimento usa SameSite=Lax
-            if (cookieSecure) {
-                cookieBuilder.sameSite("None"); // Para HTTPS/produção
-            } else {
-                cookieBuilder.sameSite("Lax"); // Para HTTP/desenvolvimento
-            }
+            ResponseCookie accessTokenCookie = generateAccessToken(accessToken);
 
-            ResponseCookie cookie = cookieBuilder.build();
             UserResponseDTO userResponseDTO = new UserResponseDTO(user.getId(), user.getName(),
                     user.getEmail(), user.getImageUrl(),
                     user.getRoles(), user.getCreatedAt(),
                     user.getUpdatedAt());
 
+            // CORREÇÃO: Usar abordagem com lista de cookies
+            List<String> cookies = List.of(
+                refreshTokenCookie.toString(),
+                accessTokenCookie.toString()
+            );
+            
+            HttpHeaders responseHeaders = new HttpHeaders();
+            responseHeaders.put(HttpHeaders.SET_COOKIE, cookies);
+            
             return ResponseEntity.ok()
-                    .header(HttpHeaders.SET_COOKIE, cookie.toString())
-                    .body(new SignInResponse(userResponseDTO, accessToken));
+                    .headers(responseHeaders)
+                    .body(userResponseDTO);
 
         } catch (HttpClientErrorException.Unauthorized e) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Token do Google inválido ou expirado.");
@@ -105,18 +115,33 @@ public class AuthService {
         }
     }
 
-    public ResponseEntity<String> logout() {
-        // Remove cookie usando ResponseCookie para manter consistência
-        ResponseCookie cookieBuilder = ResponseCookie.from("destinify-refresh-token", "")
+    // Em AuthService.java
+    public ResponseEntity<ResponseDTO> logout() {
+        // Cria o cookie para limpar o refresh token
+        ResponseCookie cookieRefresh = ResponseCookie.from("destinify-refresh-token", "")
                 .httpOnly(true)
                 .secure(cookieSecure)
                 .path("/")
-                .maxAge(0) // expira imediatamente
+                .maxAge(0) // Expira imediatamente
+                .sameSite(cookieSecure ? "None" : "Lax")
                 .build();
 
+        // Cria o cookie para limpar o access token
+        ResponseCookie cookieAccess = ResponseCookie.from("destinify-access-token", "")
+                .httpOnly(true)
+                .secure(cookieSecure)
+                .path("/")
+                .maxAge(0) // Expira imediatamente
+                .sameSite(cookieSecure ? "None" : "Lax")
+                .build();
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.SET_COOKIE, cookieRefresh.toString());
+        headers.add(HttpHeaders.SET_COOKIE, cookieAccess.toString());
+
         return ResponseEntity.ok()
-                .header(HttpHeaders.SET_COOKIE, cookieBuilder.toString())
-                .body("Logout realizado com sucesso!");
+                .headers(headers)
+                .body(new ResponseDTO("Logout realizado com sucesso!"));
     }
 
     public ResponseEntity<RefreshResponse> refreshToken(String refreshToken) {
@@ -126,19 +151,24 @@ public class AuthService {
 
             Authentication authentication = createAuthentication(user);
             String accessToken = jwtTokenProvider.generateAccessToken(authentication);
+            ResponseCookie accessTokenCookie = generateAccessToken(accessToken);
 
-            return ResponseEntity.ok().body(new RefreshResponse(accessToken));
+            return ResponseEntity.ok()
+                    .header(HttpHeaders.SET_COOKIE, accessTokenCookie.toString())
+                    .body(new RefreshResponse(accessToken));
         } catch (RuntimeException e) {
             throw new RuntimeException(e);
         }
     }
 
-    private ResponseCookie.ResponseCookieBuilder generateCookieSession(String token) {
-        return ResponseCookie.from("destinify-refresh-token", token)
+    public ResponseCookie generateAccessToken(String accessToken){
+        return ResponseCookie.from("destinify-access-token", accessToken)
                 .httpOnly(true)
                 .secure(cookieSecure)
                 .path("/")
-                .maxAge(7 * 24 * 60 * 60);
+                .maxAge(15 * 60) // 15 minutos
+                .sameSite(cookieSecure ? "None" : "Lax")
+                .build();
     }
 
     private Authentication createAuthentication(User user) {

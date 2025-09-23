@@ -2,6 +2,7 @@ package com.api.apiviagem.controller;
 
 import com.api.apiviagem.DTO.request.GoogleTokenRequest;
 import com.api.apiviagem.DTO.response.ErrorResponse;
+import com.api.apiviagem.DTO.response.ResponseDTO;
 import com.api.apiviagem.model.User;
 import com.api.apiviagem.service.AuthService;
 import jakarta.servlet.http.Cookie;
@@ -45,7 +46,7 @@ public class AuthController {
     }
 
     @PostMapping("/logout")
-    public ResponseEntity<String> logout() {
+    public ResponseEntity<ResponseDTO> logout() {
         return authService.logout();
     }
 
